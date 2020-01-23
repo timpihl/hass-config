@@ -1,7 +1,7 @@
 # hass-config
 > Hassio / Home Assistant configuration for ToKer Home
 
-[![Build Status][travis-image]][travis-url]
+[![Build Status](https://travis-ci.com/timpihl/hass-config.svg?branch=master)](https://travis-ci.com/timpihl/hass-config)
 
 ## ToKer
 
