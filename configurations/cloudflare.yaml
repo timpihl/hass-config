@@ -1,5 +1,5 @@
 email: tim@pihl-consulting.se
-api_key: d04877138b7f296103ad0dac3a395f0ca6f44
+api_key: !secret cloudflare_api_key
 zone: toker.ovh
 records:
   - "test"
