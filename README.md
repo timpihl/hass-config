@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.com/timpihl/hass-config.svg?branch=master)](https://travis-ci.com/timpihl/hass-config)
 [![Action Status](https://github.com/timpihl/hass-config/workflows/yamllint/badge.svg)](https://github.com/timpihl/hass-config/actions)
+[![Action Status](https://github.com/timpihl/hass-config/workflows/python/badge.svg)](https://github.com/timpihl/hass-config/actions)
 
 ## ToKer
 
