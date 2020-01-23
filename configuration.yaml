@@ -1,0 +1,114 @@
+homeassistant: 
+
+##########################################
+
+default_config:
+stream:
+shopping_list:
+websocket_api:
+
+automation: 
+  !include automations.yaml
+
+binary_sensor: 
+#  - !include configurations/binary_sensor/xiaomi.yaml
+#  - !include configurations/binary_sensor/broadlink.yaml
+
+camera: 
+  !include configurations/camera.yaml
+
+cloudflare:
+  !include configurations/cloudflare.yaml
+
+#device_tracker: 
+#  - !include configurations/device_tracker.yaml
+
+discovery: 
+  !include configurations/discovery.yaml
+
+fan:
+  - !include configurations/xiaomi.yaml
+
+frontend: 
+  !include configurations/frontend.yaml
+
+google_assistant: 
+  !include configurations/google_assistant.yaml
+
+group: !include groups.yaml
+
+history: 
+  !include configurations/history.yaml
+
+http: 
+  !include configurations/http.yaml
+
+ifttt: 
+  !include configurations/ifttt.yaml
+
+#input_select:
+#  !include configurations/input_select.yaml
+
+lock:
+  - !include configurations/lock.yaml
+
+logbook: 
+  !include configurations/logbook.yaml
+
+logger: 
+  !include configurations/logger.yaml
+
+#lovelace: 
+#  !include configurations/lovelace.yaml
+
+media_player: 
+  - !include configurations/spotify.yaml
+
+notify: 
+  - !include configurations/notify.yaml
+
+panel_iframe:
+  !include configurations/panel_iframe.yaml
+
+recorder: 
+  !include configurations/recorder.yaml
+  
+script: 
+  !include scripts.yaml
+
+sensor:
+  !include configurations/sensor/glue.yaml
+#  - !include configurations/sensor/websocket.yaml
+
+scene: 
+  !include scenes.yaml
+
+switch: 
+  - !include configurations/switch/broadlink.yaml
+
+telegram_bot: 
+  - !include configurations/telegram.yaml
+
+tts:
+  - !include configurations/google_tts.yaml
+
+updater: 
+  !include configurations/updater.yaml
+
+### Standard default_config
+# automation
+# cloud
+# config
+# frontend
+# history
+# logbook
+# map
+# mobile_app
+# person
+# script
+# ssdp
+# sun
+# system_health
+# updater
+# zeroconf
+###
