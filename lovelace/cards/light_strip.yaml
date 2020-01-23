@@ -1,0 +1,16 @@
+type: "custom:button-card"
+entity: light.sanglampa_strip
+icon: "mdi:led-strip-variant"
+size: 30px
+name: Strip
+tap_action:
+  action: toggle
+  haptic: heavy
+hold_action:
+  action: more-info
+  haptic: heavy
+state:
+  - value: "on"
+    color: var(--button-card-light-color)
+  - value: "off"
+    color: "#393939"

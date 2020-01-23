@@ -1,0 +1,31 @@
+type: custom:card-modder
+card:
+  type: custom:mini-media-player
+  entity: media_player.ultra
+  icon: mdi:cast
+  show_source: true
+  artwork: cover
+  idle_view: when_paused
+  power_color: false
+  hide_volume: false
+  scroll_info: true
+  show_progress: true
+  hide_info: false
+  hide_icon: false
+  group: true
+  hide:
+    power: false
+    source: false
+
+style:
+  #!include ../styles/chromecast.yaml
+  #border-radius: 10px
+  margin-left: 10px
+  margin-top: 10px;
+  margin-right: 10px
+  margin-bottom: 10px;
+  #margin: 20px !important;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0,  0.4)
+  #background: center / cover no-repeat url("/local/images/music_reflex.png")
+  #background-repeat: no-repeat
+  padding: 20px

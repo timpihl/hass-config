@@ -1,0 +1,42 @@
+name: Dusch
+entity: light.badrummet
+icon: "mdi:shower"
+
+type: "custom:button-card"
+aspect_ratio: 1/1
+size: 50px
+
+show_state: true
+show_name: true
+
+styles:
+  !include styles.yaml
+
+tap_action:
+  action: call-service
+  service: >
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.badrummet
+  haptic: heavy
+
+double_tap_action:
+  action: call-service
+  service: >
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.badrummet
+  haptic: heavy
+
+hold_action:
+  action: more-info
+  haptic: heavy
+
+state:
+  !include group_state.yaml

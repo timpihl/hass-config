@@ -1,0 +1,4 @@
+base_url: !secret http_url
+trusted_proxies: 192.168.10.30
+use_x_forwarded_for: true
+login_attempts_threshold: 5

@@ -1,0 +1,103 @@
+- id: '1'
+  alias: 1 - Notify on restart
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      message: Your Hass.io server has restarted ♡
+      title: Toker Home
+    service: notify.mobile_app_ios
+- id: '2'
+  alias: 2 - Set theme on reboot
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - delay: 00:00:01
+  - service: script.google_dark_theme
+- id: '3'
+  alias: 3 - Update Cloudflare dns records
+  description: ''
+  trigger:
+  - minutes: /10
+    platform: time_pattern
+  condition: []
+  action:
+  - service: cloudflare.update_records
+- id: '4'
+  alias: 4 - Notify on failed login
+  description: ''
+  trigger:
+  - entity_id: persistent_notification.http_login
+    platform: state
+    to: notifying
+  condition: []
+  action:
+  - data:
+      message: '{{ states.persistent_notification.http_login.attributes.message }}'
+      title: '{{ states.persistent_notification.http_login.attributes.title }}'
+    service: notify.mobile_app_ios
+  - delay: '5'
+  - data:
+      notification_id: http_login
+    service: persistent_notification.dismiss
+- id: '5'
+  alias: 5 - Köket turn on Köksbordet
+  description: ''
+  trigger:
+  - entity_id: light.koket
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - service: script.3
+- id: '6'
+  alias: 6 - Köket turn off Köksbordet
+  description: ''
+  trigger:
+  - entity_id: light.koket
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - service: script.4
+- id: '7'
+  alias: 7 - Julstjärnorna Names
+  description: ''
+  trigger:
+  - platform: time_pattern
+    seconds: /10
+  condition: []
+  action:
+  - entity_id: input_select.colors
+    service: input_select.select_next
+  - service: script.7
+- id: '1577477602520'
+  alias: 8 - Leaving
+  description: ''
+  trigger:
+  - entity_id: person.tim
+    platform: state
+    to: not_home
+  - entity_id: person.kanita
+    platform: state
+    to: not_home
+  condition:
+  - condition: state
+    entity_id: person.kanita
+    state: not_home
+  action:
+  - entity_id: group.all_lights
+    service: light.turn_off
+  - delay: 0:35
+  - entity_id: light.hallen
+    service: light.turn_on
+  - data:
+      brightness: 1
+    entity_id: light.hallen
+    service: light.turn_on

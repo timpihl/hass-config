@@ -1,0 +1,23 @@
+platform: template
+switches: 
+  lock:
+    value_template: >-
+      {% if is_state('lock.glue_lock', 'unlocked') %}
+        off
+      {% else %}
+        on
+      {% endif %}
+    turn_on:
+      service: lock.lock
+      data:
+        entity_id: lock.glue_lock
+    turn_off:
+      service: lock.unlock
+      data:
+        entity_id: lock.glue_lock
+    icon_template: >-
+      {% if is_state('lock.glue_lock', 'unlocked') %}
+        mdi:lock-open
+      {% else %}
+        mdi:lock
+      {% endif %}

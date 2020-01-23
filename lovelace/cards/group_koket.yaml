@@ -1,0 +1,63 @@
+name: Köket
+entity: light.koket
+icon: "mdi:food"
+type: "custom:button-card"
+aspect_ratio: 1/1
+size: 50px
+show_state: true
+show_name: true
+styles:
+  card:
+    - padding: 5px
+  grid:
+    - grid-template-areas: '"i" "n" "s"'
+    - grid-template-columns: 1fr
+    - grid-template-rows: 1fr min-content min-content
+  img_cell:
+    - align-self: start
+    - text-align: start
+    - justify-self: start
+    - padding-left: 10px
+    - height: 30px
+    - width: 30px
+  name:
+    - justify-self: start
+    - padding-left: 10px
+    - font-weight: bold
+    - font-size: 14px
+  state:
+    - justify-self: start
+    - padding-left: 10px
+    - font-size: 12px
+tap_action:
+  action: call-service
+  service: >
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.koket
+  haptic: heavy
+double_tap_action:
+  action: call-service
+  service: >
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.koket
+  haptic: heavy
+hold_action:
+  action: more-info
+  haptic: heavy
+state:
+  - value: "on"
+    color: "#FF558F"
+  - value: "off"
+    styles:
+      card:
+        - filter: opacity(50%)
+      icon:
+        - filter: grayscale(100%)

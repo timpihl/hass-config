@@ -1,0 +1,17 @@
+ |
+  ha-card {
+    height: auto !important;
+    width: auto !important;
+    margin: 5px;
+    #border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5) !important;
+  }
+  .card-header {
+    font-size: 16px;
+  }
+  ha-icon {
+    height: 35px !important;
+    width: 30px !important;
+    #color: var(--iron-icon-fill-color, currentcolor) !important;
+    #{% if is_state('', 'playing') %} background: center / cover no-repeat url("/local/images/music_reflex.png"); {% endif %}
+  }

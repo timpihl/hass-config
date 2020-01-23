@@ -1,0 +1,14 @@
+colors:
+  name: Colors
+  options:
+    - blue
+    - lightblue
+    - green
+    - yellow
+    - pink
+    - purple
+    - magenta
+    - orange
+    - red
+  initial: blue
+  icon: mdi:panda

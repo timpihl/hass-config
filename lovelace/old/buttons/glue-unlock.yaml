@@ -1,0 +1,22 @@
+type: "custom:button-card"
+name: Glue Unlock
+icon: mdi:lock-open
+color_type: icon
+show_state: false
+show_name: false
+tap_action:
+  action: call-service
+  service: lock.unlock
+  service_data:
+    entity_id: lock.glue_lock
+styles:
+  card:
+    - box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6)
+    #- height:
+    - width: 200px
+    - padding: 10px
+    - margin-left: 5px
+    - margin-right: 1px
+    #- margin-top: 10px
+    #- margin-bottom: 10px
+    #- border-radius: 12px

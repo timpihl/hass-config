@@ -1,0 +1,18 @@
+type: custom:card-modder
+card:
+  type: custom:mini-media-player
+  entity: media_player.ultra
+  icon: mdi:google-chrome
+  artwork: cover
+  power_color: true
+  info: scroll
+  show_progress: true
+  group: true
+  hide:
+    icon: false
+    name: false
+    controls: false
+    volume: false
+
+style:
+  !include ../styles/01-ultra.yaml

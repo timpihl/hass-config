@@ -1,0 +1,13 @@
+type: entity-button
+name: Kitchen Group
+icon: mdi:food
+color: auto
+color_type: icon
+show_state: false
+show_name: false
+entity: light.koket
+tap_action:
+  action: toggle
+hold_action:
+  action: more-info
+style: !include /config/lovelace/ui/css/light-groups.yaml

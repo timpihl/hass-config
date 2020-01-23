@@ -1,0 +1,15 @@
+type: "custom:button-card"
+name: Toker Tv
+icon:
+color_type: label-card
+styles:
+  card:
+    - !include ../styles/label/01-style-card-clear.yaml
+  label:
+    - !include ../styles/label/01-style-label-clear.yaml
+  name:
+    - !include ../styles/label/01-style-name.yaml
+  state:
+    - !include ../styles/label/01-style-state.yaml
+  icon:
+    - !include ../styles/label/01-style-icon.yaml

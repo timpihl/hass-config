@@ -1,0 +1,63 @@
+- platform: mjpeg
+  name: Mot Bromma
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626739.Jpeg?type=fullsize
+  mjpeg_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626739.Jpeg?type=fullsize
+
+- platform: generic
+  name: Från Bromma
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626682.Jpeg?type=fullsize
+
+- platform: generic
+  name: Karlberg
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626719.Jpeg?type=fullsize
+
+- platform: generic
+  name: Solnabron
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39635187.Jpeg?type=fullsize
+
+#- platform: generic
+#  name: Norrtull mot E4
+#  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626487.Jpeg?type=fullsize
+
+#- platform: generic
+#  name: Norrtull Betal
+#  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39636160.Jpeg?type=fullsize
+
+- platform: generic
+  name: Sveavägen Norr 
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626726.Jpeg?type=fullsize
+
+- platform: generic
+  name: Sveavägen Söder
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626439.Jpeg?type=fullsize
+
+- platform: generic
+  name: Odengatan Sveavägen
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626727.Jpeg?type=fullsize
+
+- platform: generic
+  name: Odengatan mot Valhallavägen
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626725.Jpeg?type=fullsize
+
+- platform: generic
+  name: Haga Södra
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39635840.Jpeg?type=fullsize
+
+- platform: generic
+  name: Haga Norra
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39627009.Jpeg?type=fullsize
+
+- platform: generic
+  name: PCM
+  still_image_url: http://192.168.10.120:1200/shot.jpg
+  stream_source: rtsp://192.168.10.120:1200/h264_pcm.sdp
+
+#- platform: onvif
+#  name: Köket
+#  host: 192.168.10.120
+#  port: 1200
+
+#- platform: generic
+#  name: ULAW
+#  still_image_url: http://192.168.10.120:1200/shot.jpg
+#  stream_source: rtsp://192.168.10.120:1200/h264_ulaw.sdp

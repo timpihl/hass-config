@@ -6,6 +6,7 @@
 .ssh
 .storage
 .vscode
+.uuid
 home-assistant.code-workspace
 home-assistant.log
 home-assistant_v2.db
@@ -16,3 +17,5 @@ tts
 home-assistant_v2.db-wal
 home-assistant_v2.db-shm
 .cloud
+google_assistant.json
+known_devices.yaml

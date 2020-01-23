@@ -1,0 +1,14 @@
+type: custom:mini-media-player
+entity: media_player.spotify
+icon: mdi:spotify
+artwork: cover
+source: icon
+hide:
+  volume: true
+  source: false
+  power_state: false
+#shortcuts:
+#  list:
+#    - icon: mdi:google-chrome
+#      type: source
+#      id: media_player.ultra

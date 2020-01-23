@@ -1,0 +1,14 @@
+type: entities
+title: Vardagsrummet
+show_header_toggle: false
+style: !include /config/lovelace/ui/css/style-cards.yaml
+entities:
+  - light.vardagsrummet
+  - light.hue_top_one
+  - light.hue_top_two
+  - light.hue_top_three
+  - light.hue_glass_one
+  - light.hue_glass_two
+  - light.hue_glass_three
+  - light.spots_on_off
+  - light.fonster_v

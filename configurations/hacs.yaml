@@ -1,0 +1,6 @@
+token: !secret hacs_token
+appdaemon: True
+theme: True
+python_script: True
+sidepanel_title: "Hacs"
+sidepanel_icon: "mdi:alpha-h-box"

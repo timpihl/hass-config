@@ -1,0 +1,15 @@
+type: entity-button
+name: TV Down
+icon: mdi:arrow-down
+color_type: icon
+show_state: false
+show_name: false
+tap_action:
+  action: call-service
+  service: switch.turn_off
+  service_data:
+    entity_id: switch.tv_down
+hold_action:
+  action: more-info
+entity: switch.tv_down
+style: !include /config/lovelace/ui/css/buttons.yaml

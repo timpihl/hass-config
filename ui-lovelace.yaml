@@ -1,0 +1,18 @@
+resources: 
+  !include lovelace/resources.yaml
+
+custom_header: 
+  !include lovelace/custom_header.yaml
+
+title: Toker Home
+background: var(--background-image)
+
+views:
+
+  - !include lovelace/home.yaml
+
+  - !include lovelace/tablet.yaml
+
+  - !include lovelace/trafic.yaml
+
+  - !include lovelace/media.yaml

@@ -1,0 +1,4 @@
+type: weather-forecast
+title: Sveavägen 99
+entity: weather.toker_home
+style: !include /config/lovelace/ui/css/style-cards.yaml

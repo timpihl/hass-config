@@ -1,0 +1,28 @@
+type: custom:mini-media-player
+entity: media_player.ultra
+icon: mdi:cast
+show_source: true
+artwork: cover
+idle_view: when_paused
+power_color: true
+hide_volume: false
+scroll_info: true
+show_progress: true
+hide_info: false
+hide_icon: false
+group: true
+hide:
+  power: true
+  source: false
+style: |
+  ha-card {
+    border-radius: 10px;
+    padding: 10px !important;
+    margin: 5px !important;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5) !important;
+    #{% if is_state('media_player.ultra', 'playing') %} background: center / cover no-repeat url("/local/images/music_reflex.jpg") {% endif %};
+    background: center / cover no-repeat url("/local/images/music_reflex.jpg") !important;
+  }
+  .card-content {
+    background: center / cover no-repeat url("/local/images/music_reflex.jpg")
+  }

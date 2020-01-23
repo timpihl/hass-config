@@ -1,0 +1,114 @@
+'1':
+  alias: 1 - Badrummet - Turn on
+  sequence:
+  - data:
+      brightness_pct: 100
+    entity_id: light.badrummet
+    service: light.turn_on
+'2':
+  alias: 2 - Badrummet - Turn off
+  sequence:
+  - data: {}
+    entity_id: light.badrummet
+    service: light.turn_off
+'3':
+  alias: 3 - Köksbordet - Turn on
+  sequence:
+  - data:
+      brightness_pct: 35
+    entity_id: light.koksbordet
+    service: light.turn_on
+'4':
+  alias: 4 - Köksbordet - Turn off
+  sequence:
+  - data: {}
+    entity_id: light.koksbordet
+    service: light.turn_off
+'5':
+  alias: 5 - Dörren - Unlock
+  sequence:
+  - data:
+      payload: locked
+      qos: 2
+      topic: /NodeRed/Glue
+    service: mqtt.publish
+'6':
+  alias: 6 - Dörren - Lock
+  sequence:
+  - data:
+      payload_template: unlocked
+      qos: 2
+      topic: /NodeRed/Glue
+    service: mqtt.publish
+'7':
+  alias: 7 - Julstjärnorna Colorloop
+  sequence:
+  - data_template:
+      color_name: '{{ states.input_select.colors.state }}'
+      transition: 3
+    entity_id: light.julstjarnorna
+    service: light.turn_on
+'8':
+  alias: 8 - Glue Script
+  sequence:
+  - data:
+      payload_template: '{{ states(''sensor.glue'') }}
+
+        '
+      qos: 2
+      topic: /NodeRed/Glue
+    service: mqtt.publish
+dark_teal:
+  alias: 0 - Dark Teal
+  sequence:
+  - data: {}
+    service: frontend.reload_themes
+  - data:
+      name: dark_teal
+    service: frontend.set_theme
+pink_dark_ios:
+  alias: 0 - Pink Dark iOS
+  sequence:
+  - data: {}
+    service: frontend.reload_themes
+  - data:
+      name: pink-dark-ios
+    service: frontend.set_theme
+clear:
+  alias: 0 - Clear
+  sequence:
+  - service: frontend.reload_themes
+  - data:
+      name: clear
+    service: frontend.set_theme
+sundown:
+  alias: 0 - Sundown
+  sequence:
+  - service: frontend.reload_themes
+  - data:
+      name: sundown
+    service: frontend.set_theme
+google_dark_theme:
+  alias: 0 - Google Dark Theme
+  sequence:
+  - data:
+      name: Google Dark Theme
+    service: frontend.set_theme
+ux_goodie:
+  alias: 0 - UX Goodie
+  sequence:
+  - data:
+      name: ux_goodie
+    service: frontend.set_theme
+amoled_blue:
+  alias: 0 - AMOLED Blue
+  sequence:
+  - data:
+      name: AMOLED Blue
+    service: frontend.set_theme
+material_dark_pink:
+  alias: 0 - Material Dark Pink
+  sequence:
+  - data:
+      name: material_dark_pink
+    service: frontend.set_theme

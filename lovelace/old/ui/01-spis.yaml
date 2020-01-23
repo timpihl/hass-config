@@ -1,0 +1,19 @@
+type: entity-button
+entity: light.flakt_one
+style: |
+  @keyframes blink {
+    50% {
+      box-shadow: 0px 0px 25px -5px hotpink;
+    }
+  }
+  ha-card {
+    border-radius: 15px;
+    font-size: 0px !important;
+    margin: 10px;
+    animation: [[ if(light.flakt_one == "on", "blink 1.5s linear infinite", "") ]];
+  }
+  ha-icon {
+    padding: 5px !important;
+    height: 35px !important;
+    color: [[ if(light.flakt_one == "on", "hotpink !important", "") ]];
+  }

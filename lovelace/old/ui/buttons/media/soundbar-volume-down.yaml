@@ -1,0 +1,15 @@
+type: entity-button
+name: Volume Down
+icon: mdi:volume-minus
+color_type: icon
+show_state: false
+show_name: false
+tap_action:
+  action: call-service
+  service: switch.turn_off
+  service_data:
+    entity_id: switch.soundbar_vol_down
+hold_action:
+  action: more-info
+entity: switch.soundbar_vol_down
+style: !include /config/lovelace/ui/css/buttons.yaml

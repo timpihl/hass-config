@@ -1,0 +1,21 @@
+type: "custom:button-card"
+name: Toker Lock                         
+icon:
+color_type: label-card
+styles:
+  card:
+    #- !include ../styles/label/clear-card.yaml
+    - box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6)
+    #- height:
+    - width: 424px
+    - padding: 10px
+    - margin-left: 5px
+    - margin-top: 10px
+    - margin-right: 5px
+    - margin-bottom: 10px
+    - background: rgb(0,0,0,0.4)
+    #border-radius: 12px
+  label:
+    - !include ../styles/label/clear-label.yaml
+  name:
+    - !include ../styles/label/clear-name.yaml

@@ -1,0 +1,24 @@
+type: "custom:button-card"
+name: Netflix
+icon: mdi:netflix
+color_type: icon
+show_state: false
+show_name: false
+tap_action:
+  action: call-service
+  service: switch.turn_on
+  service_data:
+    entity_id: switch.tv_netflix
+hold_action:
+  action: more-info
+styles:
+  card:
+    - !include ../styles/button/01-style-card.yaml
+  label:
+    - !include ../styles/button/01-style-label.yaml
+  name:
+    - !include ../styles/button/01-style-name.yaml
+  state:
+    - !include ../styles/button/01-style-state.yaml
+  icon:
+    - !include ../styles/button/01-style-icon.yaml

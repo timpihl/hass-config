@@ -1,0 +1,15 @@
+platform: template
+name: Glue
+value_template: >-
+  {% if is_state('sensor.glue', 'locked') %}
+    locked
+  {% elif is_state('sensor.glue', 'unlocked') %}
+    unlocked
+  {% endif %}
+#optimistic: true
+lock:
+  service: script.turn_on
+  entity_id: script.6
+unlock:
+  service: script.turn_on
+  entity_id: script.5

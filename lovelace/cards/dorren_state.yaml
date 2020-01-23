@@ -1,0 +1,27 @@
+name: Glue
+entity: lock.glue
+
+type: "custom:button-card"
+aspect_ratio: 1/1
+size: 50px
+
+show_state: true
+show_name: true
+
+styles:
+  !include styles.yaml
+
+tap_action:
+  action: toggle
+  haptic: heavy
+
+double_tap_action:
+  action: toggle
+  haptic: heavy
+
+hold_action:
+  action: more-info
+  haptic: heavy
+
+state:
+  !include lock_state.yaml

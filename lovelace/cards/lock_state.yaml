@@ -1,0 +1,8 @@
+- value: "unlocked"
+  color: "#FF558F"
+- value: "locked"
+  styles:
+    card:
+      - filter: opacity(50%)
+    icon:
+      - filter: grayscale(100%)

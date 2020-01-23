@@ -1,0 +1,8 @@
+- value: "on"
+  color: "#FF558F"
+- value: "off"
+  styles:
+    card:
+      - filter: opacity(50%)
+    icon:
+      - filter: grayscale(100%)

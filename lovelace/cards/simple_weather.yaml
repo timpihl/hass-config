@@ -1,0 +1,7 @@
+type: custom:simple-weather-card
+entity: weather.toker_home
+name: at Toker Home
+backdrop: 
+#  fade: true
+#  day: '#45aaf2'
+#  night: '#a55eea'

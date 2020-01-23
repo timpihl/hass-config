@@ -1,0 +1,21 @@
+type: custom:card-modder
+card:
+  type: custom:mini-media-player
+  entity: media_player.spotify
+  icon: mdi:spotify
+  show_source: true
+  artwork: cover
+  idle_view: when_paused
+  power_color: true
+  hide_volume: false
+  scroll_info: true
+  show_progress: true
+  hide_info: false
+  hide_icon: false
+  group: true
+  hide:
+    power: false
+    source: true
+
+style:
+  !include ../styles/01-spotify.yaml

@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    glue:
+      value_template: >-
+        {% if is_state("sensor.glue", "locked") %}
+          locked
+        {% else %}
+          unlocked
+        {% endif %}
+      friendly_name: 'Glue'

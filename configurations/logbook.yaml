@@ -1,0 +1,14 @@
+exclude:
+  entities:
+    - automation.cloudflare_dns_update
+  domains:
+    - sun
+    - script
+    - automation
+    - switch
+    - mobile_app
+    - camera
+    - automation
+    - sensor
+    - binary_sensor
+    - input_select

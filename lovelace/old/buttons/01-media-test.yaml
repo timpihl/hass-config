@@ -1,0 +1,21 @@
+type: custom:card-modder
+card:
+  type: entities
+  #title: Mediaplayers
+  entities:
+    - entity: media_player.ultra
+      icon: mdi:google-chrome
+      type: custom:mini-media-player
+      show_source: true
+      artwork: cover
+      idle_view: true
+      power_color: true
+      hide_volume: false
+      scroll_info: true
+      show_progress: true
+      hide_info: false
+      hide_icon: false
+      group: true
+
+style:
+  !include ../styles/chromecast.yaml

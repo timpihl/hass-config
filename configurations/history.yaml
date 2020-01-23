@@ -1,0 +1,16 @@
+use_include_order: true
+include:
+  domains:
+    - lock
+    - media_player
+    - light
+    - person
+    - fan
+exclude:
+  domains:
+    - switch
+    - mobile_app
+    - camera
+    - automation
+    - binary_sensor
+    - sensor

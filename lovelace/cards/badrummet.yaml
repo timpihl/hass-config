@@ -1,0 +1,16 @@
+title: Badrummet
+show_header_toggle: false
+type: entities
+entities:
+  - type: custom:fold-entity-row
+    padding: 0
+    head:
+      label: Badrummet
+      entity: light.badrummet
+      icon: mdi:shower
+    group_config:
+      secondary_info: last-changed
+    entities:
+      - light.badrummet_a
+      - light.badrummet_b
+      - light.badrummet_c

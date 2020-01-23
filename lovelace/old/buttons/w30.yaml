@@ -1,0 +1,10 @@
+type: "custom:button-card"
+name: Blank
+icon:
+show_icon: false
+show_name: false
+show_state: false
+color_type: auto
+styles:
+  card:
+    - !include ../styles/blank/w30.yaml
