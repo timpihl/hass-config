@@ -1,11 +1,13 @@
 # hass-config
-## Hassio / Home Assistant configuration for Toker Home
+Hassio / Home Assistant configuration for ToKer Home
  
-### Toker Home
- 
-#### Specifications: 
+## ToKer Home
 
-CPU: Intel Core i7 9700K 3.6 - 4.9 GHz
+(T)im (o)ch (K)anita
+
+### Specifications: 
+
+#### CPU: #### Intel Core i7 9700K 3.6 - 4.9 GHz
 
 RAM: Corsair Vengeance 32GB DDR4 2666Mhz CL18
 
