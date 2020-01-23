@@ -1,10 +1,12 @@
 # hass-config
-Hassio / Home Assistant configuration for ToKer Home
- 
+> Hassio / Home Assistant configuration for ToKer Home
+
+[![Build Status][travis-image]][travis-url]
+
 ## ToKer
-
+```sh
 (T)im (o)ch (K)anita
-
+```
 ### Specifications: 
 
 #### CPU:
