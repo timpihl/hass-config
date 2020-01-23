@@ -7,7 +7,7 @@
 
 (T)im (o)ch (K)anita
 
-### Specifications: 
+### Hardware specifications
 
 #### CPU:
 ```sh
