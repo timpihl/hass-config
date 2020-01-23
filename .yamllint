@@ -1,7 +1,7 @@
 ---
 
 yaml-files:
-  - "themes/pink-dark-ios.yaml"
+  - "./configuration.yaml"
 
 rules:
   braces:
