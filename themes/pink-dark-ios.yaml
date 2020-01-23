@@ -1,0 +1,102 @@
+---
+#
+#  Pink Dark iOS
+#
+pink-dark-ios:
+  primary-color: var(--pink)
+  light-primary-color: var(--pink)
+  primary-background-color: var(--grey)
+  secondary-background-color: var(--dark-grey)
+  divider-color: var(--grey)
+  accent-color: var(--primary-color)
+
+  primary-text-color: var(--white)
+  secondary-text-color: "#d3d3d3"
+  text-primary-color: var(--white)
+  disabled-text-color: "#232323"
+  text-dark-color: var(--white)
+
+  sidebar-icon-color: "#B6B6C1"
+  sidebar-text-color: "#F1F1F1"
+  sidebar-selected-background-color: var(--grey)
+  sidebar-selected-icon-color: var(--white)
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+
+  state-icon-color: var(--white)
+  state-icon-active-color: var(--white)
+  state-icon-unavailable-color: var(--disabled-text-color)
+
+  paper-slider-knob-color: var(--white)
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: "#0984ff"
+  paper-slider-secondary-color: var(--paper-slider-knob-color)
+  paper-slider-container-color: rgba(255, 255, 255, 0.5)
+  paper-slider-font-color: var(--black)
+  ha-slider-background: none !important
+
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: rgba(255, 159, 9, 0.7)
+  lumo-body-text-color: var(--white)
+  lumo-tertiary-text-color: var(--white)
+  lumo-header-text-color: var(--pink)
+  lumo-primary-text-color: var--(pink)
+  lumo-base-color: var(--dark-grey)
+  lumo-tint-5pct: var(--mid-grey)
+  lumo-shade: var(--dark-grey)
+  lumo-contrast: var(--dark-grey)
+  lumo-contrast-10pct: var(--grey)
+  lumo-box-shadow-m: 0 5px 15px -4px var(--pink)
+
+  card-background-color: var(--secondary-background-color)
+  paper-listbox-background-color: var(--grey)
+  ha-card-border-radius: 20px
+  ha-card-background: "rgba(10, 10, 10, 0.4)"
+  ha-user-badge: var(--pink)
+  paper-card-background-color: "rgba(10, 10, 10, 0.4)"
+
+  paper-toggle-button-checked-button-color: "#484848"
+  paper-toggle-button-checked-bar-color: "#484848"
+  paper-toggle-button-unchecked-button-color: var(--paper-toggle-button-checked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--disabled-text-color)
+
+  table-row-background-color: var(--grey)
+  table-row-alternative-background-color: var(--mid-grey)
+
+  switch-checked-color: "#30d257"
+  switch-checked-track-color: "#30d257"
+  switch-checked-button-color: var(--white)
+
+  paper-dialog-background-color: rgba(25, 25, 25, 0.95)
+  paper-item-icon-color: var(--white)
+  paper-item-icon-background: var(--pink)
+  more-info-header-background: rgba(10, 10, 10, 1)
+
+  mcg-title-letter-spacing: .15em
+  mini-media-player-base-color: var(--white)
+  mini-media-player-icon-color: var(--white)
+  mini-media-player-artwork-opacity: "0.7"
+
+  # Custom Toker
+  background-image: "center / cover no-repeat fixed url('/local/images/homekit-bg-4.jpeg')"
+  white: "#FFFFFF"
+  black: "#000000"
+  pink: "#FF558F"
+  grey: "#1e1e1e"
+  mid-grey: "#191919"
+  dark-grey: "#050505"
+
+  ha-card-header-font-size: 16px
+
+  cch-background: "rgba(0,0,0,0.5)"
+  cch-all-buttons-color: var(--white)
+  cch-button-color-menu: var(--white)
+  cch-button-color-notifications: var(--white)
+  cch-button-color-voice: var(--white)
+  cch-button-color-options: var(--white)
+  cch-all-tabs-color: var(--white)
+  cch-tab-indicator-color: var(--white)
+  cch-active-tab-color: "#00FFFF"
+  cch-notify-indicator-color: "#00FFFF"
+  cch-notify-text-color: var(--white)
