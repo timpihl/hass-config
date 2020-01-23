@@ -1,7 +1,5 @@
 homeassistant:
 
-###########################################
-
 default_config:
 stream:
 shopping_list:
