@@ -67,9 +67,6 @@ media_player:
 notify: 
   - !include configurations/notify.yaml
 
-panel_iframe:
-  !include configurations/panel_iframe.yaml
-
 recorder: 
   !include configurations/recorder.yaml
   
