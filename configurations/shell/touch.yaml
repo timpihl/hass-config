@@ -1,1 +1,1 @@
-restart_pow: touch ~/.pow/restart.txt
+touch: touch /restart.txt
