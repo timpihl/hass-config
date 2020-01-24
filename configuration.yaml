@@ -79,7 +79,7 @@ scene:
   !include scenes.yaml
 
 shell_command:
-  touch: touch /restart.txt
+  touch: 'touch /restart.txt'
 #  !include_dir_merge_named configurations/shell/
 
 switch: 
