@@ -1,2 +1,2 @@
 platform: google_maps
-username: tim@pihl-consulting.se
+username: !secret email
