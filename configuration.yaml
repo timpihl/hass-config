@@ -89,6 +89,8 @@ tts:
 updater: 
   !include configurations/updater.yaml
 
+icloud:
+  !include configurations/icloud.yaml
 
 
 ### Standard default_config
