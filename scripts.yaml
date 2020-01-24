@@ -41,13 +41,11 @@
       topic: /NodeRed/Glue
     service: mqtt.publish
 '7':
-  alias: 7 - Julstjärnorna Colorloop
+  alias: 7 - Update iCloud states
   sequence:
-  - data_template:
-      color_name: '{{ states.input_select.colors.state }}'
-      transition: 3
-    entity_id: light.julstjarnorna
-    service: light.turn_on
+  - data:
+      account: tim@pihl-consulting.se
+    service: icloud.update
 '8':
   alias: 8 - Glue Script
   sequence:
@@ -112,3 +110,8 @@ material_dark_pink:
   - data:
       name: material_dark_pink
     service: frontend.set_theme
+'9':
+  alias: 9 - Badrummet
+  sequence:
+  - entity_id: light.badrummet
+    service: light.toggle

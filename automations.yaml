@@ -66,17 +66,6 @@
   condition: []
   action:
   - service: script.4
-- id: '7'
-  alias: 7 - Julstjärnorna Names
-  description: ''
-  trigger:
-  - platform: time_pattern
-    seconds: /10
-  condition: []
-  action:
-  - entity_id: input_select.colors
-    service: input_select.select_next
-  - service: script.7
 - id: '1577477602520'
   alias: 8 - Leaving
   description: ''
@@ -101,3 +90,24 @@
       brightness: 1
     entity_id: light.hallen
     service: light.turn_on
+- id: '1579821688406'
+  alias: 7 - iCloud
+  description: Update iCloud location
+  trigger:
+  - minutes: /5
+    platform: time_pattern
+  condition: []
+  action:
+  - service: script.7
+- id: '1579824300432'
+  alias: 9 - Event
+  description: ''
+  trigger:
+  - event_data:
+      actionName: Badrummet
+    event_type: ios.action_fired
+    platform: event
+  condition: []
+  action:
+  - entity_id: light.badrummet
+    service: script.9
