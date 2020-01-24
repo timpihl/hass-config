@@ -23,6 +23,7 @@ discovery:
 
 device_tracker:
   - !include configurations/google_maps.yaml
+  - !include configurations/icloud3.yaml
 
 fan:
   - !include configurations/xiaomi.yaml

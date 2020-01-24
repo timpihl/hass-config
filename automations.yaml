@@ -66,7 +66,7 @@
   condition: []
   action:
   - service: script.4
-- id: 'toker_alone'
+- id: toker_alone
   alias: ToKer Alone
   description: ''
   trigger:
@@ -79,11 +79,9 @@
   condition:
   - condition: and
     conditions:
-    - condition: device
-      device_id: 924ce9a34ddb4bb482ce609caec1a398
-      domain: device_tracker
-      entity_id: device_tracker.sm_g960f
-      type: is_not_home
+    - condition: state
+      entity_id: device_tracker.google_maps_106326879474919188136
+      state: not_home
     - condition: device
       device_id: fb4923dcf6db46ff8cc6b1b6cbcb1aa0
       domain: device_tracker
@@ -95,7 +93,7 @@
       name: ToKer
     service: logbook.log
   - service: script.brightness_low
-- id: 'icloud_update'
+- id: icloud_update
   alias: iCloud Update
   description: Update iCloud location
   trigger:
@@ -104,7 +102,7 @@
   condition: []
   action:
   - service: script.7
-- id: 'ios_badrummet'
+- id: ios_badrummet
   alias: iOS Event Badrummet
   description: ''
   trigger:

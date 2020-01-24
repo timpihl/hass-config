@@ -1,0 +1,5 @@
+platform: icloud3
+username: !secret email
+password: !secret icloud3_password
+track_devices:
+  - tim_icloud
