@@ -110,8 +110,8 @@ material_dark_pink:
   - data:
       name: material_dark_pink
     service: frontend.set_theme
-'9':
-  alias: 9 - Badrummet
+toggle_badrummet:
+  alias: Toggle Badrummet
   sequence:
   - entity_id: light.badrummet
     service: light.toggle

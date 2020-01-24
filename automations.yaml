@@ -66,8 +66,8 @@
   condition: []
   action:
   - service: script.4
-- id: '1577477602520'
-  alias: 8 - Leaving
+- id: 'toker_alone'
+  alias: ToKer Alone
   description: ''
   trigger:
   - entity_id: person.kanita
@@ -95,8 +95,8 @@
       name: ToKer
     service: logbook.log
   - service: script.brightness_low
-- id: '1579821688406'
-  alias: 7 - iCloud
+- id: 'icloud_update'
+  alias: iCloud Update
   description: Update iCloud location
   trigger:
   - minutes: /5
@@ -104,8 +104,8 @@
   condition: []
   action:
   - service: script.7
-- id: '1579824300432'
-  alias: 9 - Event
+- id: 'ios_badrummet'
+  alias: iOS Event Badrummet
   description: ''
   trigger:
   - event_data:
@@ -115,4 +115,4 @@
   condition: []
   action:
   - entity_id: light.badrummet
-    service: script.9
+    service: script.toggle_badrummet
