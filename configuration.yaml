@@ -21,6 +21,9 @@ cloudflare:
 discovery: 
   !include configurations/discovery.yaml
 
+device_tracker:
+  - !include configurations/google_maps.yaml
+
 fan:
   - !include configurations/xiaomi.yaml
 
