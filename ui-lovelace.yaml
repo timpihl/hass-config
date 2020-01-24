@@ -21,6 +21,10 @@ resources:
     url: /community_plugin/lovelace-fold-entity-row/fold-entity-row.js
   - type: module
     url: /community_plugin/lovelace-layout-card/layout-card.js
+  - type: js
+    url: /community_plugin/light-slider-card.js
+  - type: module
+    url: /community_plugin/popup-backdrop-filter.js
 title: Toker
 views:
   - title: Home
