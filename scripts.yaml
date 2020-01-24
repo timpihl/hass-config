@@ -115,7 +115,7 @@ material_dark_pink:
   sequence:
   - entity_id: light.badrummet
     service: light.toggle
-shell_touch:
-  alias: Shell
+git_run:
+  alias: Git Run
   sequence:
-  - service: shell_command.touch
+  - service: shell_command.git_run
