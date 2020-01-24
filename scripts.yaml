@@ -115,3 +115,7 @@ material_dark_pink:
   sequence:
   - entity_id: light.badrummet
     service: light.toggle
+shell_touch:
+  alias: Shell
+  sequence:
+  - service: shell_command.touch
