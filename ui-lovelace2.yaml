@@ -544,7 +544,10 @@ views:
             type: entities
         layout: horizontal
         type: 'custom:layout-card'
-  - badges: []
+  - title: Camera
+    path: camera
+    icon: 'mdi:camera'
+    badges: []
     cards:
       - aspect_ratio: 0%
         camera_image: camera.pcm
@@ -581,9 +584,6 @@ views:
         entities: []
         image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
         type: picture-glance
-    icon: 'mdi:camera'
-    path: camera
-    title: Camera
   - badges: []
     cards: []
     icon: 'mdi:dev-to'
