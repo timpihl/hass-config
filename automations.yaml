@@ -70,26 +70,31 @@
   alias: 8 - Leaving
   description: ''
   trigger:
-  - entity_id: person.tim
-    platform: state
-    to: not_home
   - entity_id: person.kanita
     platform: state
     to: not_home
+  - entity_id: person.tim
+    platform: state
+    to: not_home
   condition:
-  - condition: state
-    entity_id: person.kanita
-    state: not_home
+  - condition: and
+    conditions:
+    - condition: device
+      device_id: 924ce9a34ddb4bb482ce609caec1a398
+      domain: device_tracker
+      entity_id: device_tracker.sm_g960f
+      type: is_not_home
+    - condition: device
+      device_id: fb4923dcf6db46ff8cc6b1b6cbcb1aa0
+      domain: device_tracker
+      entity_id: device_tracker.icloud
+      type: is_not_home
   action:
-  - entity_id: group.all_lights
-    service: light.turn_off
-  - delay: 0:35
-  - entity_id: light.hallen
-    service: light.turn_on
   - data:
-      brightness: 1
-    entity_id: light.hallen
-    service: light.turn_on
+      message: I'm all alone, turning down the lights.
+      name: ToKer
+    service: logbook.log
+  - service: script.brightness_low
 - id: '1579821688406'
   alias: 7 - iCloud
   description: Update iCloud location

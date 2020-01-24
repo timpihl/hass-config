@@ -119,3 +119,26 @@ git_run:
   alias: Git Run
   sequence:
   - service: shell_command.git_run
+brightness_low:
+  alias: Brightness Low
+  sequence:
+  - data:
+      brightness_pct: 1
+    entity_id: light.hallen
+    service: light.turn_on
+  - data:
+      brightness_pct: 1
+    entity_id: light.vardagsrummet
+    service: light.turn_on
+  - data:
+      brightness_pct: 1
+    entity_id: light.koket
+    service: light.turn_on
+  - data:
+      brightness_pct: 1
+    entity_id: light.koksbordet
+    service: light.turn_on
+  - data:
+      brightness_pct: 1
+    entity_id: light.sovrummet
+    service: light.turn_on
