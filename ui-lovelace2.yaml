@@ -23,7 +23,11 @@ resources:
     url: /community_plugin/lovelace-layout-card/layout-card.js
 title: Toker
 views:
-  - badges: []
+  - title: Home
+    path: home
+    icon: 'mdi:home'
+    panel: true
+    badges: []
     cards:
       - cards:
           - backdrop: null
@@ -540,10 +544,6 @@ views:
             type: entities
         layout: horizontal
         type: 'custom:layout-card'
-    icon: 'mdi:home'
-    panel: true
-    path: home
-    title: Home
   - badges: []
     cards:
       - aspect_ratio: 0%
