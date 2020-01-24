@@ -18,3 +18,4 @@ logs:
   homeassistant.components.mqtt: error
   homeassistant.components.light: error
   homeassistant.components.google_assistant: critical
+  homeassistant.components.shell_command: debug
