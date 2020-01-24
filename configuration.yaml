@@ -67,7 +67,7 @@ scene:
   !include scenes.yaml
 
 shell_command:
-  touch: 'git'
+  git_run: '. git.sh'
 
 switch: 
   - !include configurations/switch/broadlink.yaml
