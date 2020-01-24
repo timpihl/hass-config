@@ -25,7 +25,7 @@ fan:
   - !include configurations/xiaomi.yaml
 
 frontend: 
-  !include configurations/frontend.yaml
+  themes: !include_dir_merge_named ../themes/
 
 google_assistant: 
   !include configurations/google_assistant.yaml
@@ -49,6 +49,9 @@ logbook:
 
 logger: 
   !include configurations/logger.yaml
+
+lovelace:
+  mode: yaml
 
 media_player: 
   - !include configurations/spotify.yaml
@@ -82,6 +85,8 @@ tts:
 
 updater: 
   !include configurations/updater.yaml
+
+
 
 ### Standard default_config
 # automation
