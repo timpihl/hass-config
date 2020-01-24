@@ -1,18 +1,591 @@
-resources: 
-  !include lovelace/resources.yaml
-
-custom_header: 
-  !include lovelace/custom_header.yaml
-
-title: Toker Home
-background: var(--background-image)
-
+custom_header:
+  chevrons: false
+  compact_mode: true
+  editor_warnings: false
+  footer_mode: true
+  header_css: 'padding: 5px;'
+resources:
+  - type: module
+    url: /community_plugin/button-card/button-card.js
+  - type: module
+    url: /community_plugin/custom-header/custom-header.js
+  - type: module
+    url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+  - type: module
+    url: /community_plugin/simple-weather-card/simple-weather-card-bundle.js
+  - type: module
+    url: /community_plugin/lovelace-card-mod/card-mod.js
+  - type: module
+    url: /community_plugin/lovelace-card-tools/card-tools.js
+  - type: module
+    url: /community_plugin/lovelace-fold-entity-row/fold-entity-row.js
+  - type: module
+    url: /community_plugin/lovelace-layout-card/layout-card.js
+title: Toker
 views:
-
-  - !include lovelace/home.yaml
-
-  - !include lovelace/tablet.yaml
-
-  - !include lovelace/trafic.yaml
-
-  - !include lovelace/media.yaml
+  - title: Home
+    path: home
+    icon: 'mdi:home'
+    panel: true
+    badges: []
+    cards:
+      - cards:
+          - backdrop: null
+            entity: weather.toker_home
+            name: at Toker Home
+            type: 'custom:simple-weather-card'
+          - artwork: cover
+            entity: media_player.ultra
+            hide:
+              power_state: false
+              source: false
+              volume: true
+            icon: 'mdi:google-chrome'
+            source: icon
+            type: 'custom:mini-media-player'
+          - cards:
+              - aspect_ratio: 1/1
+                color_type: icon
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:power-standby'
+                name: Toker Tv Switch
+                show_name: false
+                show_state: false
+                size: 30px
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr
+                  icon: null
+                  img_cell:
+                    - align-self: center
+                    - text-align: center
+                    - justify-self: center
+                    - height: 25px
+                    - width: 25px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: switch.turn_off
+                  service_data:
+                    entity_id: switch.tv_power
+                type: 'custom:button-card'
+              - aspect_ratio: 1/1
+                color_type: icon
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:volume-off'
+                name: Volume Mute
+                show_name: false
+                show_state: false
+                size: 30px
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr
+                  icon: null
+                  img_cell:
+                    - align-self: center
+                    - text-align: center
+                    - justify-self: center
+                    - height: 30px
+                    - width: 30px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: switch.turn_off
+                  service_data:
+                    entity_id: switch.stereo_mute
+                type: 'custom:button-card'
+              - aspect_ratio: 1/1
+                color_type: icon
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:volume-minus'
+                name: Volume Down
+                show_name: false
+                show_state: false
+                size: 30px
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr
+                  icon: null
+                  img_cell:
+                    - align-self: center
+                    - text-align: center
+                    - justify-self: center
+                    - height: 30px
+                    - width: 30px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: switch.turn_off
+                  service_data:
+                    entity_id: switch.soundbar_vol_down
+                type: 'custom:button-card'
+              - aspect_ratio: 1/1
+                color_type: icon
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:volume-plus'
+                name: Volume Up
+                show_name: false
+                show_state: false
+                size: 30px
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr
+                  icon: null
+                  img_cell:
+                    - align-self: center
+                    - text-align: center
+                    - justify-self: center
+                    - height: 30px
+                    - width: 30px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: switch.turn_off
+                  service_data:
+                    entity_id: switch.soundbar_vol_up
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - aspect_ratio: 1/1
+                double_tap_action:
+                  action: toggle
+                  haptic: heavy
+                entity: lock.glue
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                name: Glue
+                show_name: true
+                show_state: true
+                size: 25px
+                state:
+                  - styles:
+                      card:
+                        - filter: opacity(50%)
+                      icon:
+                        - filter: grayscale(100%)
+                    value: locked
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i" "n" "s"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr min-content min-content
+                  img_cell:
+                    - align-self: start
+                    - text-align: start
+                    - justify-self: start
+                    - padding-left: 10px
+                    - height: 25px
+                    - width: 25px
+                  name:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-weight: bold
+                    - font-size: 12px
+                  state:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-size: 12px
+                tap_action:
+                  action: toggle
+                  haptic: heavy
+                type: 'custom:button-card'
+              - color_type: blank-card
+                type: 'custom:button-card'
+              - color_type: blank-card
+                type: 'custom:button-card'
+              - color_type: blank-card
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - aspect_ratio: 1/1
+                double_tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.hallen
+                entity: light.hallen
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:hanger'
+                name: Hallen
+                show_name: true
+                show_state: true
+                size: 25px
+                state:
+                  - styles:
+                      card:
+                        - filter: opacity(50%)
+                      icon:
+                        - filter: grayscale(100%)
+                    value: 'off'
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i" "n" "s"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr min-content min-content
+                  img_cell:
+                    - align-self: start
+                    - text-align: start
+                    - justify-self: start
+                    - padding-left: 10px
+                    - height: 25px
+                    - width: 25px
+                  name:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-weight: bold
+                    - font-size: 12px
+                  state:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-size: 12px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.hallen
+                type: 'custom:button-card'
+              - aspect_ratio: 1/1
+                double_tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.koket
+                entity: light.koket
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:food'
+                name: Köket
+                show_name: true
+                show_state: true
+                size: 25px
+                state:
+                  - styles:
+                      card:
+                        - filter: opacity(50%)
+                      icon:
+                        - filter: grayscale(100%)
+                    value: 'off'
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i" "n" "s"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr min-content min-content
+                  img_cell:
+                    - align-self: start
+                    - text-align: start
+                    - justify-self: start
+                    - padding-left: 10px
+                    - height: 25px
+                    - width: 25px
+                  name:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-weight: bold
+                    - font-size: 12px
+                  state:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-size: 12px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.koket
+                type: 'custom:button-card'
+              - aspect_ratio: 1/1
+                double_tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.vardagsrummet
+                entity: light.vardagsrummet
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:youtube-tv'
+                name: Loungé
+                show_name: true
+                show_state: true
+                size: 25px
+                state:
+                  - styles:
+                      card:
+                        - filter: opacity(50%)
+                      icon:
+                        - filter: grayscale(100%)
+                    value: 'off'
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i" "n" "s"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr min-content min-content
+                  img_cell:
+                    - align-self: start
+                    - text-align: start
+                    - justify-self: start
+                    - padding-left: 10px
+                    - height: 25px
+                    - width: 25px
+                  name:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-weight: bold
+                    - font-size: 12px
+                  state:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-size: 12px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.vardagsrummet
+                type: 'custom:button-card'
+              - aspect_ratio: 1/1
+                double_tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.sovrummet
+                entity: light.sovrummet
+                hold_action:
+                  action: more-info
+                  haptic: heavy
+                icon: 'mdi:hotel'
+                name: Sovrum
+                show_name: true
+                show_state: true
+                size: 25px
+                state:
+                  - styles:
+                      card:
+                        - filter: opacity(50%)
+                      icon:
+                        - filter: grayscale(100%)
+                    value: 'off'
+                styles:
+                  card:
+                    - padding: 5px
+                  grid:
+                    - grid-template-areas: '"i" "n" "s"'
+                    - grid-template-columns: 1fr
+                    - grid-template-rows: 1fr min-content min-content
+                  img_cell:
+                    - align-self: start
+                    - text-align: start
+                    - justify-self: start
+                    - padding-left: 10px
+                    - height: 25px
+                    - width: 25px
+                  name:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-weight: bold
+                    - font-size: 12px
+                  state:
+                    - justify-self: start
+                    - padding-left: 10px
+                    - font-size: 12px
+                tap_action:
+                  action: call-service
+                  haptic: heavy
+                  service: |
+                    [[[
+                      if (entity.state == 'on') return 'light.turn_off';
+                      if (entity.state == 'off') return 'light.turn_on';
+                    ]]]
+                  service_data:
+                    entity_id: light.sovrummet
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - entities:
+              - entities:
+                  - light.hallen_a
+                  - light.hallen_b
+                  - light.hallen_c
+                group_config:
+                  secondary_info: last-changed
+                head:
+                  entity: light.hallen
+                  icon: 'mdi:hanger'
+                  label: Hallen
+                padding: 0
+                type: 'custom:fold-entity-row'
+              - entities:
+                  - light.spot_a
+                  - light.spot_b
+                  - light.spot_c
+                  - light.flakt_a
+                  - light.flakt_b
+                  - light.koksbanken
+                  - light.koksbordet
+                  - light.koksfonstret
+                group_config:
+                  secondary_info: last-changed
+                head:
+                  entity: light.koket
+                  icon: 'mdi:food'
+                  label: Köket
+                padding: 0
+                type: 'custom:fold-entity-row'
+              - entities:
+                  - light.filament_a
+                  - light.filament_b
+                  - light.filament_c
+                group_config:
+                  secondary_info: last-changed
+                head:
+                  entity: light.koksbordet
+                  icon: 'mdi:table-chair'
+                  label: Köksbordet
+                padding: 0
+                type: 'custom:fold-entity-row'
+              - entities:
+                  - light.glas_a
+                  - light.glas_b
+                  - light.glas_c
+                  - light.top_a
+                  - light.top_b
+                  - light.top_c
+                  - light.vardagsrumsfonstret
+                  - light.spots_tv
+                group_config:
+                  secondary_info: last-changed
+                head:
+                  entity: light.vardagsrummet
+                  icon: 'mdi:youtube-tv'
+                  label: Vardagsrummet
+                padding: 0
+                type: 'custom:fold-entity-row'
+              - entities:
+                  - light.sanglampa_k
+                  - light.sanglampa_t
+                  - light.strip
+                group_config:
+                  secondary_info: last-changed
+                head:
+                  entity: light.sovrummet
+                  icon: 'mdi:hotel'
+                  label: Sovrummet
+                padding: 0
+                type: 'custom:fold-entity-row'
+            show_header_toggle: false
+            type: entities
+        layout: horizontal
+        type: 'custom:layout-card'
+  - title: Camera
+    path: camera
+    icon: 'mdi:camera'
+    badges: []
+    cards:
+      - aspect_ratio: 0%
+        camera_image: camera.pcm
+        camera_view: live
+        entities:
+          - entity: light.hallen
+            icon: 'mdi:hanger'
+          - entity: light.koket
+            icon: 'mdi:food'
+          - entity: light.koksbordet
+            icon: 'mdi:table-chair'
+        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+        tap_action:
+          action: toggle
+        title: Köket
+        type: picture-glance
+      - aspect_ratio: 80%
+        camera_image: camera.sveavagen_norr
+        entities: []
+        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+        type: picture-glance
+      - aspect_ratio: 80%
+        camera_image: camera.sveavagen_soder
+        entities: []
+        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+        type: picture-glance
+      - aspect_ratio: 80%
+        camera_image: camera.mot_bromma
+        entities: []
+        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+        type: picture-glance
+      - aspect_ratio: 80%
+        camera_image: camera.fran_bromma
+        entities: []
+        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+        type: picture-glance
+  - badges: []
+    cards: []
+    icon: 'mdi:dev-to'
+    path: dev
+    title: Dev
