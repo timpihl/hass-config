@@ -67,9 +67,7 @@ scene:
   !include scenes.yaml
 
 shell_command:
-  touch: 'touch ./restart.txt'
-  touch2: touch restart2.txt
-  touch3: 'touch restart3.txt'
+  touch: 'git'
 
 switch: 
   - !include configurations/switch/broadlink.yaml
