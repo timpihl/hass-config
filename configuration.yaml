@@ -9,17 +9,12 @@ automation:
   !include automations.yaml
 
 binary_sensor: 
-#  - !include configurations/binary_sensor/xiaomi.yaml
-#  - !include configurations/binary_sensor/broadlink.yaml
 
 camera: 
   !include configurations/camera.yaml
 
 cloudflare:
   !include configurations/cloudflare.yaml
-
-#device_tracker: 
-#  - !include configurations/device_tracker.yaml
 
 discovery: 
   !include configurations/discovery.yaml
@@ -44,9 +39,6 @@ http:
 ifttt: 
   !include configurations/ifttt.yaml
 
-#input_select:
-#  !include configurations/input_select.yaml
-
 lock:
   - !include configurations/lock.yaml
 
@@ -55,9 +47,6 @@ logbook:
 
 logger: 
   !include configurations/logger.yaml
-
-#lovelace: 
-#  !include configurations/lovelace.yaml
 
 media_player: 
   - !include configurations/spotify.yaml
@@ -73,14 +62,14 @@ script:
 
 sensor:
   !include configurations/sensor/glue.yaml
-#  - !include configurations/sensor/websocket.yaml
 
 scene: 
   !include scenes.yaml
 
 shell_command:
-  touch: 'touch /restart.txt'
-#  !include_dir_merge_named configurations/shell/
+  touch: 'touch ./restart.txt'
+  touch2: touch restart2.txt
+  touch3: 'touch restart3.txt'
 
 switch: 
   - !include configurations/switch/broadlink.yaml
