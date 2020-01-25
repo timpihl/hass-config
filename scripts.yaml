@@ -43,8 +43,7 @@
 '7':
   alias: 7 - Update iCloud states
   sequence:
-  - data:
-      account: tim@pihl-consulting.se
+  - data: {}
     service: icloud.update
 '8':
   alias: 8 - Glue Script

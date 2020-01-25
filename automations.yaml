@@ -82,11 +82,9 @@
     - condition: state
       entity_id: device_tracker.google_maps_106326879474919188136
       state: not_home
-    - condition: device
-      device_id: fb4923dcf6db46ff8cc6b1b6cbcb1aa0
-      domain: device_tracker
-      entity_id: device_tracker.icloud
-      type: is_not_home
+    - condition: state
+      entity_id: device_tracker.ios
+      state: not_home
   action:
   - data:
       message: I'm all alone, turning down the lights.
