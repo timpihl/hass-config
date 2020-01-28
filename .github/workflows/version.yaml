@@ -2,13 +2,15 @@ name: version
 on: [push]
 
 jobs:
-  Version-check:
+  version:
+
     runs-on: ubuntu-latest
-    name: Bump version
+    name: version
     steps:
-    - name: Bump version
+
+    - name: version
       uses: remorses/bump-version@js
       with:
         version_file: ./VERSION
       env:
-        GITHUB_TOKEN: {{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
