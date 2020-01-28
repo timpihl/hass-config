@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Generate version file
-      uses: vinodhraj/Bump-N-Tag-Version@latest
+      uses: vinodhraj/Bump-N-Tag-Version@v1.0.1
       with:
         # Name of the version file
         file_name: version
