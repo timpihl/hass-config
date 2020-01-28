@@ -1,17 +1,13 @@
-name: App Version Actions
+name: version actions
 on: [push]
 
 jobs:
-  version-check:
+  build:
     runs-on: ubuntu-latest
-    name: bump version
     steps:
     - uses: actions/checkout@master
-    - name: increment version
-      id: version   
-      uses: vinodhraj/Bump-N-Tag-Version@master
-      with:
-        file_name: './VERSION'
-        tag_version: "true"
+    - name: bump version and tag
+      uses: wiktorj/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: true
