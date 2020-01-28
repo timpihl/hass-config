@@ -1,5 +1,5 @@
 name: App Version Actions
-on: [push]  # Recommended to use either of one event
+on: [push]  # Recommended to use either of one 
 
 jobs:
   Version-check:
