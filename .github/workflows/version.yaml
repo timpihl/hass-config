@@ -1,16 +1,15 @@
-name: version
-on: [push]
-
+name: bump version
+on:
+  push:
+    branches:
+      - master
 jobs:
-  version:
-
+  build:
     runs-on: ubuntu-latest
-    name: version
     steps:
-
-    - name: version
-      uses: remorses/bump-version@js
-      with:
-        version_file: VERSION
+    - uses: actions/checkout@master
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: true
