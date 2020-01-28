@@ -30,5 +30,5 @@ Windows Server 2019
 ```
 #### VM: 
 ```sh
-Ubuntu 19.10
+2 x Ubuntu 19.10
 ```
