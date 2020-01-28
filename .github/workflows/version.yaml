@@ -11,7 +11,7 @@ jobs:
       id: version   
       uses: vinodhraj/Bump-N-Tag-Version@master
       with:
-        file_name: version
+        file_name: ./version
         tag_version: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
