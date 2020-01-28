@@ -1,9 +1,10 @@
 # hass-config
 > Hassio / Home Assistant configuration for ToKer Home
 
-[![Build Status](https://travis-ci.com/timpihl/hass-config.svg?branch=master)](https://travis-ci.com/timpihl/hass-config)
-[![Action Status](https://github.com/timpihl/hass-config/workflows/yamllint/badge.svg)](https://github.com/timpihl/hass-config/actions)
-[![Action Status](https://github.com/timpihl/hass-config/workflows/python/badge.svg)](https://github.com/timpihl/hass-config/actions)
+![GitHub language count](https://img.shields.io/github/languages/count/timpihl/hass-config?color=ff558f&style=for-the-badge)
+![Travis (.org)](https://img.shields.io/travis/timpihl/hass-config?color=ff558f&label=travis-ci&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/timpihl/hass-config/yamllint?color=ff558f&label=yamllint&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/timpihl/hass-config/python?color=ff558f&label=python&style=for-the-badge)
 
 ## ToKer
 
