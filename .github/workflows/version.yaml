@@ -1,17 +1,17 @@
-name: Generate version file
-
+name: App Version Actions
 on: [push]
 
 jobs:
-  build:
-
+  Version-check:
     runs-on: ubuntu-latest
-
+    name: Bump-N-Tag Version
     steps:
-    - name: Generate version file
-      uses: vinodhraj/Bump-N-Tag-Version@v1.0.1
+    - uses: actions/checkout@master
+    - name: Increment version
+      id: version   
+      uses: vinodhraj/Bump-N-Tag-Version@master
       with:
-        # Name of the version file
-        file_name: version
-        # States whether to create tag for this version or not
-        tag_version: false
+        file_name: './VERSION'
+        tag_version: "true"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
