@@ -1,17 +1,14 @@
-name: App Version Actions
-on: [push]  # Recommended to use either of one 
+name: version
+on: [push]
 
 jobs:
   Version-check:
     runs-on: ubuntu-latest
-    name: Bump-N-Tag Version
+    name: Bump version
     steps:
-    - uses: actions/checkout@master
-    - name: Increment version
-      id: version   
-      uses: vinodhraj/Bump-N-Tag-Version@master
+    - name: Bump version
+      uses: remorses/bump-version@js
       with:
-        file_name: './VERSION'
-        tag_version: "true"
+        version_file: ./VERSION
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: {{ secrets.GITHUB_TOKEN }}
