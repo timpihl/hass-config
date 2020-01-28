@@ -15,7 +15,7 @@ jobs:
               with:
                   versionSpec: '5.1.x'
             - name: Use GitVersion
-              id: gitversion 0.1.0
+              id: v
               uses: gittools/actions/gitversion/execute@v0.6.1
             - run: |
                 echo "Major: ${{ steps.gitversion.outputs.major }}"
