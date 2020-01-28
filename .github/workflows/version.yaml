@@ -1,10 +1,10 @@
-name: Versioning
+name: version
 on: [push]
 
 jobs:
   Version-check:
     runs-on: ubuntu-latest
-    name: versioning
+    name: version
     steps:
     - uses: actions/checkout@master
     - name: Increment version
@@ -12,6 +12,6 @@ jobs:
       uses: vinodhraj/Bump-N-Tag-Version@master
       with:
         file_name: './VERSION'
-        tag_version: "true"
+        tag_version: "false"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
