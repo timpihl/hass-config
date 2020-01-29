@@ -20,9 +20,9 @@ jobs:
         WITH_V: true
         DEFAULT_BUMP: patch
 
-    - name: push to release
-      uses: "marvinpinto/action-automatic-releases@latest"
+    - name: add latest tag
+      uses: EndBug/latest-tag@latest
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        prerelease: false
-        
+        description: Latest released tag or release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
