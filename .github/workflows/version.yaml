@@ -22,6 +22,6 @@ jobs:
     - name: push to release
       uses: rymndhng/release-on-push-action@master 
       with:
-        strategy: minor
+        strategy: patch
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
