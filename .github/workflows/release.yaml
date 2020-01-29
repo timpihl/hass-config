@@ -1,15 +1,15 @@
 #
 # Creates release.
 
-name: releases
+name: release
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - master
 
 jobs:
   build:
-    name: releases
+    name: release
     runs-on: ubuntu-latest
     steps:
 
