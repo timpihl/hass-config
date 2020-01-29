@@ -3,8 +3,15 @@
 
 name: release
 on:
-  tags:
-    create
+  push:
+    branches:
+      - 'tags/**'
+    tags:
+      - '*'
+    release:
+      types:
+        - created
+        - published
 
 jobs:
   build:
