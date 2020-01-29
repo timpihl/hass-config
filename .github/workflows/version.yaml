@@ -10,17 +10,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: update version and tag
+
     - uses: actions/checkout@master
+    - name: update version and tag
       uses: anothrNick/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
         DEFAULT_BUMP: patch
-
-    - name: push to release
     - uses: rymndhng/release-on-push-action@master
+    - name: push to release
       with:
         strategy: minor
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
