@@ -18,8 +18,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
         DEFAULT_BUMP: patch
-    - uses: rymndhng/release-on-push-action@master
+
     - name: push to release
+      uses: rymndhng/release-on-push-action@master 
       with:
         strategy: minor
       env:
