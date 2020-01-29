@@ -6,7 +6,9 @@
   on:
     push:
       tags:
-        - "v*"
+        - "v**"
+        - "**"
+        - "*"
   
   jobs:
     tagged-release:
