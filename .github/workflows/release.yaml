@@ -4,10 +4,14 @@
 name: release
 on:
   push:
+    release:
+      types:
+        - created
     tags:
       - 'v*.*.*'
       - 'v*.*'
       - 'v*'
+      - '*'
 
 jobs:
   build:
