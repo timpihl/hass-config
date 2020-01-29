@@ -1,7 +1,7 @@
 #
 # Creates release.
 
-name: release
+name: releases
 on:
   push:
     tags:
@@ -9,14 +9,14 @@ on:
 
 jobs:
   build:
-    name: Create Release
+    name: releases
     runs-on: ubuntu-latest
     steps:
 
-      - name: Checkout code
+      - name: checkout
         uses: actions/checkout@master
 
-      - name: Create Release
+      - name: create release
         id: create_release
         uses: actions/create-release@v1
         env:
