@@ -21,8 +21,7 @@ jobs:
         DEFAULT_BUMP: patch
 
     - name: push to release
-      uses: rymndhng/release-on-push-action@master 
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        strategy: patch
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
