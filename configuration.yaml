@@ -186,9 +186,6 @@ sensor:
 scene: 
   !include scenes.yaml
 
-service:
-  !include services.yaml
-
 shell_command:
   git_run: '. git.sh'
 
