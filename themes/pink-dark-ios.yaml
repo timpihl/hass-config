@@ -79,7 +79,8 @@ pink-dark-ios:
   mini-media-player-artwork-opacity: "0.7"
 
   # Custom Toker
-  background-image: "center / cover no-repeat fixed url('/local/images/homekit-bg-4.jpeg')"
+  lovelace-background: "center / cover no-repeat fixed url('/local/images/background-tiny.jpeg')"
+  background-image: "center / cover no-repeat fixed url('/local/images/background-tiny.jpeg')"
   white: "#FFFFFF"
   black: "#000000"
   pink: "#FF558F"
