@@ -141,3 +141,14 @@ brightness_low:
       brightness_pct: 1
     entity_id: light.sovrummet
     service: light.turn_on
+'1580216769505':
+  alias: Coming home
+  sequence:
+  - data:
+      brightness: 255
+      entity_id: light.hallen, light.koket, light.sovrummet, light.vardagsrummet
+      rgb_color:
+      - 255
+      - 255
+      - 255
+    service: light.turn_on

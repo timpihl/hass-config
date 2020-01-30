@@ -207,7 +207,7 @@ telegram_bot:
 tts:
   - platform: google_translate
     cache: true
-    cache_dir: /configurations/tts
+    cache_dir: configurations/tts
     time_memory: 57600
     base_url: !secret http_url
     service_name: google_say

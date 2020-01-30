@@ -112,3 +112,25 @@
   action:
   - entity_id: light.badrummet
     service: script.toggle_badrummet
+- id: '1580238054185'
+  alias: ToKer Home
+  description: ''
+  trigger:
+  - entity_id: person.tim
+    event: enter
+    platform: zone
+    zone: zone.home
+  - entity_id: device_tracker.ios
+    event: enter
+    platform: zone
+    zone: zone.home
+  - entity_id: device_tracker.google_maps_106326879474919188136
+    event: enter
+    platform: zone
+    zone: zone.home
+  condition:
+  - condition: state
+    entity_id: device_tracker.google_maps_106326879474919188136
+    state: not_home
+  action:
+  - service: script.1580216769505
