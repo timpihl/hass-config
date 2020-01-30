@@ -146,11 +146,11 @@ lovelace:
   mode: yaml
 
 media_player: 
-  - platform: spotify
-    client_id: !secret spotify_client_id
-    client_secret: !secret spotify_client_secret
-    aliases:
-      3c7c8aa9fbaa85fa3c721c8ff75793a8d9aad326: iOS
+#  - platform: spotify
+#    client_id: !secret spotify_client_id
+#    client_secret: !secret spotify_client_secret
+#    aliases:
+#      3c7c8aa9fbaa85fa3c721c8ff75793a8d9aad326: iOS
 #  - !include configurations/spotify.yaml
 
 notify: 
