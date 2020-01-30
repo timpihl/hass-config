@@ -2,7 +2,7 @@ custom_header:
   chevrons: false
   compact_mode: true
   editor_warnings: false
-  footer_mode: true
+  footer_mode: false
   header_css: 'padding: 5px;'
 resources:
   - type: module
@@ -26,6 +26,7 @@ resources:
   - type: module
     url: /community_plugin/popup-backdrop-filter.js
 title: Toker
+background: "center / cover no-repeat fixed url('/local/images/background-tiny.jpeg')"
 views:
   - title: Home
     path: home
