@@ -8,16 +8,13 @@ stream:
 shopping_list:
 websocket_api:
 
-automation: 
-  !include automations.yaml
+automation: !include automations.yaml
 
 binary_sensor: 
 
-camera: 
-  !include configurations/camera.yaml
+camera: !include configurations/camera.yaml
 
-cloudflare:
-  !include configurations/cloudflare.yaml
+cloudflare: !include configurations/cloudflare.yaml
 
 discovery: 
   ignore:

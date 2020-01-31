@@ -112,7 +112,7 @@
   action:
   - entity_id: light.badrummet
     service: script.toggle_badrummet
-- id: '1580238054185'
+- id: 'ToKer-Alone'
   alias: ToKer Home
   description: ''
   trigger:
