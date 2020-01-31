@@ -1,0 +1,5 @@
+- platform: xiaomi_miio
+  host: 192.168.10.7
+  token: !secret xiaomi_token
+  model: zhimi.airpurifier.mc1
+  name:  Xiaomi Air Purifier 2S

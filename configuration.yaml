@@ -16,196 +16,50 @@ camera: !include configurations/camera.yaml
 
 cloudflare: !include configurations/cloudflare.yaml
 
-discovery: 
-  ignore:
-    - igd
-    - netgear_router
-#  !include configurations/discovery.yaml
+discovery: !include configurations/discovery.yaml
 
-device_tracker:
-  - platform: google_maps
-    username: !secret email
-#  - !include configurations/google_maps.yaml
+device_tracker: !include configurations/device_tracker.yaml
 
-fan:
-  - platform: xiaomi_miio
-    host: 192.168.10.7
-    token: !secret xiaomi_token
-    model: zhimi.airpurifier.mc1
-    name:  Xiaomi Air Purifier 2S
-#  - !include configurations/xiaomi.yaml
+fan: !include configurations/fan.yaml
 
-frontend: 
-  themes: !include_dir_merge_named themes/
+frontend: !include configurations/frontend.yaml
 
-google_assistant: 
-  project_id: toker-home
-  service_account: !secret google_assistant
-  report_state: true
-  secure_devices_pin: "6046"
-  exposed_domains:
-    - light
-    - lock
-#  !include configurations/google_assistant.yaml
+google_assistant: !include configurations/google_assistant.yaml
 
 group: !include groups.yaml
 
-history: 
-  use_include_order: true
-  include:
-    domains:
-      - lock
-      - media_player
-      - light
-      - person
-      - fan
-  exclude:
-    domains:
-      - switch
-      - mobile_app
-      - camera
-      - automation
-      - binary_sensor
-      - sensor
-#  !include configurations/history.yaml
+history: !include configurations/history.yaml
 
-http: 
-  base_url: !secret http_url
-  trusted_proxies: 192.168.10.30
-  use_x_forwarded_for: true
-  login_attempts_threshold: 5
+http: !include configurations/http.yaml
 
-ifttt: 
-  key: !secret ifttt_key
-#  !include configurations/ifttt.yaml
+ifttt: !include configurations/ifttt.yaml
 
-lock:
-  - platform: template
-    name: Glue
-    value_template: >-
-      {% if is_state('sensor.glue', 'locked') %}
-        locked
-      {% elif is_state('sensor.glue', 'unlocked') %}
-        unlocked
-      {% endif %}
-    #optimistic: true
-    lock:
-      service: script.turn_on
-      entity_id: script.6
-    unlock:
-      service: script.turn_on
-      entity_id: script.5
-#  - !include configurations/lock.yaml
+lock: !include configurations/lock.yaml
 
-logbook: 
-  exclude:
-    entities:
-      - automation.cloudflare_dns_update
-    domains:
-      - sun
-      - script
-      - automation
-      - switch
-      - mobile_app
-      - camera
-      - automation
-      - sensor
-      - binary_sensor
-      - input_select
-      - device_tracker
-#  !include configurations/logbook.yaml
+logbook: !include configurations/logbook.yaml
 
-logger: 
-  default: warning
-  logs:
-    custom_components.hacs: debug
-    homeassistant.components.homekit_controller: debug
-    homeassistant.components.python_script: debug
-    homeassistant.components.core: debug
-    homeassistant.components.camera: debug
-    homeassistant.components.stream: debug
-    homeassistant.components.info: debug
-    homeassistant.components.updater: debug
-    homeassistant.components.automation: info
-    homeassistant.components.notify: info
-    homeassistant.components.recorder: debug
-    homeassistant.components.script: error
-    homeassistant.components.sensor: error
-    homeassistant.components.binary_sensor: info
-    homeassistant.components.switch: error
-    homeassistant.components.mqtt: error
-    homeassistant.components.light: error
-    homeassistant.components.google_assistant: critical
-    homeassistant.components.shell_command: debug
-#  !include configurations/logger.yaml
+logger: !include configurations/logger.yaml
 
-lovelace:
-  mode: yaml
+lovelace: !include configurations/lovelace.yaml
 
-media_player: 
-#  - platform: spotify
-#    client_id: !secret spotify_client_id
-#    client_secret: !secret spotify_client_secret
-#    aliases:
-#      3c7c8aa9fbaa85fa3c721c8ff75793a8d9aad326: iOS
-#  - !include configurations/spotify.yaml
+media_player: !include configurations/media_player.yaml
 
-notify: 
-  - platform: html5
-    name: Toker
-    vapid_pub_key: !secret vapid_pub_key
-    vapid_prv_key: !secret vapid_prv_key
-    vapid_email: !secret vapid_email
-#  - !include configurations/notify.yaml
+notify: !include configurations/notify.yaml
 
-recorder: 
-  purge_keep_days: 3
-  purge_interval: 0
-  db_url: !secret postgresql_url
-#  !include configurations/recorder.yaml
+recorder: !include configurations/recorder.yaml
 
-script: 
-  !include scripts.yaml
+script: !include scripts.yaml
 
-sensor:
-  - platform: template
-    sensors:
-      glue:
-        value_template: >-
-          {% if is_state("sensor.glue", "locked") %}
-            locked
-          {% else %}
-            unlocked
-          {% endif %}
-        friendly_name: 'Glue'
-#  !include configurations/sensor/glue.yaml
+sensor: !include configurations/sensor/glue.yaml
 
-scene: 
-  !include scenes.yaml
+scene: !include scenes.yaml
 
-shell_command:
-  git_run: '. git.sh'
+shell_command: !include configurations/shell_command.yaml
 
-switch: 
-  - !include configurations/switch/broadlink.yaml
+switch: !include configurations/switch.yaml
 
-telegram_bot: 
-  - platform: webhooks
-    url: !secret http_url
-    api_key: !secret telegram_api_key
-    parse_mode: html
-    allowed_chat_ids:
-      - 513520896
-#  - !include configurations/telegram.yaml
+telegram_bot: !include configurations/telegram.yaml
 
-tts:
-  - platform: google_translate
-    cache: true
-    cache_dir: configurations/tts
-    time_memory: 57600
-    base_url: !secret http_url
-    service_name: google_say
-#   - !include configurations/google_tts.yaml
+tts: !include configurations/tts.yaml
 
-updater: 
-  !include configurations/updater.yaml
+updater: !include configurations/updater.yaml

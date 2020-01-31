@@ -1,6 +1,6 @@
-platform: webhooks
-url: !secret http_url
-api_key: !secret telegram_api_key
-parse_mode: html
-allowed_chat_ids:
-  - 513520896
+- platform: webhooks
+  url: !secret http_url
+  api_key: !secret telegram_api_key
+  parse_mode: html
+  allowed_chat_ids:
+    - 513520896

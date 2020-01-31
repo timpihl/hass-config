@@ -1,4 +1,3 @@
 ignore:
-- igd
-- netgear_router
-
+  - igd
+  - netgear_router
