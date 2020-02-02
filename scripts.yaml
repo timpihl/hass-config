@@ -55,14 +55,6 @@
       qos: 2
       topic: /NodeRed/Glue
     service: mqtt.publish
-dark_teal:
-  alias: 0 - Dark Teal
-  sequence:
-  - data: {}
-    service: frontend.reload_themes
-  - data:
-      name: dark_teal
-    service: frontend.set_theme
 pink_dark_ios:
   alias: 0 - Pink Dark iOS
   sequence:
@@ -78,13 +70,6 @@ clear:
   - data:
       name: clear
     service: frontend.set_theme
-sundown:
-  alias: 0 - Sundown
-  sequence:
-  - service: frontend.reload_themes
-  - data:
-      name: sundown
-    service: frontend.set_theme
 google_dark_theme:
   alias: 0 - Google Dark Theme
   sequence:
@@ -96,18 +81,6 @@ ux_goodie:
   sequence:
   - data:
       name: ux_goodie
-    service: frontend.set_theme
-amoled_blue:
-  alias: 0 - AMOLED Blue
-  sequence:
-  - data:
-      name: AMOLED Blue
-    service: frontend.set_theme
-material_dark_pink:
-  alias: 0 - Material Dark Pink
-  sequence:
-  - data:
-      name: material_dark_pink
     service: frontend.set_theme
 toggle_badrummet:
   alias: Toggle Badrummet
