@@ -116,4 +116,4 @@
       entity_id: device_tracker.google_maps_106326879474919188136
       state: not_home
   action:
-    - service: script.1580216769505
+  - service: script.1580216769505
