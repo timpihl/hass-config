@@ -39,7 +39,7 @@
       notification_id: http_login
     service: persistent_notification.dismiss
 - id: '5'
-  alias: 5 - Kรถket turn on Kรถksbordet
+  alias: 5 - Köket On
   description: ''
   trigger:
     - entity_id: light.koket
@@ -49,7 +49,7 @@
   action:
   - service: script.3
 - id: '6'
-  alias: 6 - Kรถket turn off Kรถksbordet
+  alias: 6 - Köket off
   description: ''
   trigger:
     - entity_id: light.koket
@@ -57,9 +57,8 @@
       to: "off"
   condition: []
   action:
-    - service: script.4
-
-- id: "toker-alone"
+  - service: script.4
+- id: 'toker-alone'
   alias: ToKer Alone
   description: ""
   trigger:
@@ -79,13 +78,12 @@
           entity_id: device_tracker.ios
           state: not_home
   action:
-    - data:
-        message: I'm all alone, turning down the lights.
-        name: ToKer
-      service: logbook.log
-    - service: script.brightness_low
-
-- id: "ios_badrummet"
+  - data:
+      message: I'm all alone, turning down the lights.
+      name: ToKer
+    service: logbook.log
+  - service: script.brightness_low
+- id: 'ios_badrummet'
   alias: iOS Event Badrummet
   description: ""
   trigger:
@@ -95,10 +93,9 @@
       platform: event
   condition: []
   action:
-    - entity_id: light.badrummet
-      service: script.toggle_badrummet
-
-- id: "toker-home"
+  - entity_id: light.badrummet
+    service: script.toggle_badrummet
+- id: 'toker-home'
   alias: ToKer Home
   description: ""
   trigger:
