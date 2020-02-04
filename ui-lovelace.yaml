@@ -25,7 +25,7 @@ resources:
     url: /community_plugin/light-slider-card.js
   - type: module
     url: /community_plugin/popup-backdrop-filter.js
-  - type: js
+  - type: module
     url: /community_plugin/circle-sensor-card/circle-sensor-card.js
   - type: js
     url: /community_plugin/light-entity-card/light-entity-card.js
