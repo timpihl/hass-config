@@ -1,0 +1,9 @@
+#
+# Devices
+#
+devices:
+  91da7a8f-d944b0d2:
+    name: macOS
+  b6de274c-c6bae50f:
+    name: iOS
+  

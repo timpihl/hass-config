@@ -10,7 +10,7 @@ websocket_api:
 
 automation: !include automations.yaml
 binary_sensor:
-browser_mod:
+browser_mod: !include  configurations/browser_mod.yaml
 camera: !include configurations/camera.yaml
 cloudflare: !include configurations/cloudflare.yaml
 device_tracker: !include configurations/device_tracker.yaml

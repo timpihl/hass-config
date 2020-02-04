@@ -13,3 +13,4 @@ exclude:
     - binary_sensor
     - input_select
     - device_tracker
+    - browser_mod
