@@ -2,8 +2,9 @@
 # Groups
 #
 
-koket:
-  name: Köket
+koksbordet:
+  name: Köksbordet
+  icon: mdi:table-chair
   entities: 
     - light.filament_a
     - light.filament_b
