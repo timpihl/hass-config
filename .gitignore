@@ -16,3 +16,4 @@ github-credentials
 google_maps.*
 icloud*
 *.code-workspace
+.vscode

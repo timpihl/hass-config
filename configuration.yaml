@@ -35,3 +35,4 @@ switch: !include configurations/switch.yaml
 telegram_bot: !include configurations/telegram.yaml
 tts: !include configurations/tts.yaml
 updater: !include configurations/updater.yaml
+zone: !include zones.yaml
