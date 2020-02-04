@@ -6,8 +6,8 @@
   icon: mdi:home
 
 - name: Aspia
-  latitude: Aspia_lati
-  longitude: Aspia_long
+  latitude: !secret Aspia_lati
+  longitude: !secret Aspia_long
   radius: 100
   icon: mdi:cash-multiple
 
@@ -24,7 +24,7 @@
   icon: mdi:castle
 
 - name: SachaJuan
-  latitude: Sacha_lati
-  longitude: Sacha_long
+  latitude: !secret Sacha_lati
+  longitude: !secret Sacha_long
   radius: 100
   icon: mdi:content-cut
