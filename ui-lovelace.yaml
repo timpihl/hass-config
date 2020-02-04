@@ -507,7 +507,6 @@ views:
               - entities:
                   - light.filament_a
                   - light.filament_b
-                  - light.filament_c
                 group_config:
                   secondary_info: last-changed
                 head:

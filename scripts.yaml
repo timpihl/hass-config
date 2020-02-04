@@ -40,11 +40,6 @@
       qos: 2
       topic: /NodeRed/Glue
     service: mqtt.publish
-'7':
-  alias: 7 - Update iCloud states
-  sequence:
-  - data: {}
-    service: icloud.update
 '8':
   alias: 8 - Glue Script
   sequence:
