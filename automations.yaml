@@ -6,12 +6,11 @@
       platform: homeassistant
   condition: []
   action:
-    - data:
-        message: Your Hass.io server has restarted โ�ก
-        title: Toker Home
-      service: notify.mobile_app_ios
-
-- id: "auto-theme"
+  - data:
+      message: Your Hass.io server has restarted โ�ก
+      title: Toker Home
+    service: notify.mobile_app_ios
+- id: 'auto-theme'
   alias: Auto theme
   description: ""
   trigger:
@@ -31,29 +30,27 @@
       to: notifying
   condition: []
   action:
-    - data:
-        message: "{{ states.persistent_notification.http_login.attributes.message }}"
-        title: "{{ states.persistent_notification.http_login.attributes.title }}"
-      service: notify.mobile_app_ios
-    - delay: "5"
-    - data:
-        notification_id: http_login
-      service: persistent_notification.dismiss
-
-- id: "5"
-  alias: 5 - Köket On
-  description: ""
+  - data:
+      message: '{{ states.persistent_notification.http_login.attributes.message }}'
+      title: '{{ states.persistent_notification.http_login.attributes.title }}'
+    service: notify.mobile_app_ios
+  - delay: '5'
+  - data:
+      notification_id: http_login
+    service: persistent_notification.dismiss
+- id: '5'
+  alias: 5 - Kรถket turn on Kรถksbordet
+  description: ''
   trigger:
     - entity_id: light.koket
       platform: state
       to: "on"
   condition: []
   action:
-    - service: script.3
-
-- id: "6"
-  alias: 6 - Köket off
-  description: ""
+  - service: script.3
+- id: '6'
+  alias: 6 - Kรถket turn off Kรถksbordet
+  description: ''
   trigger:
     - entity_id: light.koket
       platform: state
