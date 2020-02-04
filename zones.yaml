@@ -17,7 +17,7 @@
   radius: 100
   icon: mdi:auto-fix
 
-- name: Morris Kryp-in
+- name: 'Morris Kryp-in'
   latitude: !secret Morris_lati
   longitude: !secret Morris_long
   radius: 100
