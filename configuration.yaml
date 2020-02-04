@@ -1,4 +1,5 @@
 homeassistant:
+  name: ToKer Home
 
 default_config:
 stream:
