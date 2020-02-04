@@ -1,118 +1,125 @@
-- id: 'notify-on-restart'
+- id: "notify-on-restart"
   alias: Notify on restart
-  description: ''
+  description: ""
   trigger:
-  - event: start
-    platform: homeassistant
+    - event: start
+      platform: homeassistant
   condition: []
   action:
-  - data:
-      message: Your Hass.io server has restarted ���
-      title: Toker Home
-    service: notify.mobile_app_ios
-- id: 'auto-theme'
+    - data:
+        message: Your Hass.io server has restarted โ�ก
+        title: Toker Home
+      service: notify.mobile_app_ios
+
+- id: "auto-theme"
   alias: Auto theme
-  description: ''
+  description: ""
   trigger:
-  - event: start
-    platform: homeassistant
+    - event: start
+      platform: homeassistant
   condition: []
   action:
-  - delay: 00:00:01
-  - service: script.pink_dark_ios
-- id: 'notify-failed-login'
+    - delay: 00:00:01
+    - service: script.pink_dark_ios
+
+- id: "notify-failed-login"
   alias: Notify failed login
-  description: ''
+  description: ""
   trigger:
-  - entity_id: persistent_notification.http_login
-    platform: state
-    to: notifying
+    - entity_id: persistent_notification.http_login
+      platform: state
+      to: notifying
   condition: []
   action:
-  - data:
-      message: '{{ states.persistent_notification.http_login.attributes.message }}'
-      title: '{{ states.persistent_notification.http_login.attributes.title }}'
-    service: notify.mobile_app_ios
-  - delay: '5'
-  - data:
-      notification_id: http_login
-    service: persistent_notification.dismiss
-- id: '5'
-  alias: 5 - Köket turn on Köksbordet
-  description: ''
+    - data:
+        message: "{{ states.persistent_notification.http_login.attributes.message }}"
+        title: "{{ states.persistent_notification.http_login.attributes.title }}"
+      service: notify.mobile_app_ios
+    - delay: "5"
+    - data:
+        notification_id: http_login
+      service: persistent_notification.dismiss
+
+- id: "5"
+  alias: 5 - Köket On
+  description: ""
   trigger:
-  - entity_id: light.koket
-    platform: state
-    to: 'on'
+    - entity_id: light.koket
+      platform: state
+      to: "on"
   condition: []
   action:
-  - service: script.3
-- id: '6'
-  alias: 6 - Köket turn off Köksbordet
-  description: ''
+    - service: script.3
+
+- id: "6"
+  alias: 6 - Köket off
+  description: ""
   trigger:
-  - entity_id: light.koket
-    platform: state
-    to: 'off'
+    - entity_id: light.koket
+      platform: state
+      to: "off"
   condition: []
   action:
-  - service: script.4
-- id: toker-alone
+    - service: script.4
+
+- id: "toker-alone"
   alias: ToKer Alone
-  description: ''
+  description: ""
   trigger:
-  - entity_id: person.kanita
-    platform: state
-    to: not_home
-  - entity_id: person.tim
-    platform: state
-    to: not_home
+    - entity_id: person.kanita
+      platform: state
+      to: not_home
+    - entity_id: person.tim
+      platform: state
+      to: not_home
   condition:
-  - condition: and
-    conditions:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: device_tracker.google_maps_106326879474919188136
+          state: not_home
+        - condition: state
+          entity_id: device_tracker.ios
+          state: not_home
+  action:
+    - data:
+        message: I'm all alone, turning down the lights.
+        name: ToKer
+      service: logbook.log
+    - service: script.brightness_low
+
+- id: "ios_badrummet"
+  alias: iOS Event Badrummet
+  description: ""
+  trigger:
+    - event_data:
+        actionName: Badrummet
+      event_type: ios.action_fired
+      platform: event
+  condition: []
+  action:
+    - entity_id: light.badrummet
+      service: script.toggle_badrummet
+
+- id: "toker-home"
+  alias: ToKer Home
+  description: ""
+  trigger:
+    - entity_id: person.tim
+      event: enter
+      platform: zone
+      zone: zone.home
+    - entity_id: device_tracker.ios
+      event: enter
+      platform: zone
+      zone: zone.home
+    - entity_id: device_tracker.google_maps_106326879474919188136
+      event: enter
+      platform: zone
+      zone: zone.home
+  condition:
     - condition: state
       entity_id: device_tracker.google_maps_106326879474919188136
       state: not_home
-    - condition: state
-      entity_id: device_tracker.ios
-      state: not_home
   action:
-  - data:
-      message: I'm all alone, turning down the lights.
-      name: ToKer
-    service: logbook.log
-  - service: script.brightness_low
-- id: ios_badrummet
-  alias: iOS Event Badrummet
-  description: ''
-  trigger:
-  - event_data:
-      actionName: Badrummet
-    event_type: ios.action_fired
-    platform: event
-  condition: []
-  action:
-  - entity_id: light.badrummet
-    service: script.toggle_badrummet
-- id: toker-home
-  alias: ToKer Home
-  description: ''
-  trigger:
-  - entity_id: person.tim
-    event: enter
-    platform: zone
-    zone: zone.home
-  - entity_id: device_tracker.ios
-    event: enter
-    platform: zone
-    zone: zone.home
-  - entity_id: device_tracker.google_maps_106326879474919188136
-    event: enter
-    platform: zone
-    zone: zone.home
-  condition:
-  - condition: state
-    entity_id: device_tracker.google_maps_106326879474919188136
-    state: not_home
-  action:
-  - service: script.1580216769505
+    - service: script.1580216769505
