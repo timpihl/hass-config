@@ -10,3 +10,7 @@
       friendly_name: 'Glue'
 
 - platform: websocket_api
+
+- platform: time_date
+  display_options:
+    ['time', 'date']
