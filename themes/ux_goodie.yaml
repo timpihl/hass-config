@@ -2,7 +2,7 @@
 
 ux_goodie:
   
-  lovelace-background: 'center / cover no-repeat url("/local/background.jpg") fixed'
+  #lovelace-background: 'center / cover no-repeat url("/local/background.jpg") fixed'
   
 # MAIN INTERFACE COLORS
   primary-color: "#607D8B"  # "rgb(255, 159, 10)" # Top bar (global), HA links, panels like media player

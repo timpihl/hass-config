@@ -1,5 +1,5 @@
-- id: '1'
-  alias: 1 - Notify on restart
+- id: 'notify-on-restart'
+  alias: Notify on restart
   description: ''
   trigger:
   - event: start
@@ -7,11 +7,11 @@
   condition: []
   action:
   - data:
-      message: Your Hass.io server has restarted â™¡
+      message: Your Hass.io server has restarted âÿ¡
       title: Toker Home
     service: notify.mobile_app_ios
-- id: '2'
-  alias: 2 - Set theme on reboot
+- id: 'auto-theme'
+  alias: Auto theme
   description: ''
   trigger:
   - event: start
@@ -19,18 +19,9 @@
   condition: []
   action:
   - delay: 00:00:01
-  - service: script.google_dark_theme
-- id: '3'
-  alias: 3 - Update Cloudflare dns records
-  description: ''
-  trigger:
-  - minutes: /10
-    platform: time_pattern
-  condition: []
-  action:
-  - service: cloudflare.update_records
-- id: '4'
-  alias: 4 - Notify on failed login
+  - service: script.pink_dark_ios
+- id: 'notify-failed-login'
+  alias: Notify failed login
   description: ''
   trigger:
   - entity_id: persistent_notification.http_login
@@ -66,7 +57,7 @@
   condition: []
   action:
   - service: script.4
-- id: toker_alone
+- id: toker-alone
   alias: ToKer Alone
   description: ''
   trigger:
@@ -91,15 +82,6 @@
       name: ToKer
     service: logbook.log
   - service: script.brightness_low
-- id: icloud_update
-  alias: iCloud Update
-  description: Update iCloud location
-  trigger:
-  - minutes: /5
-    platform: time_pattern
-  condition: []
-  action:
-  - service: script.7
 - id: ios_badrummet
   alias: iOS Event Badrummet
   description: ''
@@ -112,7 +94,7 @@
   action:
   - entity_id: light.badrummet
     service: script.toggle_badrummet
-- id: ToKer-Alone
+- id: toker-home
   alias: ToKer Home
   description: ''
   trigger:

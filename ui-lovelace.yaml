@@ -4,6 +4,7 @@ custom_header:
   editor_warnings: false
   footer_mode: false
   #header_css: 'padding: 5px;'
+
 resources:
   - type: module
     url: /community_plugin/button-card/button-card.js
@@ -59,19 +60,13 @@ views:
             secondary_info:
               - precipitation
             backdrop: 
-              day: "rgba(255,255,255,0.10)"
-              night: "rgba(255,255,255,0.10)"
-
-##########################################################
-
-          #- break
 
 ##########################################################
 
           - type: conditional
             conditions:
               - entity: media_player.ultra
-                state: 'playing'
+                state_not: 'off'
             card:
                 type: 'custom:mini-media-player'
                 entity: media_player.ultra
@@ -85,7 +80,6 @@ views:
 
 ##########################################################
 
-          #- break
           - type: horizontal-stack
             cards:
 
@@ -239,7 +233,6 @@ views:
 
 ##########################################################
 
-          #- break
           - type: horizontal-stack
             cards:
             
@@ -310,7 +303,6 @@ views:
 
 ##########################################################
 
-          #- break
           - type: horizontal-stack
             cards:
 
@@ -543,6 +535,11 @@ views:
                 show_name: true
                 show_state: true
                 size: 25px
+
+                style: |
+                  ha-card {
+                    
+                  }
 
                 tap_action:
                   action: call-service
