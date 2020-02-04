@@ -63,23 +63,19 @@ views:
 
 ##########################################################
 
-          - type: conditional
-            conditions:
-              - entity: media_player.ultra
-                state_not: 'off'
-            card:
-                type: 'custom:mini-media-player'
-                entity: media_player.ultra
-                icon: 'mdi:google-chrome'
-                source: icon
-                artwork: cover
-                hide:
-                  power_state: false
-                  source: false
-                  volume: true
+          - type: 'custom:mini-media-player'
+            entity: media_player.ultra
+            icon: 'mdi:google-chrome'
+            source: icon
+            artwork: cover
+            hide:
+              power_state: false
+              source: false
+              volume: true
 
 ##########################################################
 
+          - break
           - type: horizontal-stack
             cards:
 
