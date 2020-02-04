@@ -1,0 +1,30 @@
+#
+- name: ToKer Home
+  latitude: !secret ToKer_lati
+  longitude: !secret ToKer_long
+  radius: 30
+  icon: mdi:home
+
+- name: Aspia
+  latitude: Aspia_lati
+  longitude: Aspia_long
+  radius: 100
+  icon: mdi:cash-multiple
+
+- name: Gurpi’s Dungeon
+  latitude: !secret Gurpi_lati
+  longitude: !secret Gurpi_long
+  radius: 100
+  icon: mdi:auto-fix
+
+- name: Morris Kryp-in
+  latitude: !secret Morris_lati
+  longitude: !secret Morris_long
+  radius: 100
+  icon: mdi:castle
+
+- name: SachaJuan
+  latitude: Sacha_lati
+  longitude: Sacha_long
+  radius: 100
+  icon: mdi:content-cut
