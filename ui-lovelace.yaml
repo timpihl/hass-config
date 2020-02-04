@@ -597,5 +597,14 @@ views:
     icon: 'mdi:dev-to'
     badges: []
     cards:
-      - !include datorlampa.yaml
+      - type: 'custom:light-entity-card'
+        entity: light.datorlampa
+        state_image:
+          'off': /local/studio_datorlampa_off.png
+          'on': /local/studio_datorlampa_on.png
+        style:
+          left: 55.18%
+          top: 20.35%
+          width: 10%
+
     
