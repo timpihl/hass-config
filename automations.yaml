@@ -10,6 +10,7 @@
         message: Your Hass.io server has restarted โ�ก
         title: Toker Home
       service: notify.mobile_app_ios
+
 - id: "auto-theme"
   alias: Auto theme
   description: ""
@@ -20,6 +21,7 @@
   action:
     - delay: 00:00:01
     - service: script.pink_dark_ios
+
 - id: "notify-failed-login"
   alias: Notify failed login
   description: ""
@@ -37,6 +39,7 @@
     - data:
         notification_id: http_login
       service: persistent_notification.dismiss
+
 - id: "5"
   alias: 5 - Köket On
   description: ""
@@ -47,6 +50,7 @@
   condition: []
   action:
     - service: script.3
+
 - id: "6"
   alias: 6 - Köket off
   description: ""
@@ -57,6 +61,7 @@
   condition: []
   action:
     - service: script.4
+
 - id: "toker-alone"
   alias: ToKer Alone
   description: ""
@@ -82,6 +87,7 @@
         name: ToKer
       service: logbook.log
     - service: script.brightness_low
+
 - id: "ios_badrummet"
   alias: iOS Event Badrummet
   description: ""
@@ -94,6 +100,7 @@
   action:
     - entity_id: light.badrummet
       service: script.toggle_badrummet
+
 - id: "toker-home"
   alias: ToKer Home
   description: ""
