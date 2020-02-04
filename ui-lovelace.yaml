@@ -592,8 +592,10 @@ views:
         entities: []
         image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
         type: picture-glance
-  - badges: []
-    cards: []
-    icon: 'mdi:dev-to'
+  - title: Dev
     path: dev
-    title: Dev
+    icon: 'mdi:dev-to'
+    badges: []
+    cards:
+      - !include datorlampa.yaml
+    
