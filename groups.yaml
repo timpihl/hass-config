@@ -1,0 +1,9 @@
+#
+# Groups
+#
+
+koket:
+  name: Köket
+  entities: 
+    - light.filament_a
+    - light.filament_b

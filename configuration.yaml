@@ -1,5 +1,7 @@
 homeassistant:
   name: ToKer Home
+  time_zone: Europe/Stockholm
+  unit_system: metric
 
 default_config:
 stream:
@@ -27,7 +29,7 @@ lovelace: !include configurations/lovelace.yaml
 media_player: !include configurations/media_player.yaml
 notify: !include configurations/notify.yaml
 recorder: !include configurations/recorder.yaml
-scene: !include scenes.yaml
+# scene: !include scenes.yaml
 script: !include scripts.yaml
 sensor: !include configurations/sensor.yaml
 shell_command: !include configurations/shell_command.yaml
