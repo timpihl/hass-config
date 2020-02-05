@@ -16,6 +16,8 @@
       friendly_name: 'Glue'
 
     hallen_brightness:
+      unit_of_measurement: '%'
+      icon_template: 'mdi:hanger'
       value_template: >-
         {% if is_state('light.hallen', 'on') %} 
           {{ (state_attr('light.hallen', 'brightness') / 2.54) | round }}
@@ -24,6 +26,8 @@
         {% endif %}
 
     koket_brightness:
+      unit_of_measurement: '%'
+      icon_template: 'mdi:food'
       value_template: >-
         {% if is_state('light.koket', 'on') %} 
           {{ (state_attr('light.koket', 'brightness') / 2.54) | round }}
@@ -33,6 +37,7 @@
 
     sovrummet_brightness:
       unit_of_measurement: '%'
+      icon_template: 'mdi:hotel'
       value_template: >-
         {% if is_state('light.sovrummet', 'on') %} 
           {{ (state_attr('light.sovrummet', 'brightness') / 2.54) | round }}
@@ -41,6 +46,8 @@
         {% endif %}
 
     badrummet_brightness:
+      unit_of_measurement: '%'
+      icon_template: 'mdi:toilet'
       value_template: >-
         {% if is_state('light.badrummet', 'on') %} 
           {{ (state_attr('light.badrummet', 'brightness') / 2.54) | round }}
@@ -49,6 +56,8 @@
         {% endif %}
 
     vardagsrummet_brightness:
+      unit_of_measurement: '%'
+      icon_template: 'mdi:youtube-tv'
       value_template: >-
         {% if is_state('light.vardagsrummet', 'on') %} 
           {{ (state_attr('light.vardagsrummet', 'brightness') / 2.54) | round }}
