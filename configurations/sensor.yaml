@@ -16,6 +16,7 @@
       friendly_name: 'Glue'
 
     hallen_brightness:
+      friendly_name_template: 'Hallen Brightness'
       unit_of_measurement: '%'
       icon_template: 'mdi:hanger'
       value_template: >-
@@ -26,6 +27,7 @@
         {% endif %}
 
     koket_brightness:
+      friendly_name_template: 'Köket Brightness'
       unit_of_measurement: '%'
       icon_template: 'mdi:food'
       value_template: >-
@@ -36,6 +38,7 @@
         {% endif %}
 
     sovrummet_brightness:
+      friendly_name_template: 'Sovrummet Brightness'
       unit_of_measurement: '%'
       icon_template: 'mdi:hotel'
       value_template: >-
@@ -46,6 +49,7 @@
         {% endif %}
 
     badrummet_brightness:
+      friendly_name_template: 'Badrummet Brightness'
       unit_of_measurement: '%'
       icon_template: 'mdi:toilet'
       value_template: >-
@@ -56,6 +60,7 @@
         {% endif %}
 
     vardagsrummet_brightness:
+      friendly_name_template: 'Vardagsrummet Brightness'
       unit_of_measurement: '%'
       icon_template: 'mdi:youtube-tv'
       value_template: >-
