@@ -8,3 +8,5 @@ devices:
     name: iOS
   4687ce73_c107c0b3:
     name: Q101  
+disable:
+  - all
