@@ -6,7 +6,9 @@ devices:
     name: macOS
   b6de274c-c6bae50f:
     name: iOS
-  4687ce73_c107c0b3:
-    name: Q101  
+  4687ce73-c107c0b3:
+    name: Q101
+  5324adcc-9133b099:
+    name: Dell-Edge
 disable:
   - all
