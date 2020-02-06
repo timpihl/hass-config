@@ -120,3 +120,9 @@ brightness_low:
       - 255
       - 255
     service: light.turn_on
+'1580861315079':
+  alias: 0 - Matt8707
+  sequence:
+  - data:
+      name: matt8707
+    service: frontend.set_theme
