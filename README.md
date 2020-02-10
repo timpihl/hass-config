@@ -3,7 +3,7 @@
 
 ![GitHub language count](https://img.shields.io/github/languages/count/timpihl/hass-config?color=ff558f&style=for-the-badge)
 ![Travis (.org)](https://img.shields.io/travis/timpihl/hass-config?color=ff558f&label=travis-ci&style=for-the-badge)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/timpihl/hass-config/yamllint?color=ff558f&label=yamllint&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/static/v1?label=toker%20yaml&message=passing&color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/timpihl/hass-config/python?color=ff558f&label=python&style=for-the-badge)
 
 ## ToKer
