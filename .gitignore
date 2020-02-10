@@ -18,3 +18,4 @@ icloud*
 *.code-workspace
 .vscode
 .cloud
+.uuid
