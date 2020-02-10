@@ -1,9 +1,9 @@
 # hass-config
 > Hassio / Home Assistant configuration for ToKer Home
 
-![GitHub language count](https://img.shields.io/github/languages/count/timpihl/hass-config?color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
-![Toker Yaml Status](https://img.shields.io/static/v1?label=toker%20yaml&message=passing&color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
-![Toker Python Status](https://img.shields.io/static/v1?label=toker%20python&message=passing&color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
+![ToKer Language Count](https://img.shields.io/static/v1?label=toker%20languages&message=3&color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
+![ToKer Yaml Status](https://img.shields.io/static/v1?label=toker%20yaml&message=passing&color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
+![ToKer Python Status](https://img.shields.io/static/v1?label=toker%20python&message=passing&color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
 
 ## ToKer
 
