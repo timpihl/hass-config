@@ -1,4 +1,4 @@
-# hass-config
+# ToKer - Home Assistant Config
 > Hassio / Home Assistant configuration for ToKer Home
 
 ![ToKer Language Count](https://img.shields.io/static/v1?label=toker%20languages&message=3&color=ff558f&style=for-the-badge&logo=dev.to&logoWidth=25)
