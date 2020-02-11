@@ -9,7 +9,7 @@
   #optimistic: true
   lock:
     service: script.turn_on
-    entity_id: script.6
+    entity_id: script.dorren_lock
   unlock:
     service: script.turn_on
-    entity_id: script.5
+    entity_id: script.dorren_unlock

@@ -46,7 +46,7 @@
     to: 'on'
   condition: []
   action:
-  - service: script.3
+  - service: script.koksbordet_on
 - id: '6'
   alias: 6 - Köket off
   description: ''
@@ -56,7 +56,7 @@
     to: 'off'
   condition: []
   action:
-  - service: script.4
+  - service: script.koksbordet_off
 - id: toker-alone
   alias: ToKer Alone
   description: ''
@@ -78,7 +78,7 @@
       state: not_home
   action:
   - data:
-      message: I'm all alone, turning down the lights ♡
+      message: is alone, turning down the lights ♡
       name: ToKer
     service: logbook.log
   - service: script.brightness_low
@@ -102,10 +102,6 @@
     event: enter
     platform: zone
     zone: zone.home
-  - entity_id: device_tracker.ios
-    event: enter
-    platform: zone
-    zone: zone.home
   - entity_id: device_tracker.google_maps_106326879474919188136
     event: enter
     platform: zone
@@ -115,4 +111,4 @@
     entity_id: device_tracker.google_maps_106326879474919188136
     state: not_home
   action:
-  - service: script.1580216769505
+  - service: script.coming_home
