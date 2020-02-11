@@ -1,0 +1,5 @@
+type: picture-glance
+camera_image: camera.fran_bromma
+image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+aspect_ratio: 80%
+entities: []

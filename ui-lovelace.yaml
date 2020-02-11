@@ -39,6 +39,8 @@ title: Toker
 background: "center / cover no-repeat fixed url('/local/images/background-tiny.jpeg')"
 views:
 
+##########################################################
+
   - title: Home
     path: home
     icon: 'mdi:home'
@@ -46,39 +48,29 @@ views:
     badges: []
     cards:
 
+##########################################################
+
       - type: custom:layout-card
         layout: vertical
         cards:
 
-##########################################################
-
           - !include ui/weather.yaml
-
-##########################################################
 
           - !include ui/vardagsrummet-player.yaml
 
-##########################################################
-
           - !include ui/markdown-location.yaml
+
+##########################################################
 
           - break
           - type: horizontal-stack
             cards:
 
-##########################################################
-
               - !include ui/vardagsrummet-power.yaml
-
-##########################################################
 
               - !include ui/vardagsrummet-volume-off.yaml
 
-##########################################################
-
               - !include ui/vardagsrummet-volume-down.yaml
-
-##########################################################
 
               - !include ui/vardagsrummet-volume-up.yaml
 
@@ -86,12 +78,8 @@ views:
 
           - type: horizontal-stack
             cards:
-            
-##########################################################
 
               - !include ui/glue-lock.yaml
-
-##########################################################
 
               - type: 'custom:button-card'
                 color_type: blank-card
@@ -107,23 +95,13 @@ views:
           - type: horizontal-stack
             cards:
 
-##########################################################
-
               - !include ui/button-hallen.yaml
-
-##########################################################
 
               - !include ui/button-koket.yaml
 
-##########################################################
-
               - !include ui/button-vardagsrummet.yaml
 
-##########################################################
-
               - !include ui/button-sovrummet.yaml
-
-##########################################################
 
           - break
           - !include ui/folding-entity.yaml
@@ -138,54 +116,15 @@ views:
 
 ##########################################################
 
-      - type: picture-glance
-        title: Köket
-        camera_view: live
-        camera_image: camera.pcm
-        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
-        aspect_ratio: 0%
-        tap_action:
-          action: toggle
-        entities:
-          - entity: light.hallen
-            icon: 'mdi:hanger'
-          - entity: light.koket
-            icon: 'mdi:food'
-          - entity: light.koksbordet
-            icon: 'mdi:table-chair'
-                
-##########################################################
+      - !include ui/cam-koket.yaml
 
-      - type: picture-glance
-        camera_image: camera.sveavagen_norr
-        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
-        aspect_ratio: 80%
-        entities: []
-        
-                
-##########################################################
+      - !include ui/cam-sveavagen-norr.yaml
 
-      - type: picture-glance
-        camera_image: camera.sveavagen_soder
-        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
-        aspect_ratio: 80%
-        entities: []
-                
-##########################################################
+      - !include ui/cam-sveavagen-soder.yaml
 
-      - type: picture-glance
-        camera_image: camera.mot_bromma
-        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
-        aspect_ratio: 80%
-        entities: []
-                
-##########################################################
+      - !include ui/cam-bromma-to.yaml
 
-      - type: picture-glance
-        camera_image: camera.fran_bromma
-        image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
-        aspect_ratio: 80%
-        entities: []
+      - !include ui/cam-bromma-from.yaml
         
 ##########################################################
 

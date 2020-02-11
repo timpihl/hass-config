@@ -1,0 +1,15 @@
+type: picture-glance
+title: Köket
+camera_view: live
+camera_image: camera.pcm
+image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+aspect_ratio: 0%
+tap_action:
+  action: toggle
+entities:
+  - entity: light.hallen
+    icon: 'mdi:hanger'
+  - entity: light.koket
+    icon: 'mdi:food'
+  - entity: light.koksbordet
+    icon: 'mdi:table-chair'
