@@ -1,7 +1,0 @@
-compact_mode: true
-footer_mode: true
-hide_help: true
-hide_unused: true
-hide_config: true
-hide_raw: true
-header_css: 'background: rgba(0,0,0,1); padding: 5px'
