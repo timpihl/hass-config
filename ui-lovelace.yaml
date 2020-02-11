@@ -64,28 +64,30 @@ views:
 
 ##########################################################
 
-          - type: 'custom:mini-media-player'
-            entity: media_player.vardagsrummet_tv
-            icon: 'mdi:google-chrome'
-            source: icon
-            artwork: cover
-            hide:
-              power_state: false
-              source: false
-              volume: true
+#          - type: 'custom:mini-media-player'
+#            entity: media_player.vardagsrummet_tv
+#            icon: 'mdi:google-chrome'
+#            source: icon
+#            artwork: cover
+#            hide:
+#              power_state: false
+#              source: false
+#              volume: true
+          - !include ui/vardagsrummet-player.yaml
 
 ##########################################################
 
-          - type: markdown
-            content: |
-              {% if is_state("person.tim", "ToKer Home") and is_state("person.kanita", "ToKer Home") -%} 
-              You are both home, you silly
-              {% elif is_state("person.tim", "East") and is_state("person.kanita", "East") -%}
-              You are both at East, you silly
-              {%- else -%}
-              Tim is at {{ states("person.tim") }}
-              Kanita is at {{ states("person.kanita") }}
-              {%- endif %}
+#          - type: markdown
+#            content: |
+#              {% if is_state("person.tim", "ToKer Home") and is_state("person.kanita", "ToKer Home") -%} 
+#              You are both home, you silly
+#              {% elif is_state("person.tim", "East") and is_state("person.kanita", "East") -%}
+#              You are both at East, you silly
+#              {%- else -%}
+#              Tim is at {{ states("person.tim") }}
+#              Kanita is at {{ states("person.kanita") }}
+#              {%- endif %}
+          - !include ui/markdown-location.yaml
 
           - break
           - type: horizontal-stack
@@ -93,40 +95,41 @@ views:
 
 ##########################################################
 
-              - type: 'custom:button-card'
-                name: Toker Tv Switch
-                icon: 'mdi:power-standby'
-                color_type: icon
-                aspect_ratio: 1/1
-                show_name: false
-                show_state: false
-                size: 25px
-
-                tap_action:
-                  action: call-service
-                  haptic: light
-                  service: switch.turn_off
-                  service_data:
-                    entity_id: switch.tv_power
-                
-                hold_action:
-                  action: more-info
-                  haptic: light
-
-                styles:
-                  card:
-                    - padding: 5px
-                  grid:
-                    - grid-template-areas: '"i"'
-                    - grid-template-columns: 1fr
-                    - grid-template-rows: 1fr
-                  icon: null
-                  img_cell:
-                    - align-self: center
-                    - text-align: center
-                    - justify-self: center
-                    - height: 25px
-                    - width: 25px
+#              - type: 'custom:button-card'
+#                name: Toker Tv Switch
+#                icon: 'mdi:power-standby'
+#                color_type: icon
+#                aspect_ratio: 1/1
+#                show_name: false
+#                show_state: false
+#                size: 25px
+#
+#                tap_action:
+#                  action: call-service
+#                  haptic: light
+#                  service: switch.turn_off
+#                  service_data:
+#                    entity_id: switch.tv_power
+#                
+#                hold_action:
+#                  action: more-info
+#                  haptic: light
+#
+#                styles:
+#                  card:
+#                    - padding: 5px
+#                  grid:
+#                    - grid-template-areas: '"i"'
+#                    - grid-template-columns: 1fr
+#                    - grid-template-rows: 1fr
+#                  icon: null
+#                  img_cell:
+#                    - align-self: center
+#                    - text-align: center
+#                    - justify-self: center
+#                    - height: 25px
+#                    - width: 25px
+              - !include ui/vardagsrummet-power.yaml
 
 ##########################################################
 

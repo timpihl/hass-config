@@ -1,0 +1,9 @@
+type: 'custom:mini-media-player'
+entity: media_player.vardagsrummet_tv
+icon: 'mdi:google-chrome'
+source: icon
+artwork: cover
+hide:
+  power_state: false
+  source: false
+  volume: true
