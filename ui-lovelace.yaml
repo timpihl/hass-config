@@ -52,14 +52,15 @@ views:
 
 ##########################################################
 
-          - type: 'custom:simple-weather-card'
-            entity: weather.toker_home
-            name: ''
-            primary_info:
-              - extrema
-            secondary_info:
-              - precipitation
-            backdrop: 
+#          - type: 'custom:simple-weather-card'
+#            entity: weather.toker_home
+#            name: ''
+#            primary_info:
+#              - extrema
+#            secondary_info:
+#              - precipitation
+#            backdrop: 
+          - !include /ui/weather.yaml
 
 ##########################################################
 

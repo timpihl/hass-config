@@ -1,0 +1,8 @@
+type: 'custom:simple-weather-card'
+entity: weather.toker_home
+name: ''
+primary_info:
+  - extrema
+secondary_info:
+  - precipitation
+backdrop: 
