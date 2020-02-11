@@ -117,7 +117,7 @@ views:
 
 ##########################################################
 
-              - !include ui/button-vardagsummet.yaml
+              - !include ui/button-vardagsrummet.yaml
 
 ##########################################################
 
