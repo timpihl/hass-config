@@ -28,3 +28,9 @@
   longitude: !secret Sacha_long
   radius: 100
   icon: mdi:content-cut
+
+- name: East
+  latitude: !secret East_lati
+  longitude: !secret East_long
+  radius: 30
+  icon: mdi:food

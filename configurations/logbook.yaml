@@ -9,8 +9,8 @@ exclude:
     - mobile_app
     - camera
     - automation
-    - sensor
-    - binary_sensor
+#    - sensor
+#    - binary_sensor
     - input_select
     - device_tracker
     - browser_mod

@@ -1,47 +1,47 @@
-'1':
-  alias: 1 - Badrummet - Turn on
+badrummet_on:
+  alias: Badrummet On
   sequence:
   - data:
       brightness_pct: 100
     entity_id: light.badrummet
     service: light.turn_on
-'2':
-  alias: 2 - Badrummet - Turn off
+badrummet_off:
+  alias: Badrummet Off
   sequence:
   - data: {}
     entity_id: light.badrummet
     service: light.turn_off
-'3':
-  alias: 3 - Köksbordet - Turn on
+koksbordet_on:
+  alias: Köksbordet On
   sequence:
   - data:
       brightness_pct: 35
     entity_id: light.koksbordet
     service: light.turn_on
-'4':
-  alias: 4 - Köksbordet - Turn off
+koksbordet_off:
+  alias: Köksbordet Off
   sequence:
   - data: {}
     entity_id: light.koksbordet
     service: light.turn_off
-'5':
-  alias: 5 - Dörren - Unlock
+dorren_unlock:
+  alias: Dörren Unlock
   sequence:
   - data:
       payload: locked
       qos: 2
       topic: /NodeRed/Glue
     service: mqtt.publish
-'6':
-  alias: 6 - Dörren - Lock
+dorren_lock:
+  alias: Dörren Lock
   sequence:
   - data:
       payload_template: unlocked
       qos: 2
       topic: /NodeRed/Glue
     service: mqtt.publish
-'8':
-  alias: 8 - Glue Script
+glue_script:
+  alias: Glue Script
   sequence:
   - data:
       payload_template: '{{ states(''sensor.glue'') }}
@@ -109,18 +109,34 @@ brightness_low:
       brightness_pct: 1
     entity_id: light.sovrummet
     service: light.turn_on
-'1580216769505':
+coming_home:
   alias: Coming home
   sequence:
   - data:
-      brightness: 255
-      entity_id: light.hallen, light.koket, light.sovrummet, light.vardagsrummet
-      rgb_color:
-      - 255
-      - 255
-      - 255
+      brightness: 254
+      transition: 5
+      white_value: 254
+    entity_id: light.hallen
     service: light.turn_on
-'1580861315079':
+  - data:
+      brightness: 254
+      transition: 5
+      white_value: 254
+    entity_id: light.koket
+    service: light.turn_on
+  - data:
+      brightness: 254
+      transition: 5
+      white_value: 254
+    entity_id: light.sovrummet
+    service: light.turn_on
+  - data:
+      brightness: 254
+      transition: 5
+      white_value: 254
+    entity_id: light.vardagsrummet
+    service: light.turn_on
+matt8708:
   alias: 0 - Matt8707
   sequence:
   - data:

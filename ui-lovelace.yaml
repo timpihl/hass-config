@@ -65,7 +65,7 @@ views:
 ##########################################################
 
           - type: 'custom:mini-media-player'
-            entity: media_player.ultra
+            entity: media_player.vardagsrummet_tv
             icon: 'mdi:google-chrome'
             source: icon
             artwork: cover
@@ -75,6 +75,17 @@ views:
               volume: true
 
 ##########################################################
+
+          - type: markdown
+            content: |
+              {% if is_state("person.tim", "ToKer Home") and is_state("person.kanita", "ToKer Home") -%} 
+              You are both home, you silly
+              {% elif is_state("person.tim", "East") and is_state("person.kanita", "East") -%}
+              You are both at East, you silly
+              {%- else -%}
+              Tim is at {{ states("person.tim") }}
+              Kanita is at {{ states("person.kanita") }}
+              {%- endif %}
 
           - break
           - type: horizontal-stack
@@ -93,14 +104,14 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: switch.turn_off
                   service_data:
                     entity_id: switch.tv_power
                 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
 
                 styles:
                   card:
@@ -130,14 +141,14 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: switch.turn_off
                   service_data:
                     entity_id: switch.stereo_mute
 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
 
                 styles:
                   card:
@@ -167,14 +178,14 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: switch.turn_off
                   service_data:
                     entity_id: switch.soundbar_vol_down
 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
 
                 styles:
                   card:
@@ -204,14 +215,14 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: switch.turn_off
                   service_data:
                     entity_id: switch.soundbar_vol_up
 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
 
                 styles:
                   card:
@@ -245,15 +256,15 @@ views:
 
                 tap_action:
                   action: toggle
-                  haptic: heavy
+                  haptic: light
 
                 double_tap_action:
                   action: toggle
-                  haptic: heavy
+                  haptic: light
 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
 
                 state:
                   - styles:
@@ -289,6 +300,8 @@ views:
 
 ##########################################################
 
+
+
               - type: 'custom:button-card'
                 color_type: blank-card
 
@@ -316,7 +329,7 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -327,7 +340,7 @@ views:
 
                 double_tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -338,7 +351,7 @@ views:
 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
 
                 state:
                   - styles:
@@ -385,7 +398,7 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -396,7 +409,7 @@ views:
 
                 double_tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -407,7 +420,7 @@ views:
 
                 hold_action:
                   #action: more-info
-                  #haptic: heavy
+                  #haptic: light
                   action: call-service
                   service: browser_mod.popup
                   service_data:
@@ -562,7 +575,7 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -573,7 +586,7 @@ views:
 
                 double_tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -584,7 +597,7 @@ views:
 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
 
                 state:
                   - styles:
@@ -636,7 +649,7 @@ views:
 
                 tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -647,7 +660,7 @@ views:
 
                 double_tap_action:
                   action: call-service
-                  haptic: heavy
+                  haptic: light
                   service: |
                     [[[
                       if (entity.state == 'on') return 'light.turn_off';
@@ -658,7 +671,7 @@ views:
 
                 hold_action:
                   action: more-info
-                  haptic: heavy
+                  haptic: light
                             
                 state:
                   - styles:
