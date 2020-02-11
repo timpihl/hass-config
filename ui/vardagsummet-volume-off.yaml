@@ -1,0 +1,34 @@
+type: 'custom:button-card'
+name: Volume Mute
+icon: 'mdi:volume-off'
+color_type: icon
+aspect_ratio: 1/1
+show_name: false
+show_state: false
+size: 25px
+
+tap_action:
+  action: call-service
+  haptic: light
+  service: switch.turn_off
+  service_data:
+    entity_id: switch.stereo_mute
+
+hold_action:
+  action: more-info
+  haptic: light
+
+styles:
+  card:
+    - padding: 5px
+  grid:
+    - grid-template-areas: '"i"'
+    - grid-template-columns: 1fr
+    - grid-template-rows: 1fr
+  icon: null
+  img_cell:
+    - align-self: center
+    - text-align: center
+    - justify-self: center
+    - height: 30px
+    - width: 30px
