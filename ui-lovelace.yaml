@@ -60,7 +60,7 @@ views:
 #            secondary_info:
 #              - precipitation
 #            backdrop: 
-          - !include /ui/weather.yaml
+          - !include ui/weather.yaml
 
 ##########################################################
 
