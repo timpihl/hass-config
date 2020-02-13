@@ -55,6 +55,7 @@ pink_dark_ios:
   sequence:
   - data: {}
     service: frontend.reload_themes
+  - delay: 00:00:10
   - data:
       name: pink-dark-ios
     service: frontend.set_theme
@@ -120,18 +121,30 @@ coming_home:
     service: light.turn_on
   - data:
       brightness: 254
+      rgb_color:
+      - 255
+      - 255
+      - 255
       transition: 5
       white_value: 254
     entity_id: light.koket
     service: light.turn_on
   - data:
       brightness: 254
+      rgb_color:
+      - 255
+      - 255
+      - 255
       transition: 5
       white_value: 254
     entity_id: light.sovrummet
     service: light.turn_on
   - data:
       brightness: 254
+      rgb_color:
+      - 255
+      - 255
+      - 255
       transition: 5
       white_value: 254
     entity_id: light.vardagsrummet
@@ -142,3 +155,9 @@ matt8708:
   - data:
       name: matt8707
     service: frontend.set_theme
+'ios_location':
+  alias: iOS location
+  sequence:
+  - data:
+      message: request_location_update
+    service: notify.mobile_app_ios

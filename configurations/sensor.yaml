@@ -1,8 +1,23 @@
 - platform: websocket_api
 
-- platform: time_date
-  display_options:
-    ['time', 'date']
+- platform: google_geocode
+  name: Tim
+  origin: person.tim
+  options: street, city
+  display_zone: hide
+  api_key: !secret google_geocode_api
+  language: sv-SE
+  region: SV
+
+- platform: google_geocode
+  name: Kanita
+  origin: person.kanita
+  #origin: device_tracker.google_maps_106326879474919188136
+  options: street, city
+  display_zone: hide
+  api_key: !secret google_geocode_api
+  language: sv-SE
+  region: SV
 
 - platform: template
   sensors:

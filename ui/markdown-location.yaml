@@ -1,10 +1,33 @@
 type: markdown
+style: |
+  ha-card {
+    background: none;
+    box-shadow: none;
+  }
 content: |
-  {% if is_state("person.tim", "ToKer Home") and is_state("person.kanita", "ToKer Home") -%} 
-  You are both home, you silly
-  {% elif is_state("person.tim", "East") and is_state("person.kanita", "East") -%}
-  You are both at East, you silly
-  {%- else -%}
-  Tim is at {{ states("person.tim") }}
-  Kanita is at {{ states("person.kanita") }}
-  {%- endif %}
+  <center>
+  {%- if is_state('person.tim','home') and is_state('person.kanita','home') -%}
+    ♡ Ni är båda hemma ♡
+  {%- elif is_state('person.tim','East') and is_state('person.kanita','East') -%}
+    ♡ Ni är båda på East ♡
+  {% else %}
+    {%- if is_state('person.tim','home') %}
+      Tim är hemma ♡
+    {%- elif not is_state('person.tim','not_home') %}
+      Tim är på {{states('person.tim')}} ♡
+    {%- elif is_state('person.tim','not_home') %}
+      Tim är på {{state_attr('sensor.tim','Street')}} ♡
+    {% endif %}
+    <br>
+    {%- if is_state('person.kanita','home') %}
+      Kanita är hemma ♡
+    {%- elif not is_state('person.kanita','not_home') %}
+      Kanita är på {{states('person.kanita')}} ♡
+    {%- elif is_state('person.kanita','not_home') %}
+      Kanita är på {{state_attr('sensor.kanita','Street')}} ♡
+    {% endif %}
+  {%- endif -%}
+  </center>
+
+#  {%- elif is_state('person.tim','not_home') == is_state('person.kanita','not_home') and state_attr('sensor.tim','Street') == state_attr('sensor.kanita','Street') -%}
+#    ♡ Ni är båda på {{ state_attr('sensor.tim','Street') }} ♡

@@ -8,3 +8,13 @@ koksbordet:
   entities: 
     - light.filament_a
     - light.filament_b
+
+toker:
+  name: ToKer
+  icon: mdi:heart-circle-outline
+  entities: 
+    - light.hallen
+    - light.koket
+    - light.koksbordet
+    - light.sovrummet
+    - light.vardagsrummet

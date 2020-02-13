@@ -19,7 +19,7 @@
   condition: []
   action:
   - delay: 00:00:01
-  - service: script.pink_dark_ios
+  - service: script.google_dark_theme
 - id: notify-failed-login
   alias: Notify failed login
   description: ''
@@ -62,20 +62,19 @@
   description: ''
   trigger:
   - entity_id: person.kanita
+    from: home
     platform: state
-    to: not_home
   - entity_id: person.tim
+    from: home
     platform: state
-    to: not_home
   condition:
   - condition: and
     conditions:
-    - condition: state
-      entity_id: device_tracker.google_maps_106326879474919188136
-      state: not_home
-    - condition: state
-      entity_id: device_tracker.ios
-      state: not_home
+    - condition: template
+      value_template: '{{ (states(''device_tracker.google_maps_106326879474919188136'')
+        != ''home'') }}'
+    - condition: template
+      value_template: '{{ (states(''device_tracker.ios'') != ''home'') }}'
   action:
   - data:
       message: is alone, turning down the lights ♡
@@ -99,16 +98,11 @@
   description: ''
   trigger:
   - entity_id: person.tim
-    event: enter
-    platform: zone
-    zone: zone.home
-  - entity_id: device_tracker.google_maps_106326879474919188136
-    event: enter
-    platform: zone
-    zone: zone.home
+    platform: state
+    to: home
   condition:
-  - condition: state
-    entity_id: device_tracker.google_maps_106326879474919188136
-    state: not_home
+  - condition: template
+    value_template: '{{ not is_state("person.kanita", "home") }}'
   action:
-  - service: script.coming_home
+  - entity_id: script.coming_home
+    service: script.turn_on

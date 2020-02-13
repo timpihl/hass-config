@@ -36,7 +36,7 @@ resources:
     url: /community_plugin/button-entity-row/button-entity-row.js
 
 title: Toker
-background: "center / cover no-repeat fixed url('/local/images/background-tiny.jpeg')"
+background: "center / cover no-repeat fixed url('/local/images/background3.jpeg')"
 views:
 
 ##########################################################
@@ -55,9 +55,7 @@ views:
         cards:
 
           - !include ui/weather.yaml
-
           - !include ui/vardagsrummet-player.yaml
-
           - !include ui/markdown-location.yaml
 
 ##########################################################
@@ -65,13 +63,9 @@ views:
           - break
           - type: horizontal-stack
             cards:
-
               - !include ui/vardagsrummet-power.yaml
-
               - !include ui/vardagsrummet-volume-off.yaml
-
               - !include ui/vardagsrummet-volume-down.yaml
-
               - !include ui/vardagsrummet-volume-up.yaml
 
 ##########################################################
@@ -79,16 +73,11 @@ views:
           - type: horizontal-stack
             cards:
 
-              - !include ui/glue-lock.yaml
-
-              - type: 'custom:button-card'
-                color_type: blank-card
-
-              - type: 'custom:button-card'
-                color_type: blank-card
-
-              - type: 'custom:button-card'
-                color_type: blank-card
+              - !include ui/button-glue.yaml
+              - !include ui/button-blank.yaml
+              - !include ui/button-blank.yaml
+              #- !include ui/button-blank.yaml
+              - !include ui/button-ios.yaml
 
 ##########################################################
 
@@ -96,15 +85,29 @@ views:
             cards:
 
               - !include ui/button-hallen.yaml
-
               - !include ui/button-koket.yaml
-
               - !include ui/button-vardagsrummet.yaml
-
               - !include ui/button-sovrummet.yaml
 
+##########################################################
+
+          - type: horizontal-stack
+            cards:
+
+              - !include ui/button-koksbordet.yaml
+              - !include ui/button-blank.yaml
+              - !include ui/button-blank.yaml
+              - !include ui/button-blank.yaml
+
+##########################################################
+
           - break
-          - !include ui/folding-entity.yaml
+#          - !include ui/folding-entity.yaml
+
+          - !include ui/folding-temp.yaml
+
+          - break
+          - !include ui/button-blank.yaml
 
 ##########################################################
 
@@ -117,13 +120,9 @@ views:
 ##########################################################
 
       - !include ui/cam-koket.yaml
-
       - !include ui/cam-sveavagen-norr.yaml
-
       - !include ui/cam-sveavagen-soder.yaml
-
       - !include ui/cam-bromma-to.yaml
-
       - !include ui/cam-bromma-from.yaml
         
 ##########################################################

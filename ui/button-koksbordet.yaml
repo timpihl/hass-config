@@ -1,0 +1,66 @@
+type: 'custom:button-card'
+entity: light.koksbordet
+name: Koksbordet
+icon: 'mdi:table-chair'
+aspect_ratio: 1/1
+show_name: true
+show_state: true
+size: 25px
+
+tap_action:
+  action: call-service
+  haptic: light
+  service: |
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.koksbordet
+
+double_tap_action:
+  action: call-service
+  haptic: light
+  service: |
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.koksbordet
+
+hold_action:
+  action: more-info
+  haptic: light
+
+state:
+  - styles:
+      card:
+        - filter: opacity(50%)
+      icon:
+        - filter: grayscale(100%)
+    value: 'off'
+
+styles:
+  card:
+    - padding: 5px
+  grid:
+    - grid-template-areas: '"i" "n" "s"'
+    - grid-template-columns: 1fr 
+    - grid-template-rows: 1fr min-content min-content
+  img_cell:
+    - align-self: start
+    - text-align: start
+    - justify-self: start
+    - padding-left: 10px
+    - height: 25px
+    - width: 25px
+  name:
+    - justify-self: start
+    - padding-left: 10px
+    - font-weight: bold
+    - font-size: 12px
+  state:
+    - justify-self: start
+    - padding-left: 10px
+    - font-size: 12px

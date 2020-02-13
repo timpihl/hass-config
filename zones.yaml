@@ -1,15 +1,15 @@
 #
-- name: ToKer Home
-  latitude: !secret ToKer_lati
-  longitude: !secret ToKer_long
-  radius: 30
-  icon: mdi:home
+#- name: ToKer Home
+#  latitude: !secret ToKer_lati
+#  longitude: !secret ToKer_long
+#  radius: 30
+#  icon: mdi:home
 
-- name: Aspia
-  latitude: !secret Aspia_lati
-  longitude: !secret Aspia_long
-  radius: 100
-  icon: mdi:cash-multiple
+#- name: Aspia
+#  latitude: !secret Aspia_lati
+#  longitude: !secret Aspia_long
+#  radius: 100
+#  icon: mdi:cash-multiple
 
 - name: Gurpi’s Dungeon
   latitude: !secret Gurpi_lati
