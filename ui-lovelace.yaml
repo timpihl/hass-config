@@ -75,8 +75,7 @@ views:
 
               - !include ui/button-glue.yaml
               - !include ui/button-blank.yaml
-              - !include ui/button-blank.yaml
-              #- !include ui/button-blank.yaml
+              - !include ui/button-ui.yaml
               - !include ui/button-ios.yaml
 
 ##########################################################

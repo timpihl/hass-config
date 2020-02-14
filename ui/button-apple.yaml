@@ -1,9 +1,39 @@
-type: custom:button-card
-entity: 'light.koksbordet'
-icon: 'mdi:hotel'
-show_state: true
 aspect_ratio: 1/1
-name: HassOS
+show_state: true
+
+tap_action:
+  action: call-service
+  haptic: light
+  service: |
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.hallen
+
+double_tap_action:
+  action: call-service
+  haptic: light
+  service: |
+    [[[
+      if (entity.state == 'on') return 'light.turn_off';
+      if (entity.state == 'off') return 'light.turn_on';
+    ]]]
+  service_data:
+    entity_id: light.hallen
+
+hold_action:
+  action: more-info
+  haptic: light
+
+state:
+  - value: 'off'
+    styles:
+      card:
+        - filter: opacity(50%)
+      icon:
+        - filter: grayscale(100%)
 
 styles:
   card:
@@ -41,5 +71,5 @@ styles:
 custom_fields:
   value: >
     [[[
-      return states['sensor.koket_brightness'].state + '%';
+      return states['sensor.hallen_brightness'].state + '%';
     ]]]

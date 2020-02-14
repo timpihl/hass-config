@@ -50,6 +50,16 @@
           off
         {% endif %}
 
+    koksbordet_brightness:
+      friendly_name: 'Köksbordet Brightness'
+      icon_template: 'mdi:table-chair'
+      value_template: >-
+        {% if is_state('light.koket', 'on') %} 
+          {{ (state_attr('light.koket', 'brightness') / 2.54) | round }}
+        {% elif is_state('light.koket', 'off') %}
+          off
+        {% endif %}
+
     sovrummet_brightness:
       friendly_name: 'Sovrummet Brightness'
       icon_template: 'mdi:hotel'

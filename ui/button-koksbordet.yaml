@@ -2,10 +2,9 @@ type: 'custom:button-card'
 entity: light.koksbordet
 name: Koksbordet
 icon: 'mdi:table-chair'
+
 aspect_ratio: 1/1
-show_name: true
 show_state: true
-size: 25px
 
 tap_action:
   action: call-service
@@ -16,7 +15,7 @@ tap_action:
       if (entity.state == 'off') return 'light.turn_on';
     ]]]
   service_data:
-    entity_id: light.koksbordet
+    entity_id: light.hallen
 
 double_tap_action:
   action: call-service
@@ -27,40 +26,55 @@ double_tap_action:
       if (entity.state == 'off') return 'light.turn_on';
     ]]]
   service_data:
-    entity_id: light.koksbordet
+    entity_id: light.hallen
 
 hold_action:
   action: more-info
   haptic: light
 
 state:
-  - styles:
+  - value: 'off'
+    styles:
       card:
         - filter: opacity(50%)
       icon:
         - filter: grayscale(100%)
-    value: 'off'
 
 styles:
   card:
     - padding: 5px
+    - text-transform: capitalize
   grid:
-    - grid-template-areas: '"i" "n" "s"'
-    - grid-template-columns: 1fr 
-    - grid-template-rows: 1fr min-content min-content
-  img_cell:
+    - grid-template-areas: '"i value" "n n" "s s"'
+    - grid-template-columns: 1fr 1fr
+    - grid-template-rows: 1fr min-content min-content min-content
+  icon:
     - align-self: start
-    - text-align: start
-    - justify-self: start
-    - padding-left: 10px
+    - padding-left: 0px
     - height: 25px
     - width: 25px
-  name:
+  name: 
     - justify-self: start
     - padding-left: 10px
     - font-weight: bold
     - font-size: 12px
   state:
     - justify-self: start
-    - padding-left: 10px
     - font-size: 12px
+    - padding-left: 10px
+
+  custom_fields:
+    value:
+      - align-self: start
+      - justify-self: end
+      - font-size: 10px
+      - line-height: 20px
+      - padding-right: 10px
+      - padding-top: 1px
+      - color: '#ffffff'
+
+custom_fields:
+  value: >
+    [[[
+      if (entity.state == 'on') return states['sensor.koksbordet_brightness'].state + '%';
+    ]]]

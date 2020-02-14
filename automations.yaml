@@ -19,7 +19,7 @@
   condition: []
   action:
   - delay: 00:00:01
-  - service: script.google_dark_theme
+  - service: script.pink_dark_ios
 - id: notify-failed-login
   alias: Notify failed login
   description: ''
