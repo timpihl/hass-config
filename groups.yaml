@@ -5,14 +5,14 @@
 koksbordet:
   name: Köksbordet
   icon: mdi:table-chair
-  entities: 
+  entities:
     - light.filament_a
     - light.filament_b
 
 toker:
   name: ToKer
   icon: mdi:heart-circle-outline
-  entities: 
+  entities:
     - light.hallen
     - light.koket
     - light.koksbordet
