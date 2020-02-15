@@ -55,7 +55,7 @@ pink_dark_ios:
   sequence:
   - data: {}
     service: frontend.reload_themes
-  - delay: 00:00:10
+  - delay: 00:00:05
   - data:
       name: pink-dark-ios
     service: frontend.set_theme
@@ -155,7 +155,7 @@ matt8708:
   - data:
       name: matt8707
     service: frontend.set_theme
-'ios_location':
+ios_location:
   alias: iOS location
   sequence:
   - data:

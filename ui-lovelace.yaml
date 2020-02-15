@@ -4,6 +4,8 @@ custom_header:
   editor_warnings: false
   footer_mode: false
   #header_css: 'padding: 5px;'
+  button_text:
+    options: '{{ hours24LZ }}:{{ minutesLZ }}'
 
 resources:
   - type: module
@@ -76,7 +78,8 @@ views:
               - !include ui/button-glue.yaml
               - !include ui/button-blank.yaml
               - !include ui/button-ui.yaml
-              - !include ui/button-ios.yaml
+              #- !include ui/button-ios.yaml
+              - !include ui/button-dev.yaml
 
 ##########################################################
 

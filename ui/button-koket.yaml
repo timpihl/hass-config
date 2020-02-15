@@ -150,25 +150,10 @@ state:
     value: 'off'
 
 styles:
-  card:
-    - padding: 5px
-  grid:
-    - grid-template-areas: '"i" "n" "s"'
-    - grid-template-columns: 1fr
-    - grid-template-rows: 1fr min-content min-content
-  img_cell:
-    - align-self: start
-    - text-align: start
-    - justify-self: start
-    - padding-left: 10px
-    - height: 25px
-    - width: 25px
-  name:
-    - justify-self: start
-    - padding-left: 10px
-    - font-weight: bold
-    - font-size: 12px
-  state:
-    - justify-self: start
-    - padding-left: 10px
-    - font-size: 12px
+  !include button-apple-styles.yaml
+
+custom_fields:
+  value: >
+    [[[
+      return states['sensor.koket_brightness'].state + '%';
+    ]]]

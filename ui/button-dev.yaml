@@ -1,0 +1,77 @@
+type: picture-elements
+image: /local/overlay.svg
+style: |
+  ha-card {
+    --ha-card-background: transparent;
+  }
+
+elements:
+  - type: 'custom:circle-sensor-card'
+    entity: sensor.koksbordet_brightness
+    min: 1
+    max: 100
+    stroke_width: 10
+    stroke_color: var(--primary-color)
+    fill: transparent
+    gradient: true
+    units: '%'
+    show_max: false
+    style:
+      top: 15%
+      left: 85%
+      width: 30px
+      height: 30px
+      font-size: 10px
+      background: none
+      background-color: none
+
+  - type: 'custom:button-card'
+    entity: light.koksbordet
+    name: Köksbordet
+    icon: 'mdi:table-chair'
+    aspect_ratio: 1/1
+    show_state: true
+    show_icon: true
+    size: 50px
+    style:
+      top: 50%
+      left: 50%
+      height: 100%
+      width: 100%
+    tap_action:
+      action: toggle
+      haptic: light
+    double_tap_action:
+      action: toggle
+      haptic: light
+    hold_action:
+      action: more-info
+      haptic: light
+    styles:
+      card:
+        - text-transform: capitalize
+        - padding: 5px
+        - margin: 0px
+      grid:
+        #- grid-template-areas: '"i value" "n n" "s s"'
+        - grid-template-areas: '"i i""n n" "s s"'
+        - grid-template-columns: 1fr
+        - grid-template-rows: 1fr min-content #min-content min-content
+        - padding: 5px
+      img_cell:
+        - justify-self: start
+        - align-self: start
+        - height: 25px
+        - width: 25px
+      icon:
+        - justify-self: start
+        - align-self: start
+      name: 
+        - justify-self: start
+        - align-self: end
+        - font-weight: bold
+        - font-size: 12px
+      state:
+        - justify-self: start
+        - align-self: start
+        - font-size: 12px

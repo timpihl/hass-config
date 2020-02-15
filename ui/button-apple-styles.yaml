@@ -1,0 +1,39 @@
+card:
+  - text-transform: capitalize
+  - padding: 5px
+  - margin: 0px
+
+grid:
+  - grid-template-areas: '"i value" "n n" "s s"'
+  - grid-template-columns: 1fr
+  - grid-template-rows: 1fr min-content#min-content min-content
+  - padding: 5px
+
+img_cell:
+  - justify-self: start
+  - align-self: start
+  - height: 25px
+  - width: 25px
+
+icon:
+  - justify-self: start
+  - align-self: start
+
+name: 
+  - justify-self: start
+  - align-self: start
+  - font-weight: bold
+  - font-size: 12px
+
+state:
+  - justify-self: start
+  - align-self: start
+  - font-size: 12px
+
+custom_fields:
+  value:
+    - justify-self: end
+    - align-self: start
+    - font-size: 10px
+    - line-height: 18px
+    - color: '#ffffff'

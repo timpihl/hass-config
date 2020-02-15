@@ -2,76 +2,28 @@ type: 'custom:button-card'
 entity: light.hallen
 name: Hallen
 icon: 'mdi:hanger'
+size: 25px
 
 aspect_ratio: 1/1
 show_state: true
 
 tap_action:
-  action: call-service
+  action: toggle
   haptic: light
-  service: |
-    [[[
-      if (entity.state == 'on') return 'light.turn_off';
-      if (entity.state == 'off') return 'light.turn_on';
-    ]]]
-  service_data:
-    entity_id: light.hallen
 
 double_tap_action:
-  action: call-service
+  action: toggle
   haptic: light
-  service: |
-    [[[
-      if (entity.state == 'on') return 'light.turn_off';
-      if (entity.state == 'off') return 'light.turn_on';
-    ]]]
-  service_data:
-    entity_id: light.hallen
 
 hold_action:
   action: more-info
   haptic: light
 
 state:
-  - value: 'off'
-    styles:
-      card:
-        - filter: opacity(50%)
-      icon:
-        - filter: grayscale(100%)
+  !include button-apple-state.yaml
 
 styles:
-  card:
-    - padding: 5px
-    - text-transform: capitalize
-  grid:
-    - grid-template-areas: '"i value" "n n" "s s"'
-    - grid-template-columns: 1fr 1fr
-    - grid-template-rows: 1fr min-content min-content min-content
-  icon:
-    - align-self: start
-    - padding-left: 0px
-    - height: 25px
-    - width: 25px
-  name: 
-    - justify-self: start
-    - padding-left: 10px
-    - font-weight: bold
-    - font-size: 12px
-  state:
-    - justify-self: start
-    - font-size: 12px
-    - padding-left: 10px
-
-  custom_fields:
-    value:
-      - align-self: start
-      - justify-self: end
-      - font-size: 10px
-      - line-height: 20px
-      - padding-right: 10px
-      - padding-top: 1px
-      - color: '#ffffff'
+  !include button-apple-styles.yaml
 
 custom_fields:
   value: >

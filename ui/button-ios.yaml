@@ -1,45 +1,26 @@
 type: custom:button-card
-entity: 'light.koksbordet'
-icon: 'mdi:hotel'
-show_state: true
+entity: 'script.ios_location'
+icon: 'mdi:apple'
+#show_state: true
 aspect_ratio: 1/1
-name: HassOS
+name: iOS
+size: 50px
+
+tap_action:
+  action: toggle
+  haptic: light
+
+double_tap_action:
+  action: toggle
+  haptic: light
+
+hold_action:
+  action: more-info
+  haptic: light
+
+state:
+  !include button-apple-state.yaml
 
 styles:
-  card:
-    - padding: 5px
-    - text-transform: capitalize
-  grid:
-    - grid-template-areas: '"i value" "n n" "s s"'
-    - grid-template-columns: 1fr 1fr
-    - grid-template-rows: 1fr min-content min-content min-content
-  icon:
-    - align-self: start
-    - padding-left: 0px
-    - height: 25px
-    - width: 25px
-  name: 
-    - justify-self: start
-    - padding-left: 10px
-    - font-weight: bold
-    - font-size: 12px
-  state:
-    - justify-self: start
-    - font-size: 12px
-    - padding-left: 10px
+  !include button-apple-styles.yaml
 
-  custom_fields:
-    value:
-      - align-self: start
-      - justify-self: end
-      - font-size: 10px
-      - line-height: 20px
-      - padding-right: 10px
-      - padding-top: 1px
-      - color: '#ffffff'
-
-custom_fields:
-  value: >
-    [[[
-      return states['sensor.koket_brightness'].state + '%';
-    ]]]
