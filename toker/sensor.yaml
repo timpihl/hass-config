@@ -12,7 +12,15 @@
 - platform: google_geocode
   name: Kanita
   origin: person.kanita
-  #origin: device_tracker.google_maps_106326879474919188136
+  options: street, city
+  display_zone: hide
+  api_key: !secret google_geocode_api
+  language: sv-SE
+  region: SV
+
+- platform: google_geocode
+  name: Mårten
+  origin: person.marten
   options: street, city
   display_zone: hide
   api_key: !secret google_geocode_api

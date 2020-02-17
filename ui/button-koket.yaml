@@ -31,31 +31,33 @@ state:
 styles:
   !include button-apple-styles.yaml
 
-hold_action:
+hold_action:  
   action: call-service
   service: browser_mod.popup
   service_data:
     title: Köket
     deviceID:
       - this
-    style:
-      '--ha-card-border-radius': 0vw 0vw 0.8vw 0.8vw
-      border-radius: 0.8vw
-      opacity: 0.9
     card:
       type: 'custom:light-entity-card'
       entity: light.koket
       group: false
       color_wheel: true
-      persist_features: false
+      persist_features: true
+      effects_list: false
       header: false
       brightness: true
       color_temp: true
       white_value: true
       color_picker: true
       full_width_sliders: true
-      brightness_icon: 'mdi:weather-sunny'
-      white_icon: 'mdi:weather-flash'
-      temperature_icon: 'mdi:weather-pouring'
       show_slider_percent: true
       smooth_color_wheel: true
+      style: | 
+        ha-card {
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+        }
+        .light-entity-card-sliders > div {
+          padding: 10px 20px;
+        }
