@@ -35,3 +35,36 @@ custom_fields:
     [[[
       return states['sensor.sovrummet_brightness'].state + '%';
     ]]]
+
+#hold_action:
+#  action: call-service
+#  service: browser_mod.popup
+#  service_data:
+#    title: Sovrummet
+#    deviceID:
+#      - this
+#    card:
+#      type: 'custom:light-entity-card'
+#      entity: light.sovrummet
+#      group: false
+#      color_wheel: true
+#      persist_features: true
+#      effects_list: false
+#      header: false
+#      brightness: true
+#      color_temp: true
+#      white_value: true
+#      color_picker: true
+#      full_width_sliders: true
+#      brightness_icon: 'mdi:weather-sunny'
+#      white_icon: 'mdi:weather-flash'
+#      temperature_icon: 'mdi:weather-pouring'
+#      show_slider_percent: true
+#      smooth_color_wheel: true
+#      style: | 
+#        ha-more-info-dialog {
+#          border-radius: 15px;
+#        }
+#        .light-entity-card-sliders > div {
+#          padding: 10px 20px;
+#        }
