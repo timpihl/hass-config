@@ -18,15 +18,6 @@
   language: sv-SE
   region: SV
 
-- platform: google_geocode
-  name: Mårten
-  origin: device_tracker.marten_s9
-  options: street, city
-  display_zone: hide
-  api_key: !secret google_geocode_api
-  language: sv-SE
-  region: SV
-
 - platform: template
   sensors:
     glue:
