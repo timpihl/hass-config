@@ -1,6 +1,6 @@
 clear:
   # Background image
-  lovelace-background: 'center / cover no-repeat url(/local/clear.jpg) fixed'
+  lovelace-background: 'center / cover no-repeat url(/local/images/clear.jpg) fixed'
 
   # Colors
   text-color: '#636B75'                                                           # Grey text

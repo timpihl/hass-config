@@ -1,6 +1,6 @@
 clear-dark:
   # Background image
-  lovelace-background: 'center / cover no-repeat url(/local/clear-dark.jpg) fixed'
+  lovelace-background: 'center / cover no-repeat url(/local/images/clear-dark.jpg) fixed'
 
   # Colors
   text-color: '#DADADB'                                                           # Grey text

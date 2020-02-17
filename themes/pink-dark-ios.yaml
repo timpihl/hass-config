@@ -3,6 +3,8 @@
 #  Pink Dark iOS
 #
 pink-dark-ios:
+  # Background image
+  lovelace-background: 'center / cover no-repeat url(/local/images/clear-dark.jpg) fixed'
   primary-color: var(--pink)
   light-primary-color: var(--pink)
   primary-background-color: var(--grey)

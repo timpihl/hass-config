@@ -7,7 +7,7 @@
 #
 Google Dark Theme:
   # Background:
-  lovelace-background: 'center / cover no-repeat url(/local/clear-dark.jpg) fixed'
+  lovelace-background: 'center / cover no-repeat url(/local/images/clear-dark.jpg) fixed'
   # Header:
   app-header-background-color: "#171717"
   app-header-text-color: "#BDC1C6"
