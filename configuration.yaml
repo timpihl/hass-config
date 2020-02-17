@@ -47,7 +47,7 @@ cloud:
 config:
 frontend: !include configurations/frontend.yaml
 history: !include configurations/history.yaml
-logbook: logbook: !include configurations/logbook.yaml
+logbook: !include configurations/logbook.yaml
 map:
 mobile_app:
 person:
