@@ -1,5 +1,3 @@
-- platform: websocket_api
-
 - platform: google_geocode
   name: Tim
   origin: person.tim
@@ -20,14 +18,30 @@
 
 - platform: template
   sensors:
-    glue:
+    marten:
+      friendly_name: 'Mårten'
       value_template: >-
-        {% if is_state("sensor.glue", "locked") %}
+        ''
+      attribute_templates:
+        "City": ""
+        "Country": ""
+        "County": ""
+        "Formatted Address": ""
+        "Friendly Name": ""
+        "Postal Code": ""
+        "Postal Town": ""
+        "State": ""
+        "Street Number": ""
+        "Street": ""
+
+    glue:
+      friendly_name: 'Glue'
+      value_template: >-
+        {% if is_state('sensor.glue', 'locked') %}
           locked
         {% else %}
           unlocked
         {% endif %}
-      friendly_name: 'Glue'
 
     hallen_brightness:
       friendly_name: 'Hallen Brightness'
@@ -88,3 +102,4 @@
         {% elif is_state('light.vardagsrummet', 'off') %}
           off
         {% endif %}
+
