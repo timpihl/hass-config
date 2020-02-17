@@ -161,3 +161,4 @@ ios_location:
   - data:
       message: request_location_update
     service: notify.mobile_app_ios
+  - delay: 00:00:05

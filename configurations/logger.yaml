@@ -1,6 +1,8 @@
-default: warning
+default: error
 logs:
-  custom_components.hacs: debug
+  custom_components.hacs: critical
+  custom_components.google_geocode: critical
+  hacs.repository.integration.gregoryduckworth.GoogleGeocode-HASS: critical
   homeassistant.components.homekit_controller: debug
   homeassistant.components.python_script: debug
   homeassistant.components.core: debug

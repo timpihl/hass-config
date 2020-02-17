@@ -1,9 +1,10 @@
 type: custom:button-card
 entity: 'script.ios_location'
 icon: 'mdi:apple'
+name: iOS
+
 #show_state: true
 aspect_ratio: 1/1
-name: iOS
 size: 50px
 
 tap_action:
@@ -23,4 +24,3 @@ state:
 
 styles:
   !include button-apple-styles.yaml
-

@@ -5,26 +5,26 @@ homeassistant:
   time_zone: Europe/Stockholm
   unit_system: metric
 
-default_config:
+#default_config:
 stream:
 shopping_list:
 websocket_api:
 
-automation: !include automations.yaml
+#automation: !include automations.yaml
 binary_sensor:
 browser_mod: !include  configurations/browser_mod.yaml
 camera: !include configurations/camera.yaml
 device_tracker: !include configurations/device_tracker.yaml
 discovery: !include configurations/discovery.yaml
 fan: !include configurations/fan.yaml
-frontend: !include configurations/frontend.yaml
+#frontend: !include configurations/frontend.yaml
 google_assistant: !include configurations/google_assistant.yaml
 group: !include groups.yaml
-history: !include configurations/history.yaml
+#history: !include configurations/history.yaml
 http: !include configurations/http.yaml
 ifttt: !include configurations/ifttt.yaml
 lock: !include configurations/lock.yaml
-logbook: !include configurations/logbook.yaml
+#logbook: !include configurations/logbook.yaml
 logger: !include configurations/logger.yaml
 lovelace: !include configurations/lovelace.yaml
 media_player: !include configurations/media_player.yaml
@@ -39,3 +39,21 @@ telegram_bot: !include configurations/telegram.yaml
 tts: !include configurations/tts.yaml
 updater: !include configurations/updater.yaml
 zone: !include zones.yaml
+
+##################
+# Default_Config:
+automation: !include automations.yaml
+cloud:
+config:
+frontend: !include configurations/frontend.yaml
+history: !include configurations/history.yaml
+logbook: logbook: !include configurations/logbook.yaml
+map:
+mobile_app:
+person:
+script: !include scripts.yaml
+#ssdp:
+#sun:
+system_health:
+updater:
+zeroconf:

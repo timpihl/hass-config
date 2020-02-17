@@ -2,36 +2,38 @@ type: 'custom:button-card'
 entity: light.koket
 name: Köket
 icon: 'mdi:food'
-aspect_ratio: 1/1
-show_name: true
+
 show_state: true
-size: 25px
+aspect_ratio: 1/1
+size: 50px
 
 tap_action:
-  action: call-service
+  action: toggle
   haptic: light
-  service: |
-    [[[
-      if (entity.state == 'on') return 'light.turn_off';
-      if (entity.state == 'off') return 'light.turn_on';
-    ]]]
-  service_data:
-    entity_id: light.koket
 
 double_tap_action:
-  action: call-service
+  action: toggle
   haptic: light
-  service: |
+
+#hold_action:
+#  action: more-info
+#  haptic: light
+
+custom_fields:
+  value: >
     [[[
-      if (entity.state == 'on') return 'light.turn_off';
-      if (entity.state == 'off') return 'light.turn_on';
+      return states['sensor.koket_brightness'].state + '%';
     ]]]
-  service_data:
-    entity_id: light.koket
+
+state:
+  !include button-apple-state.yaml
+
+styles:
+  !include button-apple-styles.yaml
+
+#######################################
 
 hold_action:
-  #action: more-info
-  #haptic: light
   action: call-service
   service: browser_mod.popup
   service_data:
@@ -138,22 +140,4 @@ hold_action:
       '--ha-card-border-radius': 0vw 0vw 0.8vw 0.8vw
       border-radius: 0.8vw
       opacity: 0.9
-    
 
-
-state:
-  - styles:
-      card:
-        - filter: opacity(50%)
-      icon:
-        - filter: grayscale(100%)
-    value: 'off'
-
-styles:
-  !include button-apple-styles.yaml
-
-custom_fields:
-  value: >
-    [[[
-      return states['sensor.koket_brightness'].state + '%';
-    ]]]
