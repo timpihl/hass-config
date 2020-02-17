@@ -20,7 +20,7 @@
 
 - platform: google_geocode
   name: Mårten
-  origin: person.marten
+  origin: device_tracker.marten_s9
   options: street, city
   display_zone: hide
   api_key: !secret google_geocode_api
