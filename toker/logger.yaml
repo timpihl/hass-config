@@ -2,8 +2,12 @@ default: error
 logs:
   custom_components.hacs: critical
   custom_components.google_geocode: critical
-  #homeassistant.custom_components.google_geocode: critical
-  #homeassistant.custom_components.google_geocode-hass: critical
+  custom_components.browser_mod: critical
+  custom_components.google_geocode-hass: critical
+  homeassistant.custom_components.hacs: critical
+  homeassistant.custom_components.google_geocode: critical
+  homeassistant.custom_components.browser_mod: critical
+  homeassistant.custom_components.google_geocode-hass: critical
   #hacs.repository.integration.gregoryduckworth.GoogleGeocode-HASS: critical
   #homeassistant.components.homekit_controller: debug
   #homeassistant.components.python_script: debug
