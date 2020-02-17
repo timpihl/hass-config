@@ -2,24 +2,24 @@ default: error
 logs:
   custom_components.hacs: critical
   custom_components.google_geocode: critical
-  homeassistant.custom_components.google_geocode: critical
-  homeassistant.custom_components.google_geocode-hass: critical
-  hacs.repository.integration.gregoryduckworth.GoogleGeocode-HASS: critical
-  homeassistant.components.homekit_controller: debug
-  homeassistant.components.python_script: debug
-  homeassistant.components.core: debug
-  homeassistant.components.camera: debug
-  homeassistant.components.stream: debug
-  homeassistant.components.info: debug
-  homeassistant.components.updater: debug
-  homeassistant.components.automation: info
-  homeassistant.components.notify: info
-  homeassistant.components.recorder: debug
-  homeassistant.components.script: error
-  homeassistant.components.sensor: error
-  homeassistant.components.binary_sensor: info
-  homeassistant.components.switch: error
-  homeassistant.components.mqtt: error
-  homeassistant.components.light: error
-  homeassistant.components.google_assistant: critical
-  homeassistant.components.shell_command: debug
+  #homeassistant.custom_components.google_geocode: critical
+  #homeassistant.custom_components.google_geocode-hass: critical
+  #hacs.repository.integration.gregoryduckworth.GoogleGeocode-HASS: critical
+  #homeassistant.components.homekit_controller: debug
+  #homeassistant.components.python_script: debug
+  #homeassistant.components.core: debug
+  #homeassistant.components.camera: debug
+  #homeassistant.components.stream: debug
+  #homeassistant.components.info: debug
+  #homeassistant.components.updater: debug
+  #homeassistant.components.automation: info
+  #homeassistant.components.notify: info
+  #homeassistant.components.recorder: debug
+  #homeassistant.components.script: error
+  #homeassistant.components.sensor: error
+  #homeassistant.components.binary_sensor: info
+  #homeassistant.components.switch: error
+  #homeassistant.components.mqtt: error
+  #homeassistant.components.light: error
+  #homeassistant.components.google_assistant: critical
+  #homeassistant.components.shell_command: debug
