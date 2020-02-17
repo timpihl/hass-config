@@ -1,10 +1,14 @@
 type: entities
 show_header_toggle: false
+style: |
+  ha-card > .card-content {
+    padding: 10px 15px;
+  }
 entities:
   - type: 'custom:fold-entity-row'
-    group_config:
-    secondary_info: last-changed
     padding: 0
+    group_config:
+      secondary_info: last-changed
     head:
       entity: group.toker
       icon: 'mdi:heart-circle-outline'
