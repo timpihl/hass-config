@@ -31,13 +31,13 @@ media_player: !include configurations/media_player.yaml
 notify: !include configurations/notify.yaml
 recorder: !include configurations/recorder.yaml
 scene: !include scenes.yaml
-script: !include scripts.yaml
+#script: !include scripts.yaml
 sensor: !include configurations/sensor.yaml
 shell_command: !include configurations/shell_command.yaml
 switch: !include configurations/switch.yaml
 telegram_bot: !include configurations/telegram.yaml
 tts: !include configurations/tts.yaml
-updater: !include configurations/updater.yaml
+#updater: !include configurations/updater.yaml
 zone: !include zones.yaml
 
 ##################
@@ -55,5 +55,5 @@ script: !include scripts.yaml
 #ssdp:
 #sun:
 system_health:
-updater:
+updater: !include configurations/updater.yaml
 zeroconf:
