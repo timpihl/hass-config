@@ -44,9 +44,7 @@ glue_script:
   alias: Glue Script
   sequence:
   - data:
-      payload_template: '{{ states(''sensor.glue'') }}
-
-        '
+      payload_template: '{{ states(''sensor.glue'') }}'
       qos: 2
       topic: /NodeRed/Glue
     service: mqtt.publish
@@ -71,12 +69,6 @@ google_dark_theme:
   sequence:
   - data:
       name: Google Dark Theme
-    service: frontend.set_theme
-ux_goodie:
-  alias: 0 - UX Goodie
-  sequence:
-  - data:
-      name: ux_goodie
     service: frontend.set_theme
 toggle_badrummet:
   alias: Toggle Badrummet
@@ -162,3 +154,11 @@ ios_location:
       message: request_location_update
     service: notify.mobile_app_ios
   - delay: 00:00:05
+google_light_theme:
+  alias: 0 - Google Light Theme
+  sequence:
+  - service: frontend.reload_themes
+  - delay: 00:00:02
+  - data:
+      name: Google Light Theme
+    service: frontend.set_theme
