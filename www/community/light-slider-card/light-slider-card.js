@@ -9183,20 +9183,20 @@ found at http://polymer.github.io/PATENTS.txt
   input[type='range'] {
     -webkit-appearance: none;
     background-color: rgba(25, 25, 25, 0.9);
-    height: 8em;
+    height: 90px;
     overflow: hidden;
-    width: 100%;
-    border-radius: 1.5em;
+    width: 90%;
+    border-radius: 15px;
     transform: rotate(-90deg);
-    font-size: 0.9em; 
+    font-size: 12px; 
     }
   input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     box-shadow: -210px 0 0 210px rgba(255, 255, 255, 0.8);
     cursor: pointer;
-    height: 0;
-    width: 0;
-    border: 0;
+    height: 0px;
+    width: 0px;
+    border: 0px;
     }
   .slider-center {
     display: flex;
