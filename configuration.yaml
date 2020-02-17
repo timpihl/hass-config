@@ -10,34 +10,28 @@ stream:
 shopping_list:
 websocket_api:
 
-#automation: !include automations.yaml
 binary_sensor:
-browser_mod: !include  configurations/browser_mod.yaml
-camera: !include configurations/camera.yaml
-device_tracker: !include configurations/device_tracker.yaml
-discovery: !include configurations/discovery.yaml
-fan: !include configurations/fan.yaml
-#frontend: !include configurations/frontend.yaml
-google_assistant: !include configurations/google_assistant.yaml
+browser_mod: !include  toker/browser_mod.yaml
+camera: !include toker/camera.yaml
+device_tracker: !include toker/device_tracker.yaml
+discovery: !include toker/discovery.yaml
+fan: !include toker/fan.yaml
+google_assistant: !include toker/google_assistant.yaml
 group: !include groups.yaml
-#history: !include configurations/history.yaml
-http: !include configurations/http.yaml
-ifttt: !include configurations/ifttt.yaml
-lock: !include configurations/lock.yaml
-#logbook: !include configurations/logbook.yaml
-logger: !include configurations/logger.yaml
-lovelace: !include configurations/lovelace.yaml
-media_player: !include configurations/media_player.yaml
-notify: !include configurations/notify.yaml
-recorder: !include configurations/recorder.yaml
+http: !include toker/http.yaml
+ifttt: !include toker/ifttt.yaml
+lock: !include toker/lock.yaml
+logger: !include toker/logger.yaml
+lovelace: !include toker/lovelace.yaml
+media_player: !include toker/media_player.yaml
+notify: !include toker/notify.yaml
+recorder: !include toker/recorder.yaml
 scene: !include scenes.yaml
-#script: !include scripts.yaml
-sensor: !include configurations/sensor.yaml
-shell_command: !include configurations/shell_command.yaml
-switch: !include configurations/switch.yaml
-telegram_bot: !include configurations/telegram.yaml
-tts: !include configurations/tts.yaml
-#updater: !include configurations/updater.yaml
+sensor: !include toker/sensor.yaml
+shell_command: !include toker/shell_command.yaml
+switch: !include toker/switch.yaml
+telegram_bot: !include toker/telegram.yaml
+tts: !include toker/tts.yaml
 zone: !include zones.yaml
 
 ##################
@@ -45,9 +39,9 @@ zone: !include zones.yaml
 automation: !include automations.yaml
 cloud:
 config:
-frontend: !include configurations/frontend.yaml
-history: !include configurations/history.yaml
-logbook: !include configurations/logbook.yaml
+frontend: !include toker/frontend.yaml
+history: !include toker/history.yaml
+logbook: !include toker/logbook.yaml
 map:
 mobile_app:
 person:
@@ -55,5 +49,5 @@ script: !include scripts.yaml
 #ssdp:
 #sun:
 system_health:
-updater: !include configurations/updater.yaml
+updater: !include toker/updater.yaml
 zeroconf:
