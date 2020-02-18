@@ -1,6 +1,9 @@
 exclude:
   entities:
     - automation.cloudflare_dns_update
+    - sensor.dell_edge
+    - sensor.ios
+    - sensor.macos
   domains:
     - sun
     - script
