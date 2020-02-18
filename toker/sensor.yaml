@@ -33,6 +33,7 @@
         "State": ""
         "Street Number": ""
         "Street": ""
+        "friendly_name": ""
 
     glue:
       friendly_name: 'Glue'

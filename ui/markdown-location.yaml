@@ -29,5 +29,3 @@ content: |
   {%- endif -%}
   </center>
 
-#  {%- elif is_state('person.tim','not_home') == is_state('person.kanita','not_home') and state_attr('sensor.tim','Street') == state_attr('sensor.kanita','Street') -%}
-#    ♡ Ni är båda på {{ state_attr('sensor.tim','Street') }} ♡

@@ -1,9 +1,9 @@
 #
-#- name: ToKer Home
-#  latitude: !secret ToKer_lati
-#  longitude: !secret ToKer_long
-#  radius: 30
-#  icon: mdi:home
+- name: Home
+  latitude: !secret ToKer_lati
+  longitude: !secret ToKer_long
+  radius: 30
+  icon: mdi:home
 
 #- name: Aspia
 #  latitude: !secret Aspia_lati

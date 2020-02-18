@@ -1,7 +1,4 @@
 homeassistant:
-  name: ToKer Home
-  latitude: 59.3458854
-  longitude: 18.0527433
   time_zone: Europe/Stockholm
   unit_system: metric
 
@@ -9,6 +6,7 @@ homeassistant:
 stream:
 shopping_list:
 websocket_api:
+lovelace_gen:
 
 binary_sensor:
 browser_mod: !include  toker/browser_mod.yaml
