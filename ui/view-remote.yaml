@@ -1,0 +1,25 @@
+title: Remote
+path: remote
+icon: 'mdi:youtube-tv'
+panel: true
+badges: []
+cards:
+
+##########################################################
+
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+
+      - !include weather.yaml
+      - !include vardagsrummet-player.yaml
+
+##########################################################
+
+      - break
+      - type: horizontal-stack
+        cards:
+          - !include vardagsrummet-power.yaml
+          - !include vardagsrummet-volume-off.yaml
+          - !include vardagsrummet-volume-down.yaml
+          - !include vardagsrummet-volume-up.yaml

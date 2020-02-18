@@ -1,7 +1,7 @@
 type: picture-glance
 title: Köket
 camera_view: live
-camera_image: camera.pcm
+camera_image: camera.koket
 image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
 aspect_ratio: 0%
 tap_action:

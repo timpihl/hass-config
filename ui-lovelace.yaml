@@ -39,112 +39,20 @@ resources:
 #    type: js
 
 title: Toker
-# Background:
-#background: 'center / cover no-repeat url(/local/background3.jpeg) fixed'
 views:
 
 ##########################################################
 
-  - title: Home
-    path: home
-    icon: 'mdi:home'
-    panel: true
-    badges: []
-    cards:
+  - !include ui/view-home.yaml
 
 ##########################################################
 
-      - type: custom:layout-card
-        layout: vertical
-        cards:
-
-          - !include ui/weather.yaml
-          - !include ui/vardagsrummet-player.yaml
-          - !include ui/markdown-location.yaml
-
-##########################################################
-
-          - break
-          - type: horizontal-stack
-            cards:
-              - !include ui/vardagsrummet-power.yaml
-              - !include ui/vardagsrummet-volume-off.yaml
-              - !include ui/vardagsrummet-volume-down.yaml
-              - !include ui/vardagsrummet-volume-up.yaml
-
-##########################################################
-
-          - type: horizontal-stack
-            cards:
-
-              - !include ui/button-glue.yaml
-              - !include ui/button-blank.yaml
-              - !include ui/button-ui.yaml
-              #- !include ui/button-ios.yaml
-              - !include ui/button-dev.yaml
-
-##########################################################
-
-          - type: horizontal-stack
-            cards:
-
-              - !include ui/button-hallen.yaml
-              - !include ui/button-koket.yaml
-              - !include ui/button-vardagsrummet.yaml
-              - !include ui/button-sovrummet.yaml
-
-##########################################################
-
-          - type: horizontal-stack
-            cards:
-
-              - !include ui/button-koksbordet.yaml
-              - !include ui/button-blank.yaml
-              - !include ui/button-blank.yaml
-              - !include ui/button-blank.yaml
-
-##########################################################
-
-          - break
-#          - !include ui/folding-entity.yaml
-
-          - !include ui/folding-temp.yaml
-
-          - break
-          - !include ui/button-blank.yaml
-
-##########################################################
-
-  - title: Camera
-    path: camera
-    icon: 'mdi:camera'
-    badges: []
-    cards:
-
-##########################################################
-
-      - !include ui/cam-koket.yaml
-      - !include ui/cam-sveavagen-norr.yaml
-      - !include ui/cam-sveavagen-soder.yaml
-      - !include ui/cam-bromma-to.yaml
-      - !include ui/cam-bromma-from.yaml
-      - !include ui/cam-odengatan-mot-valhallavagen.yaml
-      - !include ui/cam-odengatan-sveavagen.yaml
+  - !include ui/view-camera.yaml
         
 ##########################################################
 
-  - title: Dev
-    path: dev
-    icon: 'mdi:dev-to'
-    panel: true
-    badges: []
-    cards:
+  - !include ui/view-remote.yaml
 
 ##########################################################
 
-      - type: custom:layout-card
-        layout: horizontal
-        cards:
-
-          - !include ui/markdown-domains.yaml
-          - !include ui/markdown-entities.yaml
+  - !include ui/view-dev.yaml

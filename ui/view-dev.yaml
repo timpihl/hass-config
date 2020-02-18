@@ -1,0 +1,15 @@
+title: Dev
+path: dev
+icon: 'mdi:dev-to'
+panel: true
+badges: []
+cards:
+
+##########################################################
+
+  - type: custom:layout-card
+    layout: horizontal
+    cards:
+
+      - !include markdown-domains.yaml
+      - !include markdown-entities.yaml

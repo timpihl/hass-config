@@ -1,0 +1,15 @@
+title: Camera
+path: camera
+icon: 'mdi:camera'
+badges: []
+cards:
+
+##########################################################
+
+  - !include cam-koket.yaml
+  - !include cam-sveavagen-norr.yaml
+  - !include cam-sveavagen-soder.yaml
+  - !include cam-bromma-to.yaml
+  - !include cam-bromma-from.yaml
+  - !include cam-odengatan-mot-valhallavagen.yaml
+  - !include cam-odengatan-sveavagen.yaml
