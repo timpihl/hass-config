@@ -5,8 +5,7 @@ homeassistant:
 #default_config:
 stream:
 shopping_list:
-websocket_api:
-lovelace_gen:
+#websocket_api:
 
 binary_sensor:
 browser_mod: !include  toker/browser_mod.yaml

@@ -3,9 +3,6 @@ custom_header:
   compact_mode: true
   editor_warnings: false
   footer_mode: false
-  #header_css: 'padding: 5px;'
-  #button_text:
-  #  options: '{{ hours24LZ }}:{{ minutesLZ }}'
   
   background: var(--app-header-background-color)
   elements_color: var(--app-header-text-color)
@@ -30,8 +27,6 @@ resources:
   - url: /community_plugin/lovelace-layout-card/layout-card.js
     type: module
   - url: /community_plugin/popup-backdrop-filter/popup-backdrop-filter.js
-    type: module
-  - url: /community_plugin/button-entity-row/button-entity-row.js
     type: module
   - url: /community_plugin/light-entity-card/light-entity-card.js
     type: js
