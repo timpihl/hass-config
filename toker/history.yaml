@@ -1,16 +1,67 @@
 use_include_order: true
 include:
   domains:
-    - lock
-    - media_player
-    - light
-    - person
-    - fan
+    - person.marten
+    - sensor.marten
+    - person.tim
+    - sensor.tim
+    - person.kanita
+    - sensor.kanita
+    - lock.glue
+    - binary_sensor.badrummet
+    - binary_sensor.garderoben
+    - binary_sensor.sovrummet
+    - light.badrummet
+    - light.badrummet_a
+    - light.badrummet_b
+    - light.badrummet_c
+    - light.filament_a
+    - light.filament_b
+    - light.flakt_a
+    - light.flakt_b
+    - light.garderob_k
+    - light.garderoben
+    - light.glas_a
+    - light.glas_b
+    - light.glas_c
+    - light.hallen
+    - light.hallen_a
+    - light.hallen_b
+    - light.hallen_c
+    - light.koket
+    - light.koksbanken
+    - light.koksbordet
+    - light.koksfonstret
+    - light.sanglampa_k
+    - light.sanglampa_t
+    - light.sovrummet
+    - light.spot_a
+    - light.spot_b
+    - light.spot_c
+    - light.spots_tv
+    - light.strip
+    - light.top_a
+    - light.top_b
+    - light.top_c
+    - light.tradfri_remote_control_17
+    - light.vardagsrummet
+    - light.vardagsrumsfonstret
 exclude:
   domains:
-    - switch
-    - mobile_app
-    - camera
     - automation
     - binary_sensor
+    - camera
+    - device_tracker
+    - fan
+    - group
+    - input_select
+    - light
+    - lock
+    - media_player
+    - person
+    - scene
+    - script
     - sensor
+    - switch
+    - weather
+    - zone

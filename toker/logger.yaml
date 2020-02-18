@@ -1,5 +1,8 @@
 default: error
 logs:
+  hacs: critical
+  browser_mod: critical
+  google_geocode: critical
   custom_components.hacs: critical
   custom_components.google_geocode: critical
   custom_components.browser_mod: critical
