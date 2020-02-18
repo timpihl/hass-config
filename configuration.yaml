@@ -12,6 +12,7 @@ browser_mod: !include  toker/browser_mod.yaml
 camera: !include toker/camera.yaml
 device_tracker: !include toker/device_tracker.yaml
 discovery: !include toker/discovery.yaml
+favicon: !include toker/favicons.yaml
 fan: !include toker/fan.yaml
 google_assistant: !include toker/google_assistant.yaml
 group: !include groups.yaml
