@@ -1,1 +1,79 @@
-- !include switch/broadlink.yaml
+- platform: broadlink
+  host: 192.168.10.8
+  mac: 'C8:F7:42:16:CC:6F'
+  timeout: 30
+  type: rm_mini
+  friendly_name: Broadlink
+  switches:
+    tv_power:
+      friendly_name: "TV Power"
+      command_on: 'JgAYAB0eHB46HhweHR0dOjodHTodHjodHQANBQ=='
+      command_off: 'JgAYAB0eHB46HhweHR0dOjodHTodHjodHQANBQ=='
+    soundbar_vol_up:
+      friendly_name: "Soundbar Volume Up"
+      command_on: 'JgBGAJOVEhQRExI5EjgTERQ3ExMRFBEVEBQRORI4EhQSOBEUExMROBI5ETgSFBE5EhMRFg8WERISFBISEjkSFBA4EjgTOBMADQUAAA=='
+      command_off: 'JgBGAJOVEhQRExI5EjgTERQ3ExMRFBEVEBQRORI4EhQSOBEUExMROBI5ETgSFBE5EhMRFg8WERISFBISEjkSFBA4EjgTOBMADQUAAA=='
+    soundbar_vol_down:
+      friendly_name: "Soundbar Volume Down"
+      command_on: 'JgBWAJWTFBITEhI4EjYVEhM3FBISExMTERQSNxQ2FBETNxMTEhMTEhM3EzcTExI4EhQRExMSEjgTEhMSFDYUEhM3EjgTNxMABfKVkxM3EwAMT5WUEjgTAA0FAAA='
+      command_off: 'JgBWAJWTFBITEhI4EjYVEhM3FBISExMTERQSNxQ2FBETNxMTEhMTEhM3EzcTExI4EhQRExMSEjgTEhMSFDYUEhM3EjgTNxMABfKVkxM3EwAMT5WUEjgTAA0FAAA='
+    soundbar_mute:
+      friendly_name: "Soundbar Mute"
+      command_on: 'JgBOAJWUExISExI4EzcTEhM3FRETEhIUERQSNxM3FBITNhMTExMROBM3EzQWNxM3FBISExIUEhITEhMTExEUEhI4FDYSOBMABfGVkxQ3EgANBQAAAAAAAAAAAAA='
+      command_off: 'JgBOAJWUExISExI4EzcTEhM3FRETEhIUERQSNxM3FBITNhMTExMROBM3EzQWNxM3FBISExIUEhITEhMTExEUEhI4FDYSOBMABfGVkxQ3EgANBQAAAAAAAAAAAAA='
+    tv_netflix:
+      friendly_name: "Netflix"
+      command_on: 'JgAaAB0dHR46HR0eHB4dOh0dOh4cOxweHR0dAA0FAAAAAAAAAAAAAAAAAAA='
+      command_off: 'JgAaAB0dHR46HR0eHB4dOh0dOh4cOxweHR0dAA0FAAAAAAAAAAAAAAAAAAA='
+    tv_source:
+      friendly_name: "TV Source"
+      command_on: 'JgAaAB0dOh4cHh0dHR0dOh0eHB4eHDoeHhwdAA0FAAAAAAAAAAAAAAAAAAA='
+      command_off: 'JgAaAB0dOh4cHh0dHR0dOh0eHB4eHDoeHhwdAA0FAAAAAAAAAAAAAAAAAAA='
+    tv_back:
+      friendly_name: "TV Back"
+      command_on: 'JgAwAAYAAxEdHjscHR4cHh0dHTo7HB06Ojs6AAurHR06Hh0dHR0dHhw6Oh4dOjo6OgANBQAAAAAAAAAA'
+      command_off: 'JgAwAAYAAxEdHjscHR4cHh0dHTo7HB06Ojs6AAurHR06Hh0dHR0dHhw6Oh4dOjo6OgANBQAAAAAAAAAA'
+    tv_enter:
+      friendly_name: "TV Enter"
+      command_on: 'JgAYAB0dOh4dHR0dHR4cOh0eHR06Ojo7HAANBQ=='
+      command_off: 'JgAYAB0dOh4dHR0dHR4cOh0eHR06Ojo7HAANBQ=='
+    tv_exit:
+      friendly_name: "TV Exit"
+      command_on: 'JgAYABweHR46HR4cHR4cOh0eOh0dOjo7HAANBQ=='
+      command_off: 'JgAYABweHR46HR4cHR4cOh0eOh0dOjo7HAANBQ=='
+    tv_right:
+      friendly_name: "TV Right"
+      command_on: 'JgAWABweHR06Hh0dHR0dOjo6OjscHjoADQUAAA=='
+      command_off: 'JgAWABweHR06Hh0dHR0dOjo6OjscHjoADQUAAA=='
+    tv_left:
+      friendly_name: "TV Left"
+      command_on: 'JgAWAB0dOh4eHB0dHR4cOjs6Ozk7OR0ADQUAAA=='
+      command_off: 'JgAWAB0dOh4eHB0dHR4cOjs6Ozk7OR0ADQUAAA=='
+    tv_up:
+      friendly_name: "TV Up"
+      command_on: 'JgAWAB0dHR46HR4dHB4dOjs5Ojo6HhwADQUAAA=='
+      command_off: 'JgAWAB0dHR46HR4dHB4dOjs5Ojo6HhwADQUAAA=='
+    tv_down:
+      friendly_name: "TV Down"
+      command_on: 'JgAYAB0eOh0dHhweHR0dOjo6Oh4cOxweHQANBQ=='
+      command_off: 'JgAYAB0eOh0dHhweHR0dOjo6Oh4cOxweHQANBQ=='
+    tv_play:
+      friendly_name: "TV Play"
+      command_on: 'JgAwAB0dHR46HR0dHR4cOjs6HR06Hhw7HAALjh0dHh06HR0dHR4cOjs6HB46Hhw7HAANBQAAAAAAAAAA'
+      command_off: 'JgAwAB0dHR46HR0dHR4cOjs6HR06Hhw7HAALjh0dHh06HR0dHR4cOjs6HB46Hhw7HAANBQAAAAAAAAAA'
+    tv_stop:
+      friendly_name: "TV Stop"
+      command_on: 'JgAwAB0dHh06HR0eHB4dOjo6HR46HR0dHQALqx0eHB46HR0eHR0dOjs5HR46HR0dHQANBQAAAAAAAAAA'
+      command_off: 'JgAwAB0dHh06HR0eHB4dOjo6HR46HR0dHQALqx0eHB46HR0eHR0dOjs5HR46HR0dHQANBQAAAAAAAAAA'
+    tv_rewind:
+      friendly_name: "TV Rewind"
+      command_on: 'JgAwAB0dHR46HR0dHR4cOjs6HR06Oh0eHQALjR4cHR46HR0eHB4dOjo6HR06Oh4dHQANBQAAAAAAAAAA'
+      command_off: 'JgAwAB0dHR46HR0dHR4cOjs6HR06Oh0eHQALjR4cHR46HR0eHB4dOjo6HR06Oh4dHQANBQAAAAAAAAAA'
+    tv_forward:
+      friendly_name: "TV Forward"
+      command_on: 'JgAwABweOxwdHh0dHR0dOjo6HR4cHjoeHAALqh0eOh0dHhweHR0dOjo6HR0dHjodHQANBQAAAAAAAAAA'
+      command_off: 'JgAwABweOxwdHh0dHR0dOjo6HR4cHjoeHAALqh0eOh0dHhweHR0dOjo6HR0dHjodHQANBQAAAAAAAAAA'
+    tv_usb:
+      friendly_name: "TV USB"
+      command_on: 'JgAaAB0eHB46HhweHR0dOh0dHh0cHjoeHDscAA0FAAAAAAAAAAAAAAAAAAA='
+      command_off: 'JgAaAB0eHB46HhweHR0dOh0dHh0cHjoeHDscAA0FAAAAAAAAAAAAAAAAAAA='

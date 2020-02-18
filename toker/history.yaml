@@ -1,6 +1,6 @@
 use_include_order: true
 include:
-  domains:
+  entities:
     - person.marten
     - sensor.marten
     - person.tim
@@ -46,22 +46,5 @@ include:
     - light.tradfri_remote_control_17
     - light.vardagsrummet
     - light.vardagsrumsfonstret
-exclude:
-  domains:
-    - automation
-    - binary_sensor
-    - camera
-    - device_tracker
-    - fan
-    - group
-    - input_select
-    - light
-    - lock
-    - media_player
-    - person
-    - scene
-    - script
-    - sensor
-    - switch
-    - weather
-    - zone
+#exclude:
+#  domains:

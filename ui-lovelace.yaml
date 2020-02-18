@@ -128,6 +128,8 @@ views:
       - !include ui/cam-sveavagen-soder.yaml
       - !include ui/cam-bromma-to.yaml
       - !include ui/cam-bromma-from.yaml
+      - !include ui/cam-odengatan-mot-valhallavagen.yaml
+      - !include ui/cam-odengatan-sveavagen.yaml
         
 ##########################################################
 
@@ -136,4 +138,13 @@ views:
     icon: 'mdi:dev-to'
     panel: true
     badges: []
-    cards: []
+    cards:
+
+##########################################################
+
+      - type: custom:layout-card
+        layout: horizontal
+        cards:
+
+          - !include ui/markdown-domains.yaml
+          - !include ui/markdown-entities.yaml
