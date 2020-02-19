@@ -12,7 +12,7 @@ browser_mod: !include  toker/browser_mod.yaml
 camera: !include toker/camera.yaml
 device_tracker: !include toker/device_tracker.yaml
 discovery: !include toker/discovery.yaml
-favicon: !include toker/favicons.yaml
+#favicon: !include toker/favicons.yaml
 fan: !include toker/fan.yaml
 google_assistant: !include toker/google_assistant.yaml
 group: !include groups.yaml
@@ -27,6 +27,7 @@ recorder: !include toker/recorder.yaml
 scene: !include scenes.yaml
 sensor: !include toker/sensor.yaml
 shell_command: !include toker/shell_command.yaml
+spotify: !include toker/spotify.yaml
 switch: !include toker/switch.yaml
 #telegram_bot: !include toker/telegram.yaml
 tts: !include toker/tts.yaml

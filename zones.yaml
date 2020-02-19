@@ -34,3 +34,9 @@
   longitude: !secret East_long
   radius: 30
   icon: mdi:food
+
+- name: Solarieöarna
+  latitude: !secret Solarie_lati
+  longitude: !secret Solarie_long
+  radius: 20
+  icon: mdi:white-balance-sunny
