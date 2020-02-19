@@ -12,7 +12,7 @@ cards:
     cards:
 
       - !include weather.yaml
-      - !include vardagsrummet-player.yaml
+      - !include media-vardagsrummet.yaml
 
 ##########################################################
 
