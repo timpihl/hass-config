@@ -1,2 +1,2 @@
-client_id: 9bb738c921ce40ecb64e083e4cc3594f
-client_secret: dd3f9632543d42bdab330fb98d066e20
+client_id: !secret SpotifyID
+client_secret: !secret SpotifySecret
