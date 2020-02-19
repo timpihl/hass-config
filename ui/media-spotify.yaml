@@ -1,0 +1,9 @@
+type: 'custom:mini-media-player'
+entity: media_player.spotify_tim
+icon: 'mdi:spotify'
+source: icon
+artwork: cover
+hide:
+  power_state: false
+  source: false
+  volume: true

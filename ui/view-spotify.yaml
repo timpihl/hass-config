@@ -1,0 +1,14 @@
+title: Spotify
+path: spotify
+icon: 'mdi:spotify'
+panel: true
+badges: []
+cards:
+
+##########################################################
+
+  - type: custom:layout-card
+    layout: horizontal
+    cards:
+
+      - !include media-spotify.yaml
