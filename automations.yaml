@@ -106,3 +106,22 @@
   action:
   - entity_id: script.coming_home
     service: script.turn_on
+- id: 'lightify'
+  alias: Lightify
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: lightify
+  condition: []
+  action:
+  - data:
+      brightness: 1
+    entity_id: light.sanglampa_t
+    service: light.turn_on
+  - delay: 00:00:01
+  - data:
+      brightness: 255
+      transition: 30
+      white_value: 255
+    entity_id: light.sanglampa_t
+    service: light.turn_on
