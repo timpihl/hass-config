@@ -7,7 +7,7 @@ stream:
 shopping_list:
 #websocket_api:
 
-binary_sensor:
+binary_sensor: !include toker/binary_sensor.yaml
 browser_mod: !include  toker/browser_mod.yaml
 camera: !include toker/camera.yaml
 device_tracker: !include toker/device_tracker.yaml
