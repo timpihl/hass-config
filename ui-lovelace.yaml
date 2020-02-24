@@ -31,27 +31,20 @@ resources:
   - url: /community_plugin/light-entity-card/light-entity-card.js
     type: js
 
-#  - url: /local/community/light-slider-card/light-slider-card.js
-#    type: js
-#  - url: /community_plugin/circle-sensor-card/circle-sensor-card.js
-#    type: module
-#  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
-#    type: js
-
 title: Toker
 views:
 
 ##########################################################
 
   - !include ui/view-home.yaml
-
-##########################################################
-
-  - !include ui/view-camera.yaml
         
 ##########################################################
 
   - !include ui/view-remote.yaml
+
+##########################################################
+
+  - !include ui/view-camera.yaml
 
 ##########################################################
 

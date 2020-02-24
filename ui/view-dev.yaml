@@ -8,8 +8,8 @@ cards:
 ##########################################################
 
   - type: custom:layout-card
-    layout: horizontal
+    layout: vertical
     cards:
-
-      - !include markdown-domains.yaml
-      - !include markdown-entities.yaml
+      - !include markdowns/domains.yaml
+      - break
+      - !include markdowns/entities.yaml

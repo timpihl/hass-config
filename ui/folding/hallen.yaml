@@ -1,0 +1,12 @@
+type: 'custom:fold-entity-row'
+padding: 0
+group_config:
+  secondary_info: last-changed
+head:
+  label: Hallen
+  icon: 'mdi:hanger'
+  entity: light.hallen
+entities:
+  - light.hallen_a
+  - light.hallen_b
+  - light.hallen_c

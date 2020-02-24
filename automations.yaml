@@ -106,9 +106,9 @@
   action:
   - entity_id: script.coming_home
     service: script.turn_on
-- id: 'lightify'
+- id: lightify
   alias: Lightify
-  description: ''
+  description: Lightify
   trigger:
   - platform: webhook
     webhook_id: lightify

@@ -1,85 +1,19 @@
 type: entities
 show_header_toggle: false
+style: |
+  ha-card > .card-content {
+    padding: 5px 10px;
+  }
 entities:
   - type: 'custom:fold-entity-row'
-    group_config:
-    secondary_info: last-changed
     padding: 0
-    head:
-      entity: group.toker
+    head: 
+      entity: light.toker
       icon: 'mdi:heart-circle-outline'
       label: ToKer
     entities:
-      - type: 'custom:fold-entity-row'
-        padding: 0
-        group_config:
-          secondary_info: last-changed
-        head:
-          label: Hallen
-          icon: 'mdi:hanger'
-          entity: light.hallen
-        entities:
-          - light.hallen_a
-          - light.hallen_b
-          - light.hallen_c
-
-      - type: 'custom:fold-entity-row'
-        padding: 0
-        group_config:
-          secondary_info: last-changed
-        head:
-          entity: light.koket
-          icon: 'mdi:food'
-          label: Köket
-        entities:
-          - light.spot_a
-          - light.spot_b
-          - light.spot_c
-          - light.flakt_a
-          - light.flakt_b
-          - light.koksbanken
-          - light.koksbordet
-          - light.koksfonstret
-
-      - type: 'custom:fold-entity-row'
-        padding: 0
-        group_config:
-          secondary_info: last-changed
-        head:
-          entity: light.koksbordet
-          icon: 'mdi:table-chair'
-          label: Köksbordet
-        entities:
-          - light.filament_a
-          - light.filament_b
-
-      - type: 'custom:fold-entity-row'
-        padding: 0
-        group_config:
-          secondary_info: last-changed
-        head:
-          entity: light.vardagsrummet
-          icon: 'mdi:youtube-tv'
-          label: Vardagsrummet
-        entities:
-          - light.glas_a
-          - light.glas_b
-          - light.glas_c
-          - light.top_a
-          - light.top_b
-          - light.top_c
-          - light.vardagsrumsfonstret
-          - light.spots_tv
-
-      - type: 'custom:fold-entity-row'
-        padding: 0
-        group_config:
-          secondary_info: last-changed
-        head:
-          entity: light.sovrummet
-          icon: 'mdi:hotel'
-          label: Sovrummet
-        entities:
-          - light.sanglampa_k
-          - light.sanglampa_t
-          - light.strip
+      - !include folding/hallen.yaml
+      - !include folding/koket.yaml
+      - !include folding/koksbordet.yaml
+      - !include folding/vardagsrummet.yaml
+      - !include folding/sovrummet.yaml

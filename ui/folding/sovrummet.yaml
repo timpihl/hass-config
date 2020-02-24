@@ -1,0 +1,12 @@
+type: 'custom:fold-entity-row'
+padding: 0
+group_config:
+  secondary_info: last-changed
+head:
+  entity: light.sovrummet
+  icon: 'mdi:hotel'
+  label: Sovrummet
+entities:
+  - light.sanglampa_k
+  - light.sanglampa_t
+  - light.strip

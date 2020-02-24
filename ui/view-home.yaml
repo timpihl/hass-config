@@ -11,57 +11,47 @@ cards:
     layout: vertical
     cards:
 
+#      - type: vertical-stack
+#        cards:
       - !include weather.yaml
       - !include media-vardagsrummet.yaml
-      - !include markdown-location.yaml
-
-##########################################################
-
+      - !include markdowns/location.yaml
       - break
       - type: horizontal-stack
         cards:
-          - !include vardagsrummet-power.yaml
-          - !include vardagsrummet-volume-off.yaml
-          - !include vardagsrummet-volume-down.yaml
-          - !include vardagsrummet-volume-up.yaml
-
-##########################################################
+          - !include remote/vardagsrummet-power.yaml
+          - !include remote/vardagsrummet-volume-off.yaml
+          - !include remote/vardagsrummet-volume-down.yaml
+          - !include remote/vardagsrummet-volume-up.yaml
 
       - type: horizontal-stack
         cards:
 
-          - !include button-glue.yaml
-          - !include button-blank.yaml
-          - !include button-ui.yaml
-          #- !include button-ios.yaml
-          - !include button-dev.yaml
-
-##########################################################
+          - !include buttons/button-glue.yaml
+          - !include buttons/button-blank.yaml
+          - !include buttons/button-ui.yaml
+          #- !include buttons/button-ios.yaml
+          - !include buttons/button-dev.yaml
 
       - type: horizontal-stack
         cards:
 
-          - !include button-hallen.yaml
-          - !include button-koket.yaml
-          - !include button-vardagsrummet.yaml
-          - !include button-sovrummet.yaml
-
-##########################################################
+          - !include buttons/button-hallen.yaml
+          - !include buttons/button-koket.yaml
+          - !include buttons/button-vardagsrummet.yaml
+          - !include buttons/button-sovrummet.yaml
 
       - type: horizontal-stack
         cards:
 
-          - !include button-koksbordet.yaml
-          - !include button-blank.yaml
-          - !include button-blank.yaml
-          - !include button-blank.yaml
-
-##########################################################
+          - !include buttons/button-koksbordet.yaml
+          - !include buttons/button-blank.yaml
+          - !include buttons/button-blank.yaml
+          - !include buttons/button-blank.yaml
 
       - break
-#          - !include folding-entity.yaml
-
-      - !include folding-temp.yaml
+      - !include folding-entity.yaml    
+      #- !include folding-temp.yaml
 
       - break
-      - !include button-blank.yaml
+#      - !include buttons/button-blank.yaml

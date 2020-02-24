@@ -1,0 +1,17 @@
+type: 'custom:fold-entity-row'
+padding: 0
+group_config:
+  secondary_info: last-changed
+head:
+  entity: light.koket
+  icon: 'mdi:food'
+  label: Köket
+entities:
+  - light.spot_a
+  - light.spot_b
+  - light.spot_c
+  - light.flakt_a
+  - light.flakt_b
+  - light.koksbanken
+  - light.koksbordet
+  - light.koksfonstret

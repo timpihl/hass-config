@@ -1,0 +1,11 @@
+type: 'custom:fold-entity-row'
+padding: 0
+group_config:
+  secondary_info: last-changed
+head:
+  entity: light.koksbordet
+  icon: 'mdi:table-chair'
+  label: Köksbordet
+entities:
+  - light.filament_a
+  - light.filament_b

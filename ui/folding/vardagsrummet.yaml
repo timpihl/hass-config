@@ -1,0 +1,17 @@
+type: 'custom:fold-entity-row'
+padding: 0
+group_config:
+  secondary_info: last-changed
+head:
+  entity: light.vardagsrummet
+  icon: 'mdi:youtube-tv'
+  label: Vardagsrummet
+entities:
+  - light.glas_a
+  - light.glas_b
+  - light.glas_c
+  - light.top_a
+  - light.top_b
+  - light.top_c
+  - light.vardagsrumsfonstret
+  - light.spots_tv

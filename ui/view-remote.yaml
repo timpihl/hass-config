@@ -10,16 +10,26 @@ cards:
   - type: custom:layout-card
     layout: vertical
     cards:
-
-      - !include weather.yaml
       - !include media-vardagsrummet.yaml
 
-##########################################################
-
-      - break
       - type: horizontal-stack
         cards:
-          - !include vardagsrummet-power.yaml
-          - !include vardagsrummet-volume-off.yaml
-          - !include vardagsrummet-volume-down.yaml
-          - !include vardagsrummet-volume-up.yaml
+          - !include remote/vardagsrummet-power.yaml
+          - !include remote/vardagsrummet-volume-off.yaml
+          - !include remote/vardagsrummet-volume-down.yaml
+          - !include remote/vardagsrummet-volume-up.yaml
+
+      - type: horizontal-stack
+        cards:
+          - !include remote/vardagsrummet-rewind.yaml
+          - !include remote/vardagsrummet-paus.yaml
+          - !include remote/vardagsrummet-play.yaml
+          - !include remote/vardagsrummet-forward.yaml
+
+      - type: horizontal-stack
+        cards:
+          - !include remote/vardagsrummet-left.yaml
+          - !include remote/vardagsrummet-up.yaml
+          - !include remote/vardagsrummet-down.yaml
+          - !include remote/vardagsrummet-right.yaml
+

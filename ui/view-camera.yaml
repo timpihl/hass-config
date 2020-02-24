@@ -6,10 +6,10 @@ cards:
 
 ##########################################################
 
-  - !include cam-koket.yaml
-  - !include cam-sveavagen-norr.yaml
-  - !include cam-sveavagen-soder.yaml
-  - !include cam-bromma-to.yaml
-  - !include cam-bromma-from.yaml
-  - !include cam-odengatan-mot-valhallavagen.yaml
-  - !include cam-odengatan-sveavagen.yaml
+  - !include cameras/cam-koket.yaml
+  - !include cameras/cam-sveavagen-norr.yaml
+  - !include cameras/cam-sveavagen-soder.yaml
+  - !include cameras/cam-bromma-to.yaml
+  - !include cameras/cam-bromma-from.yaml
+  - !include cameras/cam-odengatan-mot-valhallavagen.yaml
+  - !include cameras/cam-odengatan-sveavagen.yaml

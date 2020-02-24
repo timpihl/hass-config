@@ -1,7 +1,12 @@
 type: markdown
-content: >
-  Domains:
-
+style: |
+  ha-card {
+    background: none;
+    box-shadow: none;
+  }
+content: |
+  >**Domains:**
+  ***
   {% set unique_domains = states | map(attribute='domain') |list | unique | list -%}
   {%- for domain in unique_domains -%}
   {{domain + "\n"}}

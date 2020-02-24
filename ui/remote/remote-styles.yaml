@@ -1,0 +1,14 @@
+card:
+  - padding: 5px
+  - border-radius: 50%
+grid:
+  - grid-template-areas: '"i"'
+  - grid-template-columns: 1fr
+  - grid-template-rows: 1fr
+icon: null
+img_cell:
+  - align-self: center
+  - text-align: center
+  - justify-self: center
+  - height: 25px
+  - width: 25px

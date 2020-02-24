@@ -1,0 +1,21 @@
+type: 'custom:button-card'
+name: Toker Tv Paus
+icon: mdi:pause
+color_type: icon
+aspect_ratio: 1/1
+show_name: false
+show_state: false
+size: 25px
+
+tap_action:
+  action: call-service
+  haptic: light
+  service: switch.turn_off
+  service_data:
+    entity_id: switch.tv_stop
+
+hold_action:
+  action: more-info
+  haptic: light
+
+styles: !include remote-styles.yaml
