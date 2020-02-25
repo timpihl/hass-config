@@ -1,7 +1,11 @@
-- platform: generic
-  name: Köket
-  still_image_url: http://192.168.10.120:1200/shot.jpg
-  stream_source: rtsp://192.168.10.120:1200/h264_pcm.sdp
+#- platform: generic
+#  name: Köket
+#  still_image_url: !secret Koket_Generic_Image
+#  stream_source: !secret Koket_Generic_Stream
+
+#- platform: ffmpeg
+#  name: Köket FFmpeg
+#  input: !secret Koket_FFmpeg_Stream
 
 - platform: mjpeg
   name: Mot Bromma

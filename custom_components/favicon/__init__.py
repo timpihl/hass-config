@@ -121,6 +121,9 @@ def apply_hooks(hass):
 
     if title or "favicon" in icons or "apple" in icons:
         homeassistant.components.frontend.IndexView.get_template = _get_template
+        for view in hass.http.app.router.resources():
+            if isinstance(view, homeassistant.components.frontend.IndexView):
+                view._template_cache = None
 
     homeassistant.components.frontend.MANIFEST_JSON["icons"] = data["manifest_icons"].copy()
     if "manifest" in icons:
@@ -137,7 +140,7 @@ def apply_hooks(hass):
 def remove_hooks(hass):
     data = hass.data[DOMAIN]
     homeassistant.components.frontend.IndexView.get_template = data["get_template"]
-    homeassistant.components.frontend.MANIFSET_JSON["icons"] = data["manifest_icons"].copy()
+    homeassistant.components.frontend.MANIFEST_JSON["icons"] = data["manifest_icons"].copy()
     homeassistant.components.frontend.MANIFEST_JSON["name"] = "Home Assistant"
     homeassistant.components.frontend.MANIFEST_JSON["short_name"] = "Assistant"
     return True

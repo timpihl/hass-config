@@ -7,12 +7,12 @@ stream:
 shopping_list:
 #websocket_api:
 
+android_ip_webcam: !include toker/android-ip-webcam.yaml
 binary_sensor: !include toker/binary_sensor.yaml
 browser_mod: !include  toker/browser_mod.yaml
 camera: !include toker/camera.yaml
 device_tracker: !include toker/device_tracker.yaml
 discovery: !include toker/discovery.yaml
-#favicon: !include toker/favicons.yaml
 fan: !include toker/fan.yaml
 google_assistant: !include toker/google_assistant.yaml
 group: !include groups.yaml
@@ -37,7 +37,7 @@ zone: !include zones.yaml
 
 # Default_Config:
 automation: !include automations.yaml
-cloud:
+#cloud:
 config:
 frontend: !include toker/frontend.yaml
 history: !include toker/history.yaml

@@ -1,6 +1,0 @@
-- platform: ffmpeg_motion
-  input: !secret Koket_Motion
-  name: Köket
-  initial_state: false #Default true
-  changes: 10 #Default 10
-  reset: 20 #Defualt 20

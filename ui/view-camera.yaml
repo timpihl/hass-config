@@ -7,6 +7,7 @@ cards:
 ##########################################################
 
   - !include cameras/cam-koket.yaml
+#  - !include cameras/cam-koket-multi.yaml
   - !include cameras/cam-sveavagen-norr.yaml
   - !include cameras/cam-sveavagen-soder.yaml
   - !include cameras/cam-bromma-to.yaml
