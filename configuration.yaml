@@ -34,10 +34,11 @@ tts: !include toker/tts.yaml
 zone: !include zones.yaml
 
 ##################
+# Included in with default_config:
 
-# Default_Config:
+# default_config:
 automation: !include automations.yaml
-#cloud:
+# cloud:
 config:
 frontend: !include toker/frontend.yaml
 history: !include toker/history.yaml
@@ -46,8 +47,8 @@ map:
 mobile_app:
 person:
 script: !include scripts.yaml
-#ssdp:
-#sun:
+ssdp:
+# sun:
 system_health:
 updater: !include toker/updater.yaml
 zeroconf:
