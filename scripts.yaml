@@ -152,6 +152,9 @@ ios_location:
   - data:
       message: request_location_update
     service: notify.mobile_app_ios
+  - data:
+      message: request_location_update
+    service: notify.mobile_app_sm_g960f
   - delay: 00:00:05
 google_light_theme:
   alias: 0 - Google Light Theme
@@ -160,3 +163,52 @@ google_light_theme:
   - data:
       name: Google Light Theme
     service: frontend.set_theme
+koket_on:
+  alias: Köket On
+  sequence:
+  - data:
+      brightness: 255
+      transition: 10
+      white_value: 1
+    entity_id: light.koket
+    service: light.turn_on
+vardagsrummet_on:
+  alias: Vardagsrummet On
+  sequence:
+  - data:
+      brightness: 255
+      color_temp: 1
+      transition: 10
+      white_value: 1
+    entity_id: light.vardagsrummet
+    service: light.turn_on
+hallen_on:
+  alias: Hallen On
+  sequence:
+  - data:
+      brightness: 255
+      transition: 10
+      white_value: 1
+    entity_id: light.hallen
+    service: light.turn_on
+sovrummet_on:
+  alias: Sovrummet On
+  sequence:
+  - data:
+      brightness: 255
+      color_temp: 1
+      transition: 10
+      white_value: 1
+    entity_id: light.sovrummet
+    service: light.turn_on
+'1582809472326':
+  alias: All On
+  sequence:
+  - data: {}
+    service: script.hallen_on
+  - data: {}
+    service: script.koket_on
+  - data: {}
+    service: script.sovrummet_on
+  - data: {}
+    service: script.vardagsrummet_on

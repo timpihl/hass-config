@@ -81,18 +81,6 @@
       name: ToKer
     service: logbook.log
   - service: script.brightness_low
-- id: ios_badrummet
-  alias: iOS Event Badrummet
-  description: ''
-  trigger:
-  - event_data:
-      actionName: Badrummet
-    event_type: ios.action_fired
-    platform: event
-  condition: []
-  action:
-  - entity_id: light.badrummet
-    service: script.toggle_badrummet
 - id: toker-home
   alias: ToKer Home
   description: ''
@@ -104,8 +92,14 @@
   - condition: template
     value_template: '{{ not is_state("person.kanita", "home") }}'
   action:
-  - entity_id: script.coming_home
+  - entity_id: script.koket_on
     service: script.turn_on
+  - data: {}
+    service: script.hallen_on
+  - data: {}
+    service: script.sovrummet_on
+  - data: {}
+    service: script.vardagsrummet_on
 - id: lightify
   alias: Lightify
   description: Lightify

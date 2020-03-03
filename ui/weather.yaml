@@ -2,7 +2,8 @@ type: 'custom:simple-weather-card'
 entity: weather.toker_home
 name: ''
 primary_info:
-  - extrema
-secondary_info:
   - precipitation
-backdrop: 
+  - precipitation_probability
+secondary_info:
+  - wind_speed
+backdrop:

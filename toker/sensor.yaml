@@ -1,39 +1,39 @@
-- platform: google_geocode
-  name: Tim
-  origin: person.tim
-  options: street, city
-  display_zone: hide
-  api_key: !secret google_geocode_api
-  language: sv-SE
-  region: SV
+#- platform: google_geocode
+#  name: Tim
+#  origin: person.tim
+#  options: street, city
+#  display_zone: hide
+#  api_key: !secret google_geocode_api
+#  language: sv-SE
+#  region: SV
 
-- platform: google_geocode
-  name: Kanita
-  origin: person.kanita
-  options: street, city
-  display_zone: hide
-  api_key: !secret google_geocode_api
-  language: sv-SE
-  region: SV
+#- platform: google_geocode
+#  name: Kanita
+#  origin: person.kanita
+#  options: street, city
+#  display_zone: hide
+#  api_key: !secret google_geocode_api
+#  language: sv-SE
+#  region: SV
 
 - platform: template
   sensors:
-    marten:
-      friendly_name: 'Mårten'
-      value_template: >-
-        ''
-      attribute_templates:
-        "City": ""
-        "Country": ""
-        "County": ""
-        "Formatted Address": ""
-        "Friendly Name": ""
-        "Postal Code": ""
-        "Postal Town": ""
-        "State": ""
-        "Street Number": ""
-        "Street": ""
-        "friendly_name": ""
+#    marten:
+#      friendly_name: 'Mårten'
+#      value_template: >-
+#        ''
+#      attribute_templates:
+#        "City": ""
+#        "Country": ""
+#        "County": ""
+#        "Formatted Address": ""
+#        "Friendly Name": ""
+#        "Postal Code": ""
+#        "Postal Town": ""
+#        "State": ""
+#        "Street Number": ""
+#        "Street": ""
+#        "friendly_name": ""
 
     glue:
       friendly_name: 'Glue'

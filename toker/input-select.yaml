@@ -1,0 +1,7 @@
+spoof:
+  name: Spoof
+  options:
+    - Yes
+    - No
+  initial: No
+  icon: mdi:panda

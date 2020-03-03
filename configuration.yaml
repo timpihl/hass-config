@@ -9,7 +9,7 @@ shopping_list:
 
 android_ip_webcam: !include toker/android-ip-webcam.yaml
 binary_sensor: !include toker/binary_sensor.yaml
-browser_mod: !include  toker/browser_mod.yaml
+browser_mod: !include toker/browser_mod.yaml
 camera: !include toker/camera.yaml
 device_tracker: !include toker/device_tracker.yaml
 discovery: !include toker/discovery.yaml
@@ -18,6 +18,7 @@ google_assistant: !include toker/google_assistant.yaml
 group: !include groups.yaml
 http: !include toker/http.yaml
 ifttt: !include toker/ifttt.yaml
+input_select: !include toker/input-select.yaml
 lock: !include toker/lock.yaml
 logger: !include toker/logger.yaml
 lovelace: !include toker/lovelace.yaml
