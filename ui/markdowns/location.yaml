@@ -17,7 +17,7 @@ content: |
     {%- elif not is_state('person.tim','not_home') %}
       Tim är på {{states('person.tim')}} ♡
     {%- elif is_state('person.tim','not_home') %}
-      Tim är på {{state_attr('sensor.tim','Street')}} ♡
+      Tim är på {{state_attr('sensor.tim_ios_geocoded_location','Thoroughfare')}} ♡
     {% endif %}
     <br>
     {%- if is_state('person.kanita','home') %}
@@ -25,7 +25,7 @@ content: |
     {%- elif not is_state('person.kanita','not_home') %}
       Kanita är på {{states('person.kanita')}} ♡
     {%- elif is_state('person.kanita','not_home') %}
-      Kanita är på {{state_attr('sensor.kanita','Street')}} ♡
+      Kanita är på {{state_attr('sensor.kanita_s9_gecoded_location','Thoroughfare')}} ♡
     {% endif %}
   {%- endif -%}
   </center>

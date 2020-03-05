@@ -1,0 +1,5 @@
+base_topic: homeassistant
+publish_attributes: true
+include:
+  entities:
+    - sensor.tim_ios_geocoded_location

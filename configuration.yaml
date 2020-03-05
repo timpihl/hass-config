@@ -23,6 +23,7 @@ lock: !include toker/lock.yaml
 logger: !include toker/logger.yaml
 lovelace: !include toker/lovelace.yaml
 media_player: !include toker/media_player.yaml
+mqtt_statestream: !include toker/mqtt-statestream.yaml
 notify: !include toker/notify.yaml
 recorder: !include toker/recorder.yaml
 scene: !include scenes.yaml

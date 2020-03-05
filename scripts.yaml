@@ -146,12 +146,12 @@ matt8708:
   - data:
       name: matt8707
     service: frontend.set_theme
-ios_location:
-  alias: iOS location
+location:
+  alias: Location update
   sequence:
   - data:
       message: request_location_update
-    service: notify.mobile_app_ios
+    service: notify.mobile_app_tim_ios
   - data:
       message: request_location_update
     service: notify.mobile_app_sm_g960f
@@ -201,7 +201,7 @@ sovrummet_on:
       white_value: 1
     entity_id: light.sovrummet
     service: light.turn_on
-'1582809472326':
+all_on:
   alias: All On
   sequence:
   - data: {}

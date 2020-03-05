@@ -1,5 +1,5 @@
 type: custom:button-card
-entity: 'script.ios_location'
+entity: script.location
 icon: 'mdi:apple'
 aspect_ratio: 1/1
 name: |

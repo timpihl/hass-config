@@ -9,7 +9,7 @@
   - data:
       message: Your Hass.io server has restarted ♡
       title: ToKer Home
-    service: notify.mobile_app_ios
+    service: notify.mobile_app_tim_ios
 - id: auto-theme
   alias: Auto theme
   description: ''
@@ -32,7 +32,7 @@
   - data:
       message: '{{ states.persistent_notification.http_login.attributes.message }}'
       title: '{{ states.persistent_notification.http_login.attributes.title }}'
-    service: notify.mobile_app_ios
+    service: notify.mobile_app_tim_ios
   - delay: '5'
   - data:
       notification_id: http_login
@@ -119,3 +119,25 @@
       white_value: 255
     entity_id: light.sanglampa_t
     service: light.turn_on
+- id: '1583287519843'
+  alias: Nighly Theme
+  description: ''
+  trigger:
+  - hours: '*'
+    minutes: /1
+    platform: time_pattern
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.kanita
+      state: home
+    - condition: state
+      entity_id: person.tim
+      state: home
+    - after: '23:00:00'
+      before: 06:00:00
+      condition: time
+  action:
+  - data: {}
+    service: script.google_dark_theme
