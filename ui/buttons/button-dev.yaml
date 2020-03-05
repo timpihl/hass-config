@@ -14,7 +14,7 @@ tap_action:
   haptic: light
   service: script.turn_on
   service_data:
-    entity_id: script.ios_location
+    entity_id: script.location
 
 double_tap_action:
   action: toggle
