@@ -11,15 +11,16 @@
       title: ToKer Home
     service: notify.mobile_app_tim_ios
 - id: auto-theme
-  alias: Auto theme
+  alias: Light theme
   description: ''
   trigger:
-  - event: start
-    platform: homeassistant
+  - entity_id: input_select.theme
+    platform: state
+    to: Light
   condition: []
   action:
-  - delay: 00:00:01
-  - service: script.google_light_theme
+  - data: {}
+    service: script.google_light_theme
 - id: notify-failed-login
   alias: Notify failed login
   description: ''
@@ -120,24 +121,13 @@
     entity_id: light.sanglampa_t
     service: light.turn_on
 - id: '1583287519843'
-  alias: Nighly Theme
+  alias: Dark theme
   description: ''
   trigger:
-  - hours: '*'
-    minutes: /1
-    platform: time_pattern
-  condition:
-  - condition: and
-    conditions:
-    - condition: state
-      entity_id: person.kanita
-      state: home
-    - condition: state
-      entity_id: person.tim
-      state: home
-    - after: '23:00:00'
-      before: 06:00:00
-      condition: time
+  - entity_id: input_select.theme
+    platform: state
+    to: Dark
+  condition: []
   action:
   - data: {}
     service: script.google_dark_theme

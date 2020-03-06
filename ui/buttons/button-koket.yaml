@@ -22,7 +22,8 @@ double_tap_action:
 custom_fields:
   value: >
     [[[
-      return states['sensor.koket_brightness'].state + '%';
+      if (entity.state == 'off') return 'Off';
+      else return states['sensor.koket_brightness'].state + '%';
     ]]]
 
 state:
@@ -31,33 +32,4 @@ state:
 styles:
   !include button-apple-styles.yaml
 
-hold_action:  
-  action: call-service
-  service: browser_mod.popup
-  service_data:
-    title: Köket
-    deviceID:
-      - this
-    card:
-      type: 'custom:light-entity-card'
-      entity: light.koket
-      group: false
-      color_wheel: true
-      persist_features: true
-      effects_list: false
-      header: false
-      brightness: true
-      color_temp: true
-      white_value: true
-      color_picker: true
-      full_width_sliders: true
-      show_slider_percent: true
-      smooth_color_wheel: true
-      style: | 
-        ha-card {
-          border-top-left-radius: 0px;
-          border-top-right-radius: 0px;
-        }
-        .light-entity-card-sliders > div {
-          padding: 10px 20px;
-        }
+hold_action: !include button-mod.yaml

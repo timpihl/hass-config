@@ -33,7 +33,8 @@ styles:
 custom_fields:
   value: >
     [[[
-      return states['sensor.sovrummet_brightness'].state + '%';
+      if (entity.state == 'off') return 'Off';
+      else return states['sensor.sovrummet_brightness'].state + '%';
     ]]]
 
 #hold_action:

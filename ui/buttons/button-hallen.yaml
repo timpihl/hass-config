@@ -28,5 +28,6 @@ styles:
 custom_fields:
   value: >
     [[[
-      return states['sensor.hallen_brightness'].state + '%';
+      if (entity.state == 'off') return 'Off';
+      else return states['sensor.hallen_brightness'].state + '%';
     ]]]

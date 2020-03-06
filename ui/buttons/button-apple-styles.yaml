@@ -36,4 +36,4 @@ custom_fields:
     - align-self: start
     - font-size: 10px
     - line-height: 18px
-    - color: '#ffffff'
+#    - color: '#ffffff'
