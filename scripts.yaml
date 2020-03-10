@@ -154,7 +154,7 @@ location:
     service: notify.mobile_app_tim_ios
   - data:
       message: request_location_update
-    service: notify.mobile_app_sm_g960f
+    service: notify.mobile_app_kanita_s9
   - delay: 00:00:05
 google_light_theme:
   alias: 0 - Google Light Theme
@@ -212,3 +212,10 @@ all_on:
     service: script.sovrummet_on
   - data: {}
     service: script.vardagsrummet_on
+notify_tim_ios:
+  alias: Notify Tim iOS
+  sequence:
+  - data_template:
+      message: '{{ message }}'
+      title: '{{ title }}'
+    service: notify.mobile_app_tim_ios

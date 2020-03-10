@@ -1,7 +1,9 @@
-spoof:
-  name: Spoof
+location:
+  name: Location
   options:
-    - Yes
-    - No
-  initial: No
-  icon: mdi:panda
+    - Aspia
+    - Solarieöarna
+    - Hemma
+    - None
+  initial: None
+  icon: mdi:map

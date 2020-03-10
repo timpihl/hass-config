@@ -25,7 +25,7 @@ content: |
     {%- elif not is_state('person.kanita','not_home') %}
       Kanita är på {{states('person.kanita')}} ♡
     {%- elif is_state('person.kanita','not_home') %}
-      Kanita är på {{state_attr('sensor.kanita_s9_gecoded_location','Thoroughfare')}} ♡
+      Kanita är på {{state_attr('sensor.kanita_s9_geocoded_location','Thoroughfare')}} ♡
     {% endif %}
   {%- endif -%}
   </center>
