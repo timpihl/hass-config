@@ -26,6 +26,7 @@ media_player: !include toker/media_player.yaml
 mqtt_statestream: !include toker/mqtt-statestream.yaml
 notify: !include toker/notify.yaml
 recorder: !include toker/recorder.yaml
+panel_iframe: !include toker/panel-iframe.yaml
 scene: !include scenes.yaml
 sensor: !include toker/sensor.yaml
 shell_command: !include toker/shell_command.yaml
